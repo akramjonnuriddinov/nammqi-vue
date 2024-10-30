@@ -47,7 +47,7 @@
           <div
             v-for="article in articles"
             :key="article.id"
-            class="h-full overflow-hidden transform bg-white rounded-lg shadow-lg small-card"
+            class="overflow-hidden transform bg-white rounded-lg shadow-lg small-card h-[271px]"
           >
             <img
               :src="article.image"
@@ -174,11 +174,13 @@ const getCategoryColor = (category: string) => {
 }
 .small-card:hover .small-card__content {
   flex-shrink: 1;
+  will-change: height;
 }
 
 .small-card:hover .small-card__text {
   flex-shrink: 1;
   height: auto;
   opacity: 1;
+  will-change: height;
 }
 </style>
