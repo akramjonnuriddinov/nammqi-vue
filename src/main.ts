@@ -6,6 +6,7 @@ import { createPinia } from 'pinia'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import 'swiper/css/autoplay'
 
 const app = createApp(App)
 const pinia = createPinia()
