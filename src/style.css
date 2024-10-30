@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Proxima Nova Th';
+    src:
+      url('./assets/fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+      url('./assets/fonts/ProximaNova-Extrabld.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova Rg';
+    src:
+      url('./assets/fonts/ProximaNova-Bold.woff2') format('woff2'),
+      url('./assets/fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova Rg';
+    src:
+      url('./assets/fonts/ProximaNova-Regular.woff2') format('woff2'),
+      url('./assets/fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova Th';
+    src:
+      url('./assets/fonts/ProximaNovaT-Thin.woff2') format('woff2'),
+      url('./assets/fonts/ProximaNovaT-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova Lt';
+    src:
+      url('./assets/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+      url('./assets/fonts/ProximaNova-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Proxima Nova Rg', 'Roboto';
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  @screen sm {
+    .container {
+      max-width: 640px;
+    }
+  }
+  @screen md {
+    .container {
+      max-width: 768px;
+    }
+  }
+  @screen lg {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @screen xl {
+    .container {
+      max-width: 1280px;
+    }
+  }
+  @screen 2xl {
+    .container {
+      max-width: 1536px;
+    }
+  }
+}
