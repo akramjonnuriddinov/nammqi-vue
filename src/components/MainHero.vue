@@ -51,7 +51,7 @@ const slides = [
   position: relative;
   display: flex;
   height: 460px;
-  align-items: center; /* Center content vertically */
+  align-items: center;
   z-index: 0;
 }
 
@@ -62,13 +62,13 @@ const slides = [
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(23, 38, 61, 0.8); /* Overlay color */
-  z-index: 1; /* Ensures overlay sits above background image */
+  background-color: rgba(23, 38, 61, 0.8);
+  z-index: 1;
 }
 
 .container {
   position: relative;
-  z-index: 2; /* Brings text above overlay */
+  z-index: 2;
   color: white;
 }
 

@@ -12,7 +12,7 @@
           height="60"
           alt="Logo"
         />
-        <span
+        <span class="whitespace-nowrap"
           >Namangan Muhandislik <br />
           Qurilish Instituti</span
         >
@@ -23,7 +23,9 @@
           :key="index"
           class="nav__item"
         >
-          <a class="nav__item-link" href="#">{{ category.title }}</a>
+          <a class="nav__item-link whitespace-nowrap" href="#">{{
+            category.title
+          }}</a>
           <div class="nav__inner-list">
             <div class="nav__inner-left">
               <img
@@ -52,8 +54,6 @@
 </template>
 
 <script setup lang="ts">
-import { BuildingLibraryIcon } from '@heroicons/vue/24/outline'
-
 const navCategories = [
   {
     title: 'Universitet',
@@ -343,7 +343,7 @@ header {
 .nav__item-link {
   text-decoration: none;
   font-size: 18px;
-  display: inline-block;
+  display: block;
 }
 
 .nav__inner-list {
@@ -352,7 +352,7 @@ header {
   left: 0;
   background-color: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 2px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   opacity: 0;
@@ -417,7 +417,7 @@ header {
 .nav__inner-right__col li a {
   text-decoration: none;
   font-size: 18px;
-  display: inline-block;
+  display: block;
   color: #86909c;
 }
 
