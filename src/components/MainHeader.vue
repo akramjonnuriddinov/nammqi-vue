@@ -1,6 +1,6 @@
 <template>
   <header class="navbar z-[1000] relative">
-    <div class="container relative flex py-5 items-center justify-between">
+    <div class="container relative flex items-center justify-between py-5">
       <RouterLink
         to="/"
         class="mr-10 w-[440px] font-bold text-gray-800 text-xl flex items-center"
@@ -17,55 +17,27 @@
           Qurilish Instituti</span
         >
       </RouterLink>
-      <ul class="nav__list gap-10 capitalize justify-end">
-        <li v-for="i in 5" class="nav__item">
-          <a class="nav__item-link" href="#">Universitet {{ i }}</a>
+      <ul class="justify-end gap-10 capitalize nav__list">
+        <li
+          v-for="(category, index) in navCategories"
+          :key="index"
+          class="nav__item"
+        >
+          <a class="nav__item-link" href="#">{{ category.title }}</a>
           <div class="nav__inner-list">
             <div class="nav__inner-left">
-              <BuildingLibraryIcon class="icon text-gray-500" />
-              <h2>UNIVERSITET {{ i }}</h2>
-              <p>
-                XX asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta
-                tijorat bilim yurti savdo-sanoat firmalari va banklar uchun
-                mutaxassislar tayyorlab bergan. Rasman oliy maqomli
-                iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.
-              </p>
+              <BuildingLibraryIcon class="text-gray-500 icon" />
+              <h2>{{ category.title }}</h2>
+              <p>{{ category.description }}</p>
             </div>
             <div class="nav__inner-right">
-              <ul class="nav__inner-right__col">
-                <li><a class="inner-link" href="#">Ustav</a></li>
-                <li><a class="inner-link" href="#">Me'yoriy hujjatlar</a></li>
-                <li><a class="inner-link" href="#">Tashkiliy tuzilma</a></li>
-                <li><a class="inner-link" href="#">Reytinglar</a></li>
-                <li>
-                  <a class="inner-link" href="#">Moliyaviy hisobotlar</a>
-                </li>
-                <li><a class="inner-link" href="#">Akkreditatsiya</a></li>
-                <li><a class="inner-link" href="#">Ochiq ma'lumotlar</a></li>
-                <li><a class="inner-link" href="#">Fakultetlar</a></li>
-                <li><a class="inner-link" href="#">Kontrakt narxlari</a></li>
-              </ul>
-              <ul class="nav__inner-right__col">
-                <li>
-                  <a class="inner-link" href="#">Universitet missiyasi</a>
-                </li>
-                <li><a class="inner-link" href="#">Rahbariyat</a></li>
-                <li><a class="inner-link" href="#">Kengashlar</a></li>
-                <li><a class="inner-link" href="#">Rekvizitlar</a></li>
-                <li>
-                  <a class="inner-link" href="#">Universitet raqamlarda</a>
-                </li>
-                <li>
-                  <a class="inner-link" href="#">Mashhur bitiruvchilar</a>
-                </li>
-                <li><a class="inner-link" href="#">Kafedralar</a></li>
-                <li>
-                  <a class="inner-link" href="#"
-                    >Markaz, departament va bo'limlar</a
-                  >
-                </li>
-                <li>
-                  <a class="inner-link" href="#">Kasaba uyushma qo'mitasi</a>
+              <ul
+                v-for="(col, colIndex) in category.columns"
+                :key="colIndex"
+                class="nav__inner-right__col"
+              >
+                <li v-for="link in col.links" :key="link.title">
+                  <a class="inner-link" :href="link.href">{{ link.title }}</a>
                 </li>
               </ul>
             </div>
@@ -78,6 +50,266 @@
 
 <script setup lang="ts">
 import { BuildingLibraryIcon } from '@heroicons/vue/24/outline'
+
+const navCategories = [
+  {
+    title: 'Universitet',
+    description:
+      'XX asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: 'Ustav', href: '#' },
+          { title: "Me'yoriy hujjatlar", href: '#' },
+          { title: 'Tashkiliy tuzilma', href: '#' },
+          { title: 'Reytinglar', href: '#' },
+          { title: 'Moliyaviy hisobotlar', href: '#' },
+          { title: 'Akkreditatsiya', href: '#' },
+          { title: "Ochiq ma'lumotlar", href: '#' },
+          { title: 'Fakultetlar', href: '#' },
+          { title: 'Kontrakt narxlari', href: '#' },
+        ],
+      },
+      {
+        links: [
+          { title: 'Universitet missiyasi', href: '#' },
+          { title: 'Rahbariyat', href: '#' },
+          { title: 'Kengashlar', href: '#' },
+          { title: 'Rekvizitlar', href: '#' },
+          { title: 'Universitet raqamlarda', href: '#' },
+          { title: 'Mashhur bitiruvchilar', href: '#' },
+          { title: 'Kafedralar', href: '#' },
+          { title: "Markaz, departament va bo'limlar", href: '#' },
+          { title: "Kasaba uyushma qo'mitasi", href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Taʼlim',
+    description:
+      'XX1 asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: 'Kurs katalogi', href: '#' },
+          { title: 'Bakalavriat', href: '#' },
+          { title: 'Malaka talablari', href: '#' },
+          { title: 'O‘quv dasturlari (Sillabuslar)', href: '#' },
+        ],
+      },
+      {
+        links: [
+          { title: 'Resurslar', href: '#' },
+          { title: 'Magistratura', href: '#' },
+          { title: 'O‘quv rejalar', href: '#' },
+          { title: 'Masofaviy o‘qitish tizimi', href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Ilm-fan',
+    description:
+      'XX1 asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: 'Seminarlar', href: '#' },
+          { title: 'Ilmiy jurnallar', href: '#' },
+          { title: 'Kutilayotgan konferensiyalar', href: '#' },
+          { title: 'Sertifikatlar', href: '#' },
+        ],
+      },
+      {
+        links: [
+          { title: 'Ilmiy maqolalar', href: '#' },
+          { title: 'Konferensiyalar', href: '#' },
+          { title: 'Ilmiy kengashlar', href: '#' },
+          { title: 'Ilmiy markazlar', href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Xalqarolashtirish',
+    description:
+      'XX1 asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: 'Xalqaro aloqalar departamenti xodimlari', href: '#' },
+          { title: 'Xalqaro grantlar', href: '#' },
+          { title: 'Xalqaro konferensiyalar', href: '#' },
+          {
+            title: 'Xorijlik pedagoglar uchun malaka oshirish dasturlari',
+            href: '#',
+          },
+        ],
+      },
+      {
+        links: [
+          { title: 'Xalqaro hamkorlik aloqalari', href: '#' },
+          { title: 'Xalqaro ilmiy aloqalar', href: '#' },
+          { title: 'Xorijda malaka oshirish va taʼlim', href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Talabalar hayoti',
+    description:
+      'XX1 asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: 'Jamoaviy klublar', href: '#' },
+          { title: 'Ijtimoiy hayot', href: '#' },
+          { title: 'Tanlovlar', href: '#' },
+          { title: 'Talabalar turar joyi', href: '#' },
+          { title: 'Kafeteriyalar', href: '#' },
+          { title: 'Imkoniyati cheklanganlar uchun qulayliklar', href: '#' },
+        ],
+      },
+      {
+        links: [
+          { title: 'Sog‘liqni saqlashni xizmati', href: '#' },
+          { title: 'Ijtimoiy xonalar', href: '#' },
+          { title: 'Ijtimoiy muhofaza markazi', href: '#' },
+          { title: 'Sport inshootlari', href: '#' },
+          { title: 'Kitob do‘koni', href: '#' },
+          { title: 'Talaba fikri', href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Qabul-2024',
+    description:
+      'XX1 asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: 'Ikkinchi taʼlim to‘g‘risidagi nizom', href: '#' },
+          {
+            title:
+              '2024/2025 o‘quv yili uchun ikkinchi va undan keyingi oliy maʼlumot olish bo‘yicha qabul shartlari',
+            href: '#',
+          },
+          { title: 'Mahalliy abiturentlarga', href: '#' },
+          { title: 'Qabul kvotalari', href: '#' },
+          { title: 'O‘qishni ko‘chirish bo‘yicha maʼlumotlar', href: '#' },
+          { title: 'Javoblar varaqasi bilan ishlash', href: '#' },
+          { title: 'Tez-tez so‘raladigan savollarga javoblar', href: '#' },
+        ],
+      },
+      {
+        links: [
+          { title: 'Qabul 2024', href: '#' },
+          { title: 'Xalqaro abituriyentlarga', href: '#' },
+          { title: 'Qabul bo‘yicha bog‘lanish', href: '#' },
+          { title: 'Abituriyentlar uchun yo‘riqnoma', href: '#' },
+          { title: 'Bakalavriatga qabul uchun ro‘yhatdan o‘tish', href: '#' },
+          { title: 'Texnikum bitiruvchilari qabuli-2024', href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Axborot xizmati',
+    description:
+      'XX1 asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: 'Yangiliklar', href: '#' },
+          { title: 'Kutilayotgan tadbirlar', href: '#' },
+          { title: 'Kontaktlar', href: '#' },
+        ],
+      },
+      {
+        links: [
+          { title: 'Videogalereya', href: '#' },
+          { title: 'Fotogalareya', href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    title: '',
+    description:
+      'XX1 asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+        ],
+      },
+      {
+        links: [
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+        ],
+      },
+    ],
+  },
+  {
+    title: '',
+    description:
+      'XX1 asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
+    columns: [
+      {
+        links: [
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+        ],
+      },
+      {
+        links: [
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+          { title: '', href: '#' },
+        ],
+      },
+    ],
+  },
+]
 </script>
 
 <style scoped>

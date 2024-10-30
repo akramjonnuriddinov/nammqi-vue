@@ -37,8 +37,7 @@ const slides = [
       'Федеральный проект по содействию занятости отдельных категорий граждан',
   },
   {
-    image:
-      'https://tsu.ru/upload/resize_cache/iblock/a11/1rrkvb7dy43oo1kkmuyz6ju4lesp3vii/1920_460_2/Fon_Montazhnaya-oblast-1.jpg',
+    image: 'https://my.nammqi.uz/storage/galleries/2023-03-09-105525.jpg',
     title: 'Universitet Haqida',
     description: 'Новые компетенции в области информационных технологий',
   },

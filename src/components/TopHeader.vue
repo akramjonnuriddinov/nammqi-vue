@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-primary-blue text-white py-4">
+  <div class="py-4 text-white bg-primary-blue">
     <div class="container flex items-center justify-between">
-      <button class="flex items-center font-extrabold text-sm">
+      <button class="flex items-center text-sm font-extrabold">
         <Squares2X2Icon class="w-6 mr-2" />
         <span>NamMQI linklar</span>
       </button>
