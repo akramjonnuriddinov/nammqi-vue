@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary-gray">
+  <section class="">
     <div class="container py-10">
       <div class="flex items-center justify-between mb-4">
         <h2 class="mb-4 text-3xl font-semibold text-gray-800">E'lonlar</h2>
@@ -11,14 +11,18 @@
         </a>
       </div>
       <Swiper
+        :modules="modules"
         :slides-per-view="3"
         :space-between="16"
         :loop="true"
-        :autoplay="{ delay: 500, disableOnInteraction: true }"
+        :centeredSlides="true"
+        :autoplay="{ delay: 500, disableOnInteraction: false }"
+        :pagination="{ clickable: true }"
+        navigation
         class="mySwiper"
       >
         <SwiperSlide v-for="(event, index) in events" :key="index" class="">
-          <div class="p-6 bg-white rounded h-[155px] flex flex-col">
+          <div class="p-6 bg-primary-gray rounded h-[155px] flex flex-col">
             <p class="mb-2 text-neutral-gray">{{ event.date }}</p>
             <a href="#" class="flex items-center h-full font-semibold">
               {{ event.description }}
@@ -32,7 +36,9 @@
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Pagination } from 'swiper/modules'
 
+const modules = [Navigation, Pagination]
 const events = [
   {
     date: '15 noyabr 2024',
