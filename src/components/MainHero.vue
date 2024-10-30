@@ -2,10 +2,10 @@
   <Swiper :loop="true" pagination class="h-[460px] relative">
     <SwiperSlide v-for="(slide, index) in slides" :key="index">
       <div
-        class="hero-slide bg-cover"
+        class="hero-slide"
         :style="{ backgroundImage: `url(${slide.image})` }"
       >
-        <div class="container text-white py-16">
+        <div class="container py-16 text-white">
           <div class="max-w-[600px] w-full">
             <h2 class="text-[55px] font-extrabold mb-3 leading-[55px]">
               {{ slide.title }}
@@ -14,16 +14,12 @@
           </div>
         </div>
       </div>
-      <div class="shadow-img"></div>
     </SwiperSlide>
   </Swiper>
 </template>
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 
 const slides = [
   {
@@ -35,7 +31,7 @@ const slides = [
   },
   {
     image:
-      'https://en.tsu.ru/upload/resize_cache/iblock/336/tqx5dp6xw04qurv3yvqoqv1p0c2glxcy/1920_460_2/gras2022-_2_.jpg',
+      'https://tsu.ru/upload/resize_cache/iblock/3e7/kvbyj3ajjt6l0ep79kw7qtj0spikl500/1920_460_2/ya-profi3.jpg',
     title: 'Call Markaz',
     description:
       'Федеральный проект по содействию занятости отдельных категорий граждан',
@@ -53,34 +49,40 @@ const slides = [
 .hero-slide {
   background-size: cover;
   background-position: center;
-  height: 100vh;
   position: relative;
+  display: flex;
+  height: 460px;
+  align-items: center; /* Center content vertically */
+  z-index: 0;
 }
+
 .hero-slide::before {
-  background: #17263d;
-  bottom: 0;
   content: '';
-  display: block;
-  left: 0;
   position: absolute;
-  right: 0;
   top: 0;
-  z-index: -1;
-}
-.text-overlay {
-  position: absolute;
-  color: white;
-  bottom: 20%;
-  left: 10%;
-}
-.shadow-img {
-  background: #17263d;
+  left: 0;
+  right: 0;
   bottom: 0;
-  left: 0;
-  opacity: 0.8;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
+  background-color: rgba(23, 38, 61, 0.8); /* Overlay color */
+  z-index: 1; /* Ensures overlay sits above background image */
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Brings text above overlay */
+  color: white;
+}
+
+h2 {
+  font-size: 55px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for added contrast */
+}
+
+p {
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 </style>
