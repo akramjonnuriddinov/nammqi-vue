@@ -36,7 +36,7 @@
             </p>
             <a
               href="#"
-              class="inline-block mt-4 font-semibold underline text-primary-blue"
+              class="inline-block mt-4 font-semibold underline text-primary-gray"
               >Подробнее</a
             >
           </div>
@@ -87,7 +87,7 @@
       <div class="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-2">
         <!-- Rector's Message -->
         <div
-          class="flex items-center p-6 transition-transform transform bg-white rounded-lg shadow-lg hover:scale-105"
+          class="flex items-center p-6 transition-transform duration-300 transform bg-white rounded-lg shadow-lg hover:scale-105"
         >
           <img
             src="https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg"
@@ -95,8 +95,12 @@
             class="object-cover w-24 h-24 mr-4 rounded-lg"
           />
           <div>
-            <h2 class="text-xl font-bold text-primary-blue">Слово — ректору</h2>
-            <p class="mt-2 text-sm leading-snug text-gray-600">
+            <a href="#" class="block text-xl font-bold text-primary-blue"
+              >Слово — ректору</a
+            >
+            <p class="mt-2 text-sm leading-snug text-gray-600 line-clamp-2">
+              Реформа высшего образования: чего ждут работодатели и к чему они
+              Реформа высшего образования: чего ждут работодатели и к чему они
               Реформа высшего образования: чего ждут работодатели и к чему они
               готовы?
             </p>
@@ -106,7 +110,7 @@
 
         <!-- Special Project Section -->
         <div
-          class="relative p-6 transition-transform transform bg-white rounded-lg shadow-lg hover:scale-105"
+          class="relative p-6 transition-transform duration-300 transform bg-white rounded-lg shadow-lg hover:scale-105"
         >
           <img
             src="https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg"
@@ -116,12 +120,12 @@
           <div
             class="absolute inset-0 flex items-center justify-center text-white bg-opacity-75 rounded-lg bg-primary-blue"
           >
-            <div class="text-center">
+            <a href="#" class="text-center">
               <h2 class="text-xl font-bold">Спецпроект</h2>
               <p class="mt-1 text-sm">
                 О проекте на тему развития сельского хозяйства
               </p>
-            </div>
+            </a>
           </div>
         </div>
       </div>

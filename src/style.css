@@ -53,14 +53,32 @@
     font-display: swap;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: 'Proxima Nova Rg', 'Roboto';
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    scrollbar-width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-blue;
+    border-radius: 4px;
   }
 }
 
 @layer components {
   .container {
-    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    @apply px-4 mx-auto sm:px-6 lg:px-8;
   }
   @screen sm {
     .container {
