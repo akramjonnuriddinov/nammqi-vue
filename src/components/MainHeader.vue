@@ -26,7 +26,10 @@
           <a class="nav__item-link" href="#">{{ category.title }}</a>
           <div class="nav__inner-list">
             <div class="nav__inner-left">
-              <BuildingLibraryIcon class="text-gray-500 icon" />
+              <img
+                src="https://tsue.uz/_nuxt/img/university.c6bede9.svg"
+                alt=""
+              />
               <h2>{{ category.title }}</h2>
               <p>{{ category.description }}</p>
             </div>
@@ -384,7 +387,6 @@ header {
 
 .nav__inner-left h2 {
   font-size: 18px;
-  color: #004080;
   margin-bottom: 10px;
 }
 
