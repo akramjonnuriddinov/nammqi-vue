@@ -47,7 +47,7 @@
           </li>
           <li class="flex items-center mt-4">
             <button
-              class="px-4 py-2 text-white transition-opacity duration-300 bg-transparent border rounded hover:opacity-80"
+              class="px-4 py-2 text-white transition-opacity duration-300 bg-transparent border hover:opacity-80"
             >
               <i class="mr-2 fas fa-map-marker-alt"></i>Manzilni olish
             </button>
