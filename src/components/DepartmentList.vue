@@ -4,7 +4,7 @@
       <!-- Sidebar for Faculties -->
       <aside class="w-full p-4 bg-white border md:w-1/3">
         <h2 class="mb-4 text-3xl font-semibold text-gray-800">Fakultetlar</h2>
-        <ul>
+        <ul data-aos="fade-up">
           <li
             v-for="(faculty, index) in faculties"
             :key="faculty.name"
@@ -15,7 +15,6 @@
                 : 'bg-[#cceeff80] hover:bg-[#cceeffcc]',
             ]"
             @click="selectFaculty(index)"
-            data-aos="fade-up"
           >
             <img :src="faculty.icon" alt="icon" class="w-12 h-12 mr-3" />
             <span class="font-medium">{{ faculty.name }}</span>
