@@ -29,7 +29,7 @@
       <!-- Main Content for Departments -->
       <section class="w-full p-4 md:w-2/3">
         <div class="flex items-center justify-between mb-4">
-          <h2 class="text-3xl font-semibold text-gray-800">Kafedralar</h2>
+          <h2 class="text-4xl font-semibold text-gray-800">Kafedralar</h2>
           <button class="font-bold text-primary-blue hover:opacity-80">
             Barchasini ko'rish
           </button>

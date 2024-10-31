@@ -2,7 +2,7 @@
   <section class="">
     <div class="container py-10">
       <div class="flex items-center justify-between mb-4">
-        <h2 class="text-3xl font-semibold text-gray-800">E'lonlar</h2>
+        <h2 class="text-4xl font-semibold text-gray-800">E'lonlar</h2>
         <a
           href="#"
           class="px-4 py-2 transition-opacity duration-300 border whitespace-nowrap text-primary-blue border-primary-blue hover:opacity-80"
