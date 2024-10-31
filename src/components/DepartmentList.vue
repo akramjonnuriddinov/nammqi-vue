@@ -9,12 +9,13 @@
             v-for="(faculty, index) in faculties"
             :key="faculty.name"
             :class="[
-              'flex items-center p-4 rounded-lg cursor-pointer mb-2 font-medium transition duration-300 ease-in-out',
+              'flex items-center p-4 rounded cursor-pointer mb-2 font-medium transition duration-300 ease-in-out',
               selectedFacultyIndex === index
                 ? 'bg-primary-blue text-white shadow-md'
                 : 'bg-[#cceeff80] hover:bg-[#cceeffcc]',
             ]"
             @click="selectFaculty(index)"
+            data-aos="fade-up"
           >
             <img
               :src="faculty.icon"
@@ -38,12 +39,12 @@
           <div
             v-for="department in selectedFaculty.departments"
             :key="department.name"
-            class="overflow-hidden transition duration-300 ease-in-out bg-white border border-gray-200 rounded-lg"
+            class="overflow-hidden transition duration-300 ease-in-out bg-white border border-gray-200 rounded"
           >
             <img
               :src="department.image"
               alt="department image"
-              class="object-cover w-full h-32 mb-3 rounded-tl-md rounded-tr-md"
+              class="object-cover w-full h-32 mb-3 rounded-tl rounded-tr"
             />
             <h3
               class="p-4 font-semibold text-center text-gray-700 truncate-lines"

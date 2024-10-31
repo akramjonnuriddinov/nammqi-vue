@@ -26,8 +26,7 @@
         :space-between="16"
         :loop="true"
         :centeredSlides="true"
-        :autoplay="{ delay: 500, disableOnInteraction: false }"
-        :pagination="{ clickable: true }"
+        :autoplay="{ delay: 3500, disableOnInteraction: false }"
         :navigation="{ prevEl: prevButton, nextEl: nextButton }"
         class="mySwiper"
       >
@@ -46,10 +45,10 @@
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import { ref, onMounted } from 'vue'
 
-const modules = [Navigation, Pagination]
+const modules = [Navigation, Autoplay]
 const events = [
   {
     date: '15 noyabr 2024',

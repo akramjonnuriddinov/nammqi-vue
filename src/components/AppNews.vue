@@ -13,6 +13,7 @@
       <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <!-- Large Article -->
         <div
+          data-aos="fade-right"
           class="relative overflow-hidden bg-white rounded-lg shadow-lg lg:col-span-2"
         >
           <img
@@ -48,6 +49,7 @@
             v-for="article in articles"
             :key="article.id"
             class="overflow-hidden transform bg-white rounded-lg shadow-lg small-card h-[271px]"
+            data-aos="fade-left"
           >
             <img
               :src="article.image"
@@ -84,7 +86,10 @@
       </div>
 
       <!-- Additional Sections Below -->
-      <div class="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-2">
+      <div
+        data-aos="fade-up"
+        class="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-2"
+      >
         <!-- Rector's Message -->
         <div
           class="flex items-center p-6 transition-transform duration-300 transform bg-white rounded-lg shadow-lg hover:scale-105"
