@@ -155,7 +155,7 @@ const articles = ref([
   },
 ])
 
-const getCategoryColor = (category: string) => {
+const getCategoryColor = (category: any) => {
   switch (category) {
     case 'Международное':
       return 'bg-primary-blue'

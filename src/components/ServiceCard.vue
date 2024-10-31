@@ -1,5 +1,5 @@
 <template>
-  <div class="interactive-card">
+  <div data-aos="zoom-in" class="interactive-card">
     <a :href="link" class="card-link">
       <div class="icon-wrapper">
         <img :src="icon" alt="" class="icon not-hover" />
