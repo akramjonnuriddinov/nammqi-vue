@@ -30,9 +30,8 @@ const slides = [
       'Современные инструменты обеспечения качества образования для университетов России',
   },
   {
-    image:
-      'https://tsu.ru/upload/resize_cache/iblock/3e7/kvbyj3ajjt6l0ep79kw7qtj0spikl500/1920_460_2/ya-profi3.jpg',
-    title: 'Call Markaz',
+    image: 'https://my.nammqi.uz/storage/banner/banner-1.png',
+    title: "Yangi O'zbekison",
     description:
       'Федеральный проект по содействию занятости отдельных категорий граждан',
   },

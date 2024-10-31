@@ -40,23 +40,23 @@ interface Image {
 
 const images = ref<Image[]>([
   {
-    src: 'https://tsu.ru/upload/iblock/c32/7teotuwxqua9r0p27wawfb77afyh25s2/DSC_9081.JPG',
+    src: 'https://my.nammqi.uz/storage/qabul-2024/image-2024-07-01-18-24-55.png',
     alt: 'Event Highlights 1',
   },
   {
-    src: 'https://tsu.ru/upload/iblock/c32/7teotuwxqua9r0p27wawfb77afyh25s2/DSC_9081.JPG',
+    src: 'https://my.nammqi.uz/storage/elon-4.jpg',
     alt: 'Community Gathering',
   },
   {
-    src: 'https://tsu.ru/upload/iblock/c32/7teotuwxqua9r0p27wawfb77afyh25s2/DSC_9081.JPG',
+    src: 'https://my.nammqi.uz/storage/infograph/banner.png',
     alt: 'Innovative Projects',
   },
   {
-    src: 'https://tsu.ru/upload/iblock/c32/7teotuwxqua9r0p27wawfb77afyh25s2/DSC_9081.JPG',
+    src: 'https://my.nammqi.uz/storage/ijara-bulimi/2024-iil1-kengas2-masala-at-1x-1-1.jpg',
     alt: 'Tech Conference',
   },
   {
-    src: 'https://tsu.ru/upload/iblock/c32/7teotuwxqua9r0p27wawfb77afyh25s2/DSC_9081.JPG',
+    src: 'https://my.nammqi.uz/themes/nammqi/images/institute.png',
     alt: 'Art Exhibition',
   },
 ])
@@ -93,7 +93,6 @@ const getFixedSize = (index: number) => {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
@@ -165,7 +164,6 @@ const getFixedSize = (index: number) => {
   max-height: 90%;
   background: white;
   overflow: hidden;
-  border-radius: 8px;
 }
 
 .modal-image {
