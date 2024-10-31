@@ -31,7 +31,7 @@
         class="mySwiper"
       >
         <SwiperSlide v-for="(event, index) in events" :key="index" class="">
-          <div class="p-6 bg-primary-gray rounded h-[155px] flex flex-col">
+          <div class="p-6 bg-primary-gray h-[155px] flex flex-col">
             <p class="mb-2 text-neutral-gray">{{ event.date }}</p>
             <a href="#" class="flex items-center h-full font-semibold">
               {{ event.description }}

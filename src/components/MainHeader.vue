@@ -352,7 +352,6 @@ header {
   left: 0;
   background-color: white;
   padding: 20px;
-  border-radius: 2px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   opacity: 0;

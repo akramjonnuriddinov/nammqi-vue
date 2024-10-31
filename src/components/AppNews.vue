@@ -14,7 +14,7 @@
         <!-- Large Article -->
         <div
           data-aos="fade-right"
-          class="relative overflow-hidden bg-white rounded-lg shadow-lg lg:col-span-2"
+          class="relative overflow-hidden bg-white shadow-lg lg:col-span-2"
         >
           <img
             src="https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg"
@@ -23,7 +23,7 @@
           />
           <div class="h-full p-6 text-white bg-primary-blue">
             <span
-              class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase rounded bg-primary-blue"
+              class="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase bg-primary-blue"
               >ВАЖНО</span
             >
             <p class="text-xs opacity-75">29.10.2024</p>
@@ -48,7 +48,7 @@
           <div
             v-for="article in articles"
             :key="article.id"
-            class="overflow-hidden transform bg-white rounded-lg shadow-lg small-card h-[271px]"
+            class="overflow-hidden transform bg-white shadow-lg small-card h-[271px]"
             data-aos="fade-left"
           >
             <img
@@ -60,7 +60,7 @@
               <div class="flex items-center justify-between mb-2">
                 <p class="text-xs text-gray-500">{{ article.date }}</p>
                 <span
-                  class="px-2 py-1 text-xs font-semibold text-white rounded"
+                  class="px-2 py-1 text-xs font-semibold text-white"
                   :class="getCategoryColor(article.category)"
                 >
                   {{ article.category }}
@@ -92,12 +92,12 @@
       >
         <!-- Rector's Message -->
         <div
-          class="flex items-center p-6 transition-transform duration-300 transform bg-white rounded-lg shadow-lg hover:scale-105"
+          class="flex items-center p-6 transition-transform duration-300 transform bg-white shadow-lg hover:scale-105"
         >
           <img
             src="https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg"
             alt="Rector"
-            class="object-cover w-24 h-24 mr-4 rounded-lg"
+            class="object-cover w-24 h-24 mr-4"
           />
           <div>
             <a href="#" class="block text-xl font-bold text-primary-blue"
@@ -115,15 +115,15 @@
 
         <!-- Special Project Section -->
         <div
-          class="relative p-6 transition-transform duration-300 transform bg-white rounded-lg shadow-lg hover:scale-105"
+          class="relative p-6 transition-transform duration-300 transform bg-white shadow-lg hover:scale-105"
         >
           <img
             src="https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg"
             alt="Special project"
-            class="object-cover w-full h-40 rounded-lg"
+            class="object-cover w-full h-40"
           />
           <div
-            class="absolute inset-0 flex items-center justify-center text-white bg-opacity-75 rounded-lg bg-primary-blue"
+            class="absolute inset-0 flex items-center justify-center text-white bg-opacity-75 bg-primary-blue"
           >
             <a href="#" class="text-center">
               <h2 class="text-xl font-bold">Спецпроект</h2>

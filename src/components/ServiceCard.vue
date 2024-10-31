@@ -29,7 +29,6 @@ defineProps<{
 <style scoped>
 .interactive-card {
   background: #cceeff80;
-  border-radius: 4px;
   overflow: hidden;
   transition:
     transform 0.3s ease,
@@ -100,7 +99,6 @@ defineProps<{
   height: 4px;
   background-color: #0072bc;
   margin: 8px auto;
-  border-radius: 2px;
 }
 
 .card-description {
