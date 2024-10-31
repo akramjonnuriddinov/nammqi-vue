@@ -16,7 +16,11 @@
             ]"
             @click="selectFaculty(index)"
           >
-            <img :src="faculty.icon" alt="icon" class="w-12 h-12 mr-3" />
+            <img
+              :src="faculty.icon"
+              alt="icon"
+              class="w-12 h-12 mr-3 rounded-full"
+            />
             <span class="font-medium">{{ faculty.name }}</span>
           </li>
         </ul>
