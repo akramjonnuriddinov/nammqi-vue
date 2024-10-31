@@ -2,13 +2,23 @@
   <section class="">
     <div class="container py-10">
       <div class="flex items-center justify-between mb-4">
-        <h2 class="mb-4 text-3xl font-semibold text-gray-800">E'lonlar</h2>
+        <h2 class="text-3xl font-semibold text-gray-800">E'lonlar</h2>
         <a
           href="#"
-          class="px-4 py-2 transition-opacity duration-300 border text-primary-blue border-primary-blue hover:opacity-80"
+          class="px-4 py-2 transition-opacity duration-300 border whitespace-nowrap text-primary-blue border-primary-blue hover:opacity-80"
         >
           Barchasini ko'rish
         </a>
+      </div>
+      <div class="flex items-center justify-end h-12 mb-4 space-x-2">
+        <button
+          ref="prevButton"
+          class="flex items-center mr-4 text-white duration-300 bg-primary-blue hover:opacity-80"
+        ></button>
+        <button
+          ref="nextButton"
+          class="flex items-center text-white duration-300 bg-primary-blue hover:opacity-80"
+        ></button>
       </div>
       <Swiper
         :modules="modules"
@@ -18,7 +28,7 @@
         :centeredSlides="true"
         :autoplay="{ delay: 500, disableOnInteraction: false }"
         :pagination="{ clickable: true }"
-        navigation
+        :navigation="{ prevEl: prevButton, nextEl: nextButton }"
         class="mySwiper"
       >
         <SwiperSlide v-for="(event, index) in events" :key="index" class="">
@@ -37,6 +47,7 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Pagination } from 'swiper/modules'
+import { ref, onMounted } from 'vue'
 
 const modules = [Navigation, Pagination]
 const events = [
@@ -59,4 +70,35 @@ const events = [
   },
   { date: '23 oktabr 2024', description: 'Лекция-концерт «Музыка для всех»' },
 ]
+
+const prevButton = ref<any>(null)
+const nextButton = ref<any>(null)
+
+onMounted(() => {
+  // Make sure the buttons are set up as Swiper navigation controls
+  if (prevButton.value && nextButton.value) {
+    prevButton.value?.classList.add('swiper-button-prev')
+    nextButton.value?.classList.add('swiper-button-next')
+  }
+})
 </script>
+
+<style scoped>
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px;
+  height: 48px;
+  position: static;
+  margin: 0;
+}
+</style>
