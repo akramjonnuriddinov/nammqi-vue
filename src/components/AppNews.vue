@@ -3,8 +3,10 @@
     <div class="container">
       <!-- Header -->
       <header class="flex items-center justify-between mb-8">
-        <h2 class="mb-4 text-3xl font-semibold text-gray-800">Yangiliklar</h2>
-        <a href="#" class="duration-500 text-primary-blue hover:opacity-80"
+        <h2 class="mb-4 text-4xl font-semibold text-gray-800">Yangiliklar</h2>
+        <a
+          href="#"
+          class="font-bold duration-500 text-primary-blue hover:opacity-80"
           >Barchasini ko'rish</a
         >
       </header>

@@ -5,7 +5,7 @@
         <h2 class="text-4xl font-semibold text-gray-800">E'lonlar</h2>
         <a
           href="#"
-          class="px-4 py-2 transition-opacity duration-300 border whitespace-nowrap text-primary-blue border-primary-blue hover:opacity-80"
+          class="px-4 py-2 font-bold transition-opacity duration-300 border whitespace-nowrap text-primary-blue border-primary-blue hover:opacity-80"
         >
           Barchasini ko'rish
         </a>

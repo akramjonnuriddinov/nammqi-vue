@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container py-10">
-      <h2 class="mb-4 text-3xl font-semibold text-gray-800">Xizmatlar</h2>
+      <h2 class="mb-4 text-4xl font-semibold text-gray-800">Xizmatlar</h2>
       <div
         class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
