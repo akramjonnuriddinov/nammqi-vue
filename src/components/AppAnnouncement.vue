@@ -1,5 +1,5 @@
 <template>
-  <section class="">
+  <section>
     <div class="container py-10">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-4xl font-semibold text-gray-800">E'lonlar</h2>
