@@ -1,9 +1,9 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import HomeView from '../pages/HomeView.vue'
-import DefaultLayout from '../layouts/DefaultLayout.vue'
-import AdminLayout from '../layouts/AdminLayout.vue'
-import AdminDashboard from '../pages/AdminDashboard.vue'
+import HomeView from '@/pages/home/HomeView.vue'
+import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import AdminLayout from '@/layouts/AdminLayout.vue'
+import AdminDashboard from '@/pages/admin/AdminDashboard.vue'
 
 const routes = [
   {
