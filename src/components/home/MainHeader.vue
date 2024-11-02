@@ -7,7 +7,7 @@
       >
         <img
           class="mr-2"
-          src="../assets/images/logo-icon.png"
+          src="@/assets/images/logo-icon.png"
           width="68"
           height="60"
           alt="Logo"
