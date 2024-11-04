@@ -1,17 +1,19 @@
 <template>
-  <section class="container py-10 gallery-container">
-    <h2 class="mb-4 text-4xl font-semibold text-gray-800">Photo Gallery</h2>
-    <div class="gallery-grid">
-      <div
-        v-for="(image, index) in images"
-        :key="index"
-        class="gallery-item"
-        :class="getFixedSize(index)"
-        @click="openModal(image)"
-      >
-        <img :src="image.src" :alt="image.alt" class="gallery-thumbnail" />
-        <div class="description-overlay">
-          <p class="description-text">{{ image.alt }}</p>
+  <section class="py-10 gallery-container bg-blue-50">
+    <div class="container">
+      <h2 class="mb-4 text-4xl font-semibold text-gray-800">Photo Gallery</h2>
+      <div class="gallery-grid">
+        <div
+          v-for="(image, index) in images"
+          :key="index"
+          class="gallery-item"
+          :class="getFixedSize(index)"
+          @click="openModal(image)"
+        >
+          <img :src="image.src" :alt="image.alt" class="gallery-thumbnail" />
+          <div class="description-overlay">
+            <p class="description-text">{{ image.alt }}</p>
+          </div>
         </div>
       </div>
     </div>

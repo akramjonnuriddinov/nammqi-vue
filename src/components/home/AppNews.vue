@@ -1,5 +1,5 @@
 <template>
-  <section class="py-10 bg-blue-50">
+  <section class="py-10">
     <div class="container">
       <!-- Header -->
       <header class="flex items-center justify-between mb-8">
