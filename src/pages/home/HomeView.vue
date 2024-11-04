@@ -3,6 +3,7 @@
   <AppAnnouncement />
   <DepartmentList />
   <InteractiveServices />
+  <RectoratSection/>
   <AppNews />
   <AppStats />
 </template>
@@ -14,4 +15,5 @@ import InteractiveServices from '@/components/home/InteractiveServices.vue'
 import AppNews from '@/components/home/AppNews.vue'
 import AppAnnouncement from '@/components/home/AppAnnouncement.vue'
 import AppStats from '@/components/home/AppStats.vue'
+import RectoratSection from '@/components/home/RectoratSection.vue'
 </script>
