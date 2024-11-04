@@ -1,38 +1,37 @@
 <template>
-  <section class="py-10 gallery-container bg-blue-50">
-    <div class="container">
-      <h2 class="mb-4 text-4xl font-semibold text-gray-800">Photo Gallery</h2>
-      <div class="gallery-grid">
+  <section class="py-10 bg-blue-50">
+    <div class="container mx-auto px-4">
+      <h2 class="mb-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800">Photo Gallery</h2>
+      <div class="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 auto-rows-[150px] sm:auto-rows-[200px]">
         <div
           v-for="(image, index) in images"
           :key="index"
-          class="gallery-item"
+          class="relative cursor-pointer overflow-hidden group transition-transform duration-300 ease-in-out"
           :class="getFixedSize(index)"
           @click="openModal(image)"
         >
-          <img :src="image.src" :alt="image.alt" class="gallery-thumbnail" />
-          <div class="description-overlay">
-            <p class="description-text">{{ image.alt }}</p>
+          <img :src="image.src" :alt="image.alt" class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black bg-opacity-60 flex items-end p-2 text-white text-sm leading-tight">
+            <p class="w-full">{{ image.alt }}</p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Modal -->
-    <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
-      <div class="modal-content">
-        <img
-          :src="selectedImage.src"
-          :alt="selectedImage.alt"
-          class="modal-image"
-        />
-        <button class="close-button" @click="closeModal">✖</button>
+    <div v-if="showModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50" @click.self="closeModal">
+      <div class="relative max-w-[90%] max-h-[90%] bg-white overflow-hidden p-4 sm:p-6 lg:p-8">
+        <img :src="selectedImage.src" :alt="selectedImage.alt" class="w-full max-h-[80vh] object-cover" />
+        <button class="absolute w-8 h-8 bg-primary-blue top-2 right-2 text-white text-2xl" @click="closeModal">
+          <XMarkIcon />
+        </button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { XMarkIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
 
 interface Image {
@@ -78,111 +77,13 @@ const closeModal = () => {
 
 // Function to assign a specific CSS class to each card based on index
 const getFixedSize = (index: number) => {
-  const classes = ['large', 'tall', 'tall', 'small', 'small']
-  return classes[index % classes.length] // Repeat pattern for each row
+  const classes = [
+    'col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-3 row-span-2',
+    'col-span-2 sm:col-span-1 row-span-2',
+    'col-span-2 sm:col-span-1 row-span-2',
+    'col-span-2 row-span-2 sm:col-span-1 sm:row-span-1',
+    'col-span-2 row-span-2 sm:col-span-1 sm:row-span-1',
+  ]
+  return classes[index % classes.length]
 }
 </script>
-
-<style scoped>
-.gallery-grid {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 200px;
-}
-
-.gallery-item {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.gallery-thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover .gallery-thumbnail {
-  transform: scale(1.05);
-}
-
-/* Description overlay styles */
-.description-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  box-sizing: border-box;
-  color: white;
-  text-align: center;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  display: flex;
-  align-items: flex-end;
-}
-
-.description-text {
-  margin: 0;
-}
-
-/* Specific sizes for the grid items */
-.large {
-  grid-column: span 3;
-  grid-row: span 2;
-}
-
-.tall {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.small {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  background: white;
-  overflow: hidden;
-}
-
-.modal-image {
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
-  object-fit: cover;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-}
-</style>
