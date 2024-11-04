@@ -56,34 +56,23 @@
 <script setup lang="ts">
 const navCategories = [
   {
-    title: 'Universitet',
+    title: 'Tuzilma',
     description:
       'XX asr boshlarida Markaziy Osiyo hududida - O‘zbekistonda uchta tijorat bilim yurti savdo-sanoat firmalari va banklar uchun mutaxassislar tayyorlab bergan. Rasman oliy maqomli iqtisodchilarni tayyorlash 1918-yil 12-may boshlangan.',
     columns: [
       {
         links: [
-          { title: 'Ustav', href: '#' },
-          { title: "Me'yoriy hujjatlar", href: '#' },
-          { title: 'Tashkiliy tuzilma', href: '#' },
+          { title: 'Institut Ustavi', href: '#' },
+          { title: 'Institut haqida', href: '#' },
+          { title: 'Rahbariyat', href: '#' },
           { title: 'Reytinglar', href: '#' },
-          { title: 'Moliyaviy hisobotlar', href: '#' },
-          { title: 'Akkreditatsiya', href: '#' },
-          { title: "Ochiq ma'lumotlar", href: '#' },
-          { title: 'Fakultetlar', href: '#' },
-          { title: 'Kontrakt narxlari', href: '#' },
         ],
       },
       {
         links: [
-          { title: 'Universitet missiyasi', href: '#' },
-          { title: 'Rahbariyat', href: '#' },
-          { title: 'Kengashlar', href: '#' },
-          { title: 'Rekvizitlar', href: '#' },
-          { title: 'Universitet raqamlarda', href: '#' },
-          { title: 'Mashhur bitiruvchilar', href: '#' },
+          { title: 'Fakultetlar', href: '#' },
           { title: 'Kafedralar', href: '#' },
-          { title: "Markaz, departament va bo'limlar", href: '#' },
-          { title: "Kasaba uyushma qo'mitasi", href: '#' },
+          { title: "Bo'limlar", href: '#' },
         ],
       },
     ],
