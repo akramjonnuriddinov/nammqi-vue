@@ -4,6 +4,7 @@ import HomeView from '@/pages/home/HomeView.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import AdminLayout from '@/layouts/AdminLayout.vue'
 import AdminDashboard from '@/pages/admin/AdminDashboard.vue'
+import TeachersDetailView from '@/pages/teachers-detail/TeachersDetailView.vue'
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
         path: '',
         name: 'home',
         component: HomeView,
+      },
+      {
+        path: 'teachers-detail',
+        name: 'teachers-detail',
+        component: TeachersDetailView,
       },
     ],
   },
