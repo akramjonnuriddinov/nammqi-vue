@@ -31,7 +31,7 @@
               Ergashev Sharibboy To'lanovich
             </h3>
           </div>
-          <div class="flex mt-7  flex-col gap-1">
+          <div class="flex mt-7 flex-col gap-1">
             <div class="flex items-center gap-3">
               <div
                 class="w-8 h-8 rounded-full flex items-center justify-center bg-primary-blue"
@@ -49,7 +49,12 @@
               <p>sharibboy@gmail.com</p>
             </div>
           </div>
-          <BaseButton className="mt-auto w-max">Batafsil</BaseButton>
+          <BaseButton
+            @click="$router.push({ path: '/teachers-detail' })"
+            class="mt-auto w-max"
+          >
+            Batafsil
+          </BaseButton>
         </div>
       </div>
     </div>
