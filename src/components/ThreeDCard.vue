@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/solid'
-import BaseButton from '../button/BaseButton.vue'
+import BaseButton from '@/components/BaseButton.vue'
 </script>
 
 <style>

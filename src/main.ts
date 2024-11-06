@@ -12,7 +12,6 @@ const app = createApp(App)
 const pinia = createPinia()
 import AOS from 'aos'
 import 'aos/dist/aos.css' // You can also use <link> for styles
-// ..
 
 app.use(pinia)
 app.use(router)
