@@ -21,5 +21,5 @@
 
 <script setup lang="ts">
 import ServiceCard from '@/components/ServiceCard.vue'
-import { cards } from '../constants'
+import { cards } from '@/constants'
 </script>

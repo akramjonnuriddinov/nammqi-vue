@@ -47,7 +47,7 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
 import { ref, onMounted } from 'vue'
-import { events } from '../constants'
+import { events } from '@/constants'
 
 const modules = [Navigation, Autoplay]
 

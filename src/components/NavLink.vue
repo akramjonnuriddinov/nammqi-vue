@@ -10,8 +10,8 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import { NavCategory } from '../types'
-import NavDropdown from './NavDropdown.vue'
+import { NavCategory } from '@/types'
+import NavDropdown from '@/components/NavDropdown.vue'
 
 defineProps<{ category: NavCategory }>()
 </script>

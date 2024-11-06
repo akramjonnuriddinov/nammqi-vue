@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import { NavCategory } from '../types'
+import { NavCategory } from '@/types'
 
 defineProps<{ category: NavCategory }>()
 </script>
