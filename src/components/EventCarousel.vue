@@ -47,34 +47,14 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
 import { ref, onMounted } from 'vue'
+import { events } from '@/constants'
 
 const modules = [Navigation, Autoplay]
-const events = [
-  {
-    date: '15 noyabr 2024',
-    description: 'Концерт «В ритме танца через континенты»',
-  },
-  {
-    date: '3 noyabr 2024',
-    description: 'Вечер музыки для органа и гобоя «Два Баха: отец и сын»',
-  },
-  { date: '23 oktabr 2024', description: 'Лекция-концерт «Музыка для всех»' },
-  {
-    date: '15 noyabr 2024',
-    description: 'Концерт «В ритме танца через континенты»',
-  },
-  {
-    date: '3 noyabr 2024',
-    description: 'Вечер музыки для органа и гобоя «Два Баха: отец и сын»',
-  },
-  { date: '23 oktabr 2024', description: 'Лекция-концерт «Музыка для всех»' },
-]
 
-const prevButton = ref<any>(null)
-const nextButton = ref<any>(null)
+const prevButton = ref<HTMLElement | null>(null)
+const nextButton = ref<HTMLElement | null>(null)
 
 onMounted(() => {
-  // Make sure the buttons are set up as Swiper navigation controls
   if (prevButton.value && nextButton.value) {
     prevButton.value?.classList.add('swiper-button-prev')
     nextButton.value?.classList.add('swiper-button-next')

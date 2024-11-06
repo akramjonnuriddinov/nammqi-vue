@@ -81,7 +81,9 @@
 
       <div>
         <h3 class="text-xl font-bold mb-10">Portfolio</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 xl:grid-cols-3 2xl:grid-cols-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-5 xl:grid-cols-3 2xl:grid-cols-4"
+        >
           <div>
             <img src="https://my.nammqi.uz/storage/news/rektor.jpg" alt="" />
           </div>
