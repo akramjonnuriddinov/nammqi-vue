@@ -5,6 +5,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import AdminLayout from '@/layouts/AdminLayout.vue'
 import AdminDashboard from '@/pages/admin/AdminDashboard.vue'
 import TeachersDetailView from '@/pages/teachers-detail/TeachersDetailView.vue'
+import NotFound from '@/layouts/NotFound.vue'
 
 const routes = [
   {
@@ -34,6 +35,8 @@ const routes = [
       },
     ],
   },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+
 ]
 
 export const router = createRouter({
