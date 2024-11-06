@@ -7,7 +7,7 @@ import AdminDashboard from '@/pages/AdminDashboard.vue'
 import TeachersDetailView from '@/pages/TeachersDetailView.vue'
 import NotFound from '@/layouts/NotFound.vue'
 
-const routes = [
+const routes: any = [
   {
     path: '/',
     component: DefaultLayout,
