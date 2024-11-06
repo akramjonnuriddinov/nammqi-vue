@@ -26,11 +26,11 @@
         :space-between="16"
         :loop="true"
         :centeredSlides="true"
-        :autoplay="{ delay: 3500, disableOnInteraction: false }"
-        :navigation="{ prevEl: prevButton, nextEl: nextButton }"
+        :autoplay="autoplayConfig"
+        :navigation:any="{ prevEl: prevButton, nextEl: nextButton }"
         class="mySwiper"
       >
-        <SwiperSlide v-for="(event, index) in events" :key="index" class="">
+        <SwiperSlide v-for="(event, index) in events" :key="index">
           <div class="p-6 bg-primary-gray h-[155px] flex flex-col">
             <p class="mb-2 text-neutral-gray">{{ event.date }}</p>
             <a href="#" class="flex items-center h-full font-semibold">
@@ -53,6 +53,12 @@ const modules = [Navigation, Autoplay]
 
 const prevButton = ref<HTMLElement | null>(null)
 const nextButton = ref<HTMLElement | null>(null)
+
+// Define autoplay configuration
+const autoplayConfig: any = {
+  delay: 3500,
+  disableOnInteraction: false,
+}
 
 onMounted(() => {
   if (prevButton.value && nextButton.value) {
