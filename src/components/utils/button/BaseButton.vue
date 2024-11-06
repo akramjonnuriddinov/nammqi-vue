@@ -6,8 +6,8 @@
     <slot></slot>
   </button>
 </template>
-  
-  <script setup lang="ts">
+
+<script setup lang="ts">
 import { computed, defineProps } from 'vue'
 
 const props = defineProps<{
@@ -31,12 +31,11 @@ const handleClick = () => {
   props.onClick?.()
 }
 </script>
-  
-  <style scoped>
+
+<style scoped>
 .custom-button {
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
   transition: background-color 0.3s;
 }
 </style>
-  

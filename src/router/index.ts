@@ -36,7 +36,6 @@ const routes = [
     ],
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
-
 ]
 
 export const router = createRouter({

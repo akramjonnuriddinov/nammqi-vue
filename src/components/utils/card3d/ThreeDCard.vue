@@ -60,11 +60,11 @@
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/solid'
 import BaseButton from '../button/BaseButton.vue'
 </script>
-
 
 <style>
 .flip-card {
@@ -93,4 +93,3 @@ import BaseButton from '../button/BaseButton.vue'
   transform: rotateY(180deg);
 }
 </style>
-  

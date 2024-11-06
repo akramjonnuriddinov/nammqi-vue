@@ -3,7 +3,7 @@
   <AppAnnouncement />
   <DepartmentList />
   <InteractiveServices />
-  <RectoratSection/>
+  <RectoratSection />
   <AppNews />
   <AppStats />
 </template>

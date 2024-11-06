@@ -7,7 +7,9 @@
           <ThreeDCard></ThreeDCard>
         </div>
       </div> -->
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-[30px]">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-[30px]"
+      >
         <ThreeDCard></ThreeDCard>
         <ThreeDCard></ThreeDCard>
         <ThreeDCard></ThreeDCard>
@@ -25,5 +27,4 @@
 import ThreeDCard from '../utils/card3d/ThreeDCard.vue'
 </script>
 
-<style>
-</style>
+<style></style>
