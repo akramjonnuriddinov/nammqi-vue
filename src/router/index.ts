@@ -41,5 +41,8 @@ const routes = [
 
 export const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior() {
+    return { top: 0, behavior: 'smooth' }
+  },
   routes,
 })

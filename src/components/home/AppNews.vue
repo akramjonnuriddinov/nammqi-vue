@@ -56,7 +56,7 @@
             <img
               :src="article.image"
               alt="Article image"
-              class="object-cover w-full h-32 transition-transform duration-500 hover:scale-105 small-card__img"
+              class="object-cover w-full h-32 transition-transform duration-500 small-card__img"
             />
             <div class="block p-4 small-card__content">
               <div class="flex items-center justify-between mb-2">
