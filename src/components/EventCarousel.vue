@@ -3,12 +3,12 @@
     <div class="container py-10">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-4xl font-semibold text-gray-800">E'lonlar</h2>
-        <a
-          href="#"
+        <BaseButton
+          :theme="EThemes.TRANSPARENT"
           class="px-4 py-2 font-bold transition-opacity duration-300 border whitespace-nowrap text-primary-blue border-primary-blue hover:opacity-80"
         >
-          Barchasini ko'rish
-        </a>
+          <RouterLink to="/">Barchasini ko'rish</RouterLink>
+        </BaseButton>
       </div>
       <div class="flex items-center justify-end h-12 mb-4 space-x-2">
         <button
@@ -48,6 +48,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
 import { ref, onMounted } from 'vue'
 import { events } from '@/constants'
+import BaseButton from '@/components/atoms/BaseButton.vue'
+import { EThemes } from '@/types'
 
 const modules = [Navigation, Autoplay]
 
@@ -62,6 +64,7 @@ const autoplayConfig: any = {
 
 onMounted(() => {
   if (prevButton.value && nextButton.value) {
+    console.log('Hye')
     prevButton.value?.classList.add('swiper-button-prev')
     nextButton.value?.classList.add('swiper-button-next')
   }

@@ -49,12 +49,9 @@
               <p>sharibboy@gmail.com</p>
             </div>
           </div>
-          <BaseButton
-            @click="$router.push({ path: '/teachers-detail' })"
-            class="mt-auto w-max"
-          >
-            Batafsil
-          </BaseButton>
+          <RouterLink class="mt-auto w-max" to="/teachers-detail">
+            <BaseButton>Batafsil</BaseButton>
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -63,10 +60,10 @@
 
 <script setup lang="ts">
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/solid'
-import BaseButton from '@/components/BaseButton.vue'
+import BaseButton from '@/components/atoms/BaseButton.vue'
 </script>
 
-<style>
+<style scoped>
 .flip-card {
   perspective: 1000px;
 }

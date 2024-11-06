@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import BaseLogo from '@/components/BaseLogo.vue'
+import BaseLogo from '@/components/atoms/BaseLogo.vue'
 import NavLink from '@/components/NavLink.vue'
 import { navCategories } from '@/constants'
 </script>
