@@ -1,4 +1,4 @@
-import { NavCategory } from '@/types'
+import { NavCategory, Article, Faculty } from '@/types'
 
 export const navCategories: NavCategory[] = [
   {
@@ -37,7 +37,7 @@ export const navCategories: NavCategory[] = [
           { title: 'Kurs katalogi', href: '#' },
           { title: 'Bakalavriat', href: '#' },
           { title: 'Malaka talablari', href: '#' },
-          { title: 'O‘quv dasturlari (Sillabuslar)', href: '#' },
+          { title: 'O‘quv dasturlari Sillabuslar)', href: '#' },
         ],
       },
       {
@@ -312,5 +312,198 @@ export const cards = [
     hoverIcon: 'https://tsue.uz/media/icon/Frame_197551_67eivVm.png',
     title: '"TTJ"ga onlayn ariza',
     description: 'My.gov orqali ariza berish',
+  },
+]
+
+export const articles: Article[] = [
+  {
+    id: 1,
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '30.10.2024',
+    category: 'Международное',
+    title:
+      'ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования',
+  },
+  {
+    id: 2,
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '29.10.2024',
+    category: 'Образование',
+    title:
+      'В ТГУ утвердили политику использования ИИ в образовательном процессе',
+  },
+]
+
+export const faculties: Faculty[] = [
+  {
+    name: 'Iqtisodiyot va Boshqaruv fakulteti',
+    icon: 'https://my.nammqi.uz/storage/photo-2022-09-22-17-14-48.jpg', // Replace with actual icon path
+    departments: [
+      {
+        name: "Temir yo'l transporti muhandislik fakulteti",
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Tabiiy fanlar',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+    ],
+  },
+  {
+    name: 'Energetika va Mehnat muhozasi fakulteti',
+    icon: 'https://my.nammqi.uz/storage/photo-2022-09-22-17-14-58.jpg',
+    departments: [
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Fizika',
+        image: 'https://my.nammqi.uz/storage/galleries/2023-03-09-105525.jpg',
+      },
+      {
+        name: 'Materialshunoslik',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+    ],
+  },
+  {
+    name: 'Mashinasozlik fakulteti',
+    icon: 'https://my.nammqi.uz/storage/photo-2022-09-22-17-14-37.jpg',
+    departments: [
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Fizika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Materialshunoslik',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Fizika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Materialshunoslik',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+    ],
+  },
+  {
+    name: 'Transport fakulteti',
+    icon: 'https://my.nammqi.uz/storage/photo-2022-09-22-17-14-52.jpg',
+    departments: [
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Fizika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Materialshunoslik',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+    ],
+  },
+  {
+    name: 'Muhandislik kommunikatsiyalari fakulteti',
+    icon: 'https://my.nammqi.uz/storage/general/2023-03-29-165018.jpg',
+    departments: [
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Fizika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Materialshunoslik',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Fizika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+    ],
+  },
+  {
+    name: 'Sanoatni Axborotlashtirish fakulteti',
+    icon: 'https://my.nammqi.uz/storage/img-20231226-151252-748.jpg',
+    departments: [
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Fizika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Materialshunoslik',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+    ],
+  },
+  {
+    name: 'Qurilish fakulteti',
+    icon: 'https://my.nammqi.uz/storage/photo-2022-09-22-17-14-48.jpg',
+    departments: [
+      {
+        name: 'Mexanika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Fizika',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+      {
+        name: 'Materialshunoslik',
+        image:
+          'https://tstu.uz/api/file-uploads/attached/images/6ea2caf2-333b-449d-9af2-a1c5f56b3007.jpeg',
+      },
+    ],
   },
 ]

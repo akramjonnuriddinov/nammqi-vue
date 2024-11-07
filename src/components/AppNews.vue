@@ -141,26 +141,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const articles = ref([
-  {
-    id: 1,
-    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
-    date: '30.10.2024',
-    category: 'Международное',
-    title:
-      'ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования',
-  },
-  {
-    id: 2,
-    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
-    date: '29.10.2024',
-    category: 'Образование',
-    title:
-      'В ТГУ утвердили политику использования ИИ в образовательном процессе',
-  },
-])
+import { articles } from '@/constants'
 
 const getCategoryColor = (category: any) => {
   switch (category) {
