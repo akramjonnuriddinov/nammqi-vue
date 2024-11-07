@@ -27,7 +27,7 @@
         :loop="true"
         :centeredSlides="true"
         :autoplay="autoplayConfig"
-        :navigation:any="{ prevEl: prevButton, nextEl: nextButton }"
+        :navigation="navigation"
         class="mySwiper"
       >
         <SwiperSlide v-for="(event, index) in events" :key="index">
@@ -46,27 +46,33 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, reactive } from 'vue'
 import { events } from '@/constants'
 import BaseButton from '@/components/atoms/BaseButton.vue'
 import { EThemes } from '@/types'
 
 const modules = [Navigation, Autoplay]
 
-const prevButton = ref<HTMLElement | null>(null)
+const prevButton = ref<HTMLElement | null | any>(null)
 const nextButton = ref<HTMLElement | null>(null)
 
-// Define autoplay configuration
 const autoplayConfig: any = {
   delay: 3500,
   disableOnInteraction: false,
 }
 
+const navigation = reactive<any>({
+  prevEl: null as HTMLElement | null | any,
+  nextEl: null as HTMLElement | null | any,
+})
+
 onMounted(() => {
   if (prevButton.value && nextButton.value) {
-    console.log('Hye')
-    prevButton.value?.classList.add('swiper-button-prev')
-    nextButton.value?.classList.add('swiper-button-next')
+    prevButton.value.classList.add('swiper-button-prev')
+    nextButton.value.classList.add('swiper-button-next')
+
+    navigation.prevEl = prevButton.value
+    navigation.nextEl = nextButton.value
   }
 })
 </script>
@@ -76,12 +82,14 @@ onMounted(() => {
 .swiper-button-next {
   color: white;
 }
+
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-size: 20px;
 }
+
 .swiper-button-prev,
 .swiper-button-next {
   width: 48px;
