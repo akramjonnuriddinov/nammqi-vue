@@ -1,8 +1,14 @@
 <template>
   <section class="py-10 bg-blue-50">
     <div class="container mx-auto px-4">
-      <h2 class="mb-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800">Photo Gallery</h2>
-      <div class="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 auto-rows-[150px] sm:auto-rows-[200px]">
+      <h2
+        class="mb-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800"
+      >
+        Photo Gallery
+      </h2>
+      <div
+        class="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 auto-rows-[150px] sm:auto-rows-[200px]"
+      >
         <div
           v-for="(image, index) in images"
           :key="index"
@@ -10,8 +16,14 @@
           :class="getFixedSize(index)"
           @click="openModal(image)"
         >
-          <img :src="image.src" :alt="image.alt" class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" />
-          <div class="absolute inset-0 bg-black bg-opacity-60 flex items-end p-2 text-white text-sm leading-tight">
+          <img
+            :src="image.src"
+            :alt="image.alt"
+            class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-60 flex items-end p-2 text-white text-sm leading-tight"
+          >
             <p class="w-full">{{ image.alt }}</p>
           </div>
         </div>
@@ -19,10 +31,23 @@
     </div>
 
     <!-- Modal -->
-    <div v-if="showModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50" @click.self="closeModal">
-      <div class="relative max-w-[90%] max-h-[90%] bg-white overflow-hidden p-4 sm:p-6 lg:p-8">
-        <img :src="selectedImage.src" :alt="selectedImage.alt" class="w-full max-h-[80vh] object-cover" />
-        <button class="absolute w-8 h-8 bg-primary-blue top-2 right-2 text-white text-2xl" @click="closeModal">
+    <div
+      v-if="showModal"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
+      @click.self="closeModal"
+    >
+      <div
+        class="relative max-w-[90%] max-h-[90%] bg-white overflow-hidden p-4 sm:p-6 lg:p-8"
+      >
+        <img
+          :src="selectedImage.src"
+          :alt="selectedImage.alt"
+          class="w-full max-h-[80vh] object-cover"
+        />
+        <button
+          class="absolute w-8 h-8 bg-primary-blue top-2 right-2 text-white text-2xl"
+          @click="closeModal"
+        >
           <XMarkIcon />
         </button>
       </div>

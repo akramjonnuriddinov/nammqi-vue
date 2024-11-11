@@ -1,5 +1,5 @@
 <template>
-  <Swiper :loop="true" pagination class="h-[460px] relative">
+  <Swiper :loop="true" class="h-[460px] relative">
     <SwiperSlide v-for="(slide, index) in slides" :key="index">
       <div
         class="hero-slide"

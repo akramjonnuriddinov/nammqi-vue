@@ -9,8 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import TopHeader from '@/components/home/TopHeader.vue'
-import MainHeader from '@/components/home/MainHeader.vue'
-import TheFooter from '@/components/home/TheFooter.vue'
-import ScrollTop from '@/components/home/ScrollTop.vue'
+import TopHeader from '@/components/TopHeader.vue'
+import MainHeader from '@/components/MainHeader.vue'
+import TheFooter from '@/components/TheFooter.vue'
+import ScrollTop from '@/components/ScrollTop.vue'
 </script>

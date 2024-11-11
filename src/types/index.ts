@@ -14,3 +14,10 @@ export interface NavCategory {
   description: string
   columns: Column[]
 }
+
+export enum EThemes {
+  DEFAULT = 'default',
+  GREEN = 'green',
+  TRANSPARENT = 'transparent',
+  RED = 'red'
+}

@@ -3,12 +3,12 @@
     <div class="container py-10">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-4xl font-semibold text-gray-800">E'lonlar</h2>
-        <a
-          href="#"
+        <BaseButton
+          :theme="EThemes.TRANSPARENT"
           class="px-4 py-2 font-bold transition-opacity duration-300 border whitespace-nowrap text-primary-blue border-primary-blue hover:opacity-80"
         >
-          Barchasini ko'rish
-        </a>
+          <RouterLink to="/">Barchasini ko'rish</RouterLink>
+        </BaseButton>
       </div>
       <div class="flex items-center justify-end h-12 mb-4 space-x-2">
         <button
@@ -26,11 +26,11 @@
         :space-between="16"
         :loop="true"
         :centeredSlides="true"
-        :autoplay="{ delay: 3500, disableOnInteraction: false }"
-        :navigation="{ prevEl: prevButton, nextEl: nextButton }"
+        :autoplay="autoplayConfig"
+        :navigation="navigation"
         class="mySwiper"
       >
-        <SwiperSlide v-for="(event, index) in events" :key="index" class="">
+        <SwiperSlide v-for="(event, index) in events" :key="index">
           <div class="p-6 bg-primary-gray h-[155px] flex flex-col">
             <p class="mb-2 text-neutral-gray">{{ event.date }}</p>
             <a href="#" class="flex items-center h-full font-semibold">
@@ -46,38 +46,33 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, reactive } from 'vue'
+import { events } from '@/constants'
+import BaseButton from '@/components/atoms/BaseButton.vue'
+import { EThemes } from '@/types'
 
 const modules = [Navigation, Autoplay]
-const events = [
-  {
-    date: '15 noyabr 2024',
-    description: 'Концерт «В ритме танца через континенты»',
-  },
-  {
-    date: '3 noyabr 2024',
-    description: 'Вечер музыки для органа и гобоя «Два Баха: отец и сын»',
-  },
-  { date: '23 oktabr 2024', description: 'Лекция-концерт «Музыка для всех»' },
-  {
-    date: '15 noyabr 2024',
-    description: 'Концерт «В ритме танца через континенты»',
-  },
-  {
-    date: '3 noyabr 2024',
-    description: 'Вечер музыки для органа и гобоя «Два Баха: отец и сын»',
-  },
-  { date: '23 oktabr 2024', description: 'Лекция-концерт «Музыка для всех»' },
-]
 
-const prevButton = ref<any>(null)
-const nextButton = ref<any>(null)
+const prevButton = ref<HTMLElement | null | any>(null)
+const nextButton = ref<HTMLElement | null>(null)
+
+const autoplayConfig: any = {
+  delay: 3500,
+  disableOnInteraction: false,
+}
+
+const navigation = reactive<any>({
+  prevEl: null as HTMLElement | null | any,
+  nextEl: null as HTMLElement | null | any,
+})
 
 onMounted(() => {
-  // Make sure the buttons are set up as Swiper navigation controls
   if (prevButton.value && nextButton.value) {
-    prevButton.value?.classList.add('swiper-button-prev')
-    nextButton.value?.classList.add('swiper-button-next')
+    prevButton.value.classList.add('swiper-button-prev')
+    nextButton.value.classList.add('swiper-button-next')
+
+    navigation.prevEl = prevButton.value
+    navigation.nextEl = nextButton.value
   }
 })
 </script>
@@ -87,12 +82,14 @@ onMounted(() => {
 .swiper-button-next {
   color: white;
 }
+
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-size: 20px;
 }
+
 .swiper-button-prev,
 .swiper-button-next {
   width: 48px;
