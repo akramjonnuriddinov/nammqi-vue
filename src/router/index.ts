@@ -33,6 +33,11 @@ const routes: any = [
         name: 'dashboard',
         component: AdminDashboard,
       },
+      {
+        path: 'news',
+        name: 'admin-news',
+        component: () => import('@/pages/AdminNews.vue'),
+      },
     ],
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
