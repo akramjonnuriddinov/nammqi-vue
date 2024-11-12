@@ -142,6 +142,24 @@
 
 <script setup lang="ts">
 import { articles } from '@/constants'
+import { getNews } from '@/composables/useNews'
+import { onMounted, ref } from 'vue'
+
+const news = ref<any>([])
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+onMounted(async () => {
+  try {
+    const response = await getNews()
+    news.value = response.data
+    console.log(news.value)
+  } catch (err) {
+    error.value = 'Failed to load faculties'
+  } finally {
+    loading.value = false
+  }
+})
 
 const getCategoryColor = (category: any) => {
   switch (category) {

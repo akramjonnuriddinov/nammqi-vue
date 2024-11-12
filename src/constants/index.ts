@@ -321,6 +321,7 @@ export const articles: Article[] = [
     image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
     date: '30.10.2024',
     category: 'Международное',
+    content: '',
     title:
       'ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования',
   },
@@ -329,6 +330,7 @@ export const articles: Article[] = [
     image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
     date: '29.10.2024',
     category: 'Образование',
+    content: '',
     title:
       'В ТГУ утвердили политику использования ИИ в образовательном процессе',
   },

@@ -28,6 +28,7 @@ export interface Article {
   date: string
   category: string
   title: string
+  content: string
 }
 
 export interface Department {
