@@ -1,8 +1,8 @@
 <template>
-  <div class="relative">
+  <div class="flex flex-col min-h-screen">
     <TopHeader />
     <MainHeader />
-    <RouterView />
+    <RouterView class="flex-1 overflow-auto" />
     <TheFooter />
     <ScrollTop />
   </div>
