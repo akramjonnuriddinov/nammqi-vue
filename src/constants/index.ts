@@ -317,16 +317,17 @@ export const cards = [
 
 export const articles: Article[] = [
   {
-    id: 1,
+    id: '1',
     image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
     date: '30.10.2024',
     category: 'Международное',
     content: '',
     title:
       'ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования',
+    gallery: ['']
   },
   {
-    id: 2,
+    id: '2',
     image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
     date: '29.10.2024',
     category: 'Образование',
