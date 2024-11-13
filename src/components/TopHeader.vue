@@ -5,7 +5,8 @@
         <Squares2X2Icon class="w-6 mr-2" />
         <span>NamMQI linklar</span>
       </button>
-      <div>
+      <div class="flex items-center">
+        <RouterLink class="mr-6" to="/admin">Admin</RouterLink>
         <button>
           <EyeSlashIcon class="w-6 mr-6" />
         </button>

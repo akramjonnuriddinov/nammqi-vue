@@ -1,9 +1,11 @@
+import { Article } from '@/types'
 import httpClient from './useApi'
 
 export const getNews = async () => {
   return await httpClient.get('/news')
 }
 
-export const getFacultyDetails = async (id: string) => {
-  return await httpClient.get(`/faculties/${id}`)
+export const postNews = async (news: Article) => {
+  const response = await httpClient.post(`/news`, news)
+  return response
 }

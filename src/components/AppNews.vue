@@ -68,12 +68,12 @@
                   {{ article.category }}
                 </span>
               </div>
-              <a
-                href="#"
+              <RouterLink
+                to="/news"
                 class="mb-1 text-lg font-bold leading-snug text-primary-blue line-clamp-2"
               >
                 {{ article.title }}
-              </a>
+              </RouterLink>
               <p
                 class="h-0 transition-all duration-500 opacity-0 text-neutral-gray small-card__text shrink-0 line-clamp-4"
               >

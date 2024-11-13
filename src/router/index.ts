@@ -2,10 +2,6 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 import HomeView from '@/pages/HomeView.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
-import AdminLayout from '@/layouts/AdminLayout.vue'
-import AdminDashboard from '@/pages/AdminDashboard.vue'
-import TeachersDetailView from '@/pages/TeachersDetailView.vue'
-import NotFound from '@/layouts/NotFound.vue'
 
 const routes: any = [
   {
@@ -20,18 +16,23 @@ const routes: any = [
       {
         path: 'teachers-detail',
         name: 'teachers-detail',
-        component: TeachersDetailView,
+        component: () => import('@/pages/TeachersDetailView.vue'),
+      },
+      {
+        path: 'news',
+        name: 'news-detail',
+        component: () => import('@/pages/NewsDetailView.vue'),
       },
     ],
   },
   {
     path: '/admin',
-    component: AdminLayout,
+    component: () => import('@/layouts/AdminLayout.vue'),
     children: [
       {
         path: 'dashboard',
         name: 'dashboard',
-        component: AdminDashboard,
+        component: () => import('@/pages/AdminDashboard.vue'),
       },
       {
         path: 'news',
@@ -40,7 +41,11 @@ const routes: any = [
       },
     ],
   },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/layouts/NotFound.vue'),
+  },
 ]
 
 export const router = createRouter({
