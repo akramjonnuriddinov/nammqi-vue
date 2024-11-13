@@ -2,15 +2,37 @@
 import AppEditor from '@/components/AppEditor.vue'
 import { CloudArrowUpIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
+import { Article } from '@/types'
+import { v4 as uuidv4 } from 'uuid'
+import { postNews } from '@/composables/useNews'
 
 const content = ref()
+const news = ref<Article>({
+  id: uuidv4(),
+  image: '',
+  date: '',
+  title: '',
+  short_description: '',
+  content: '',
+  description: '',
+  category: '',
+  gallery: [''],
+})
 
 const handleShortDescriptionFromChild = (shortDescription: string) => {
   content.value = shortDescription
 }
 
-const submitNews = () => {
-  console.log(content.value)
+const submitNews = async () => {
+  console.log(news.value)
+  try {
+    console.log('Loading...')
+    await postNews(news.value)
+  } catch (error) {
+    console.log('post error: ', error)
+  } finally {
+    console.log('done...')
+  }
 }
 </script>
 
@@ -27,6 +49,7 @@ const submitNews = () => {
               >Title</label
             >
             <input
+              v-model="news.title"
               class="block w-full px-3 py-3 font-medium leading-tight text-gray-900 bg-white border border-gray-400 rounded-md appearance-none focus:outline-none focus:border-primary-blue"
               type="text"
               name="name"
@@ -41,6 +64,21 @@ const submitNews = () => {
               >Short Description</label
             >
             <textarea
+              v-model="news.short_description"
+              class="block w-full px-3 py-3 font-medium leading-tight text-gray-900 bg-white border border-gray-400 rounded-md appearance-none focus:outline-none focus:border-primary-blue"
+              name="description"
+              rows="4"
+              id=""
+            ></textarea>
+          </div>
+          <div class="w-full px-3 mb-6">
+            <label
+              class="block mb-2 text-sm font-bold tracking-wide text-gray-700 uppercase"
+              htmlFor="category_name"
+              >Description</label
+            >
+            <textarea
+              v-model="news.description"
               class="block w-full px-3 py-3 font-medium leading-tight text-gray-900 bg-white border border-gray-400 rounded-md appearance-none focus:outline-none focus:border-primary-blue"
               name="description"
               rows="4"

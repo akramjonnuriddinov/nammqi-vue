@@ -23,12 +23,15 @@ export enum EThemes {
 }
 
 export interface Article {
-  id: number
+  id: string
+  title: string
+  short_description: string
+  description: string
   image: string
   date: string
   category: string
-  title: string
   content: string
+  gallery: string[]
 }
 
 export interface Department {
