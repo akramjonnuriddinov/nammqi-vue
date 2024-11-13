@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppEditor from '@/components/AppEditor.vue'
+import { CloudArrowUpIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
 
 const content = ref()
@@ -14,19 +15,19 @@ const submitNews = () => {
 </script>
 
 <template>
-  <h2 class="font-medium text-2xl">Yangiliklar</h2>
+  <h2 class="text-2xl font-medium">Yangiliklar</h2>
   <div class="flex flex-col mx-3 mt-6 lg:flex-row">
     <div class="w-full m-1">
-      <form @click.prevent="submitNews" class="w-full bg-white p-6">
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-full px-3 mb-6">
+      <form @click.prevent class="w-full p-6 bg-white">
+        <div class="flex flex-wrap mb-6 -mx-3">
+          <div class="w-full px-3 mb-6 md:w-full">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+              class="block mb-2 text-sm font-bold tracking-wide text-gray-700 uppercase"
               htmlFor="category_name"
               >Title</label
             >
             <input
-              class="appearance-none block w-full bg-white text-gray-900 font-medium border border-gray-400 rounded-md py-3 px-3 leading-tight focus:outline-none focus:border-primary-blue"
+              class="block w-full px-3 py-3 font-medium leading-tight text-gray-900 bg-white border border-gray-400 rounded-md appearance-none focus:outline-none focus:border-primary-blue"
               type="text"
               name="name"
               placeholder="Title"
@@ -35,52 +36,34 @@ const submitNews = () => {
           </div>
           <div class="w-full px-3 mb-6">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2"
+              class="block mb-2 text-sm font-bold tracking-wide text-gray-700 uppercase"
               htmlFor="category_name"
               >Short Description</label
             >
             <textarea
-              rows="4"
-              class="appearance-none block w-full bg-white text-gray-900 font-medium border border-gray-400 rounded-md py-3 px-3 leading-tight focus:outline-none focus:border-primary-blue"
-              type="text"
+              class="block w-full px-3 py-3 font-medium leading-tight text-gray-900 bg-white border border-gray-400 rounded-md appearance-none focus:outline-none focus:border-primary-blue"
               name="description"
-              required
-            >
-            </textarea>
+              rows="4"
+              id=""
+            ></textarea>
           </div>
           <AppEditor
             @input="handleShortDescriptionFromChild"
             :content="content"
             :edit-editor="content"
           />
-          <div class="w-full px-3 mb-8">
+          <div class="w-full px-3 my-8">
             <label
-              class="mx-auto cursor-pointer flex w-full max-w-lg flex-col items-center justify-center rounded-xl border-2 border-dashed border-green-400 bg-white p-6 text-center"
+              class="flex flex-col items-center justify-center w-full max-w-lg p-6 mx-auto text-center bg-white border-2 border-dashed cursor-pointer rounded-xl border-neutral-gray"
               htmlFor="dropzone-file"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-10 w-10 text-green-800"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                />
-              </svg>
-
-              <h2 class="mt-4 text-xl font-medium text-gray-700 tracking-wide">
+              <CloudArrowUpIcon class="w-10 h-10 text-neutral-gray" />
+              <h2 class="mt-4 text-xl font-medium tracking-wide text-gray-700">
                 Category image
               </h2>
-
-              <p class="mt-2 text-gray-500 tracking-wide">
+              <p class="mt-2 tracking-wide text-gray-500">
                 Upload or drag & drop your file SVG, PNG, JPG or GIF.
               </p>
-
               <input
                 id="dropzone-file"
                 type="file"
@@ -90,9 +73,11 @@ const submitNews = () => {
               />
             </label>
           </div>
-          <div class="w-full md:w-full px-3 mb-6">
+          <div class="w-full px-3 mb-6 md:w-full">
             <button
-              class="appearance-none block w-full bg-primary-blue text-gray-100 font-bold border border-gray-200 rounded-md py-3 px-3 leading-tight hover:bg-primary-black focus:outline-none focus:bg-white focus:border-gray-500"
+              @click="submitNews"
+              type="submit"
+              class="block w-full px-3 py-3 font-bold leading-tight text-gray-100 transition-opacity duration-300 rounded-md bg-primary-blue hover:opacity-80 focus:outline-none focus:opacity-60"
             >
               Submit
             </button>

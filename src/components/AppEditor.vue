@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, watch, defineProps, defineEmits } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import Quill from 'quill'
 
 const props = defineProps({
@@ -136,7 +136,7 @@ watch(
 
 <template>
   <div class="w-full px-3">
-    <div class="quill-editor relative rounded-md">
+    <div class="relative rounded-md quill-editor">
       <slot class="rounded-md" name="toolbar"></slot>
       <div
         class="absolute h-full max-h-[400px] min-h-[400px] w-full overflow-y-auto border border-[#838383]"
