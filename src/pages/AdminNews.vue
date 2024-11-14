@@ -92,7 +92,7 @@ const submitNews = async () => {
           />
           <div class="w-full px-3 my-8">
             <label
-              class="flex flex-col items-center justify-center w-full max-w-lg p-6 mx-auto text-center bg-white border-2 border-dashed cursor-pointer rounded-xl border-neutral-gray"
+              class="flex flex-col select-none items-center justify-center w-full max-w-lg p-6 mx-auto text-center bg-white border-2 border-dashed cursor-pointer rounded-xl border-neutral-gray"
               htmlFor="dropzone-file"
             >
               <CloudArrowUpIcon class="w-10 h-10 text-neutral-gray" />

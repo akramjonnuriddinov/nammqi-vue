@@ -2,7 +2,7 @@
   <button
     :disabled="props.disabled || props.isLoading"
     :class="[
-      'px-4 py-2 font-bold transition-opacity duration-300 border whitespace-nowrap hover:opacity-80',
+      'px-4 py-1 font-semibold transition-opacity duration-300 border whitespace-nowrap hover:opacity-80',
       themeClass,
     ]"
   >
