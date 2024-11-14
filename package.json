@@ -11,8 +11,11 @@
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
     "aos": "^3.0.0-beta.6",
+    "axios": "^1.7.7",
     "pinia": "^2.2.4",
+    "quill": "^2.0.2",
     "swiper": "^11.1.14",
+    "uuid": "^11.0.3",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },

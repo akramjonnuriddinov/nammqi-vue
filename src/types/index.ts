@@ -19,5 +19,28 @@ export enum EThemes {
   DEFAULT = 'default',
   GREEN = 'green',
   TRANSPARENT = 'transparent',
-  RED = 'red'
+  RED = 'red',
+}
+
+export interface Article {
+  id: string
+  title: string
+  short_description: string
+  description: string
+  image: string
+  date: string
+  category: string
+  content: string
+  gallery: string[]
+}
+
+export interface Department {
+  name: string
+  image: string
+}
+
+export interface Faculty {
+  name: string
+  icon: string
+  departments: Department[]
 }

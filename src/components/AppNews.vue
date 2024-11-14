@@ -68,12 +68,12 @@
                   {{ article.category }}
                 </span>
               </div>
-              <a
-                href="#"
+              <RouterLink
+                to="/news"
                 class="mb-1 text-lg font-bold leading-snug text-primary-blue line-clamp-2"
               >
                 {{ article.title }}
-              </a>
+              </RouterLink>
               <p
                 class="h-0 transition-all duration-500 opacity-0 text-neutral-gray small-card__text shrink-0 line-clamp-4"
               >
@@ -141,26 +141,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { articles } from '@/constants'
+import { getNews } from '@/composables/useNews'
+import { onMounted, ref } from 'vue'
 
-const articles = ref([
-  {
-    id: 1,
-    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
-    date: '30.10.2024',
-    category: 'Международное',
-    title:
-      'ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования',
-  },
-  {
-    id: 2,
-    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
-    date: '29.10.2024',
-    category: 'Образование',
-    title:
-      'В ТГУ утвердили политику использования ИИ в образовательном процессе',
-  },
-])
+const news = ref<any>([])
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+onMounted(async () => {
+  try {
+    const response = await getNews()
+    news.value = response.data
+    console.log(news.value)
+  } catch (err) {
+    error.value = 'Failed to load faculties'
+  } finally {
+    loading.value = false
+  }
+})
 
 const getCategoryColor = (category: any) => {
   switch (category) {
