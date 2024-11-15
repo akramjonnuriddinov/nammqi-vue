@@ -82,6 +82,8 @@
     font-style: normal;
     font-display: swap;
   }
+  input {
+    @apply border focus:border-primary-blue outline-none py-1 px-2  }
 
   html {
     scroll-behavior: smooth;
