@@ -42,6 +42,17 @@ const routes: any = [
     ],
   },
   {
+    path: '/profile',
+    component: () => import('@/layouts/ProfileLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'profile-info',
+        component: () => import('@/pages/ProfileInfoView.vue')
+      }
+    ]
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/layouts/NotFound.vue'),

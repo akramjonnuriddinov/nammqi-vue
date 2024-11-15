@@ -44,3 +44,15 @@ export interface Faculty {
   icon: string
   departments: Department[]
 }
+
+export interface Teacher {
+  fullname: string
+  position: string
+  phone_number: string
+  email: string
+  linkedin: string
+  work_experience: string[]
+  education: string[]
+  skills: string[]
+  about: string
+}
