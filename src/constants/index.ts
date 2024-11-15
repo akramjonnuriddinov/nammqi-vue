@@ -315,6 +315,7 @@ export const cards = [
   },
 ]
 
+
 export const articles: Article[] = [
   {
     id: '1',
@@ -336,6 +337,119 @@ export const articles: Article[] = [
       'В ТГУ утвердили политику использования ИИ в образовательном процессе',
   },
 ]
+
+export const news: Article[] = [
+  {
+    id: '1',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '30.10.2024',
+    category: 'Международное',
+    content: '',
+    title:
+      'ТГУ представил вузам КНР форматы сотрудничества в сфере медиаобразования',
+    gallery: [''],
+  },
+  {
+    id: '2',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '29.10.2024',
+    category: 'Образование',
+    content: '',
+    title: 'В ТГУ утвердили политику использования ИИ в образовательном процессе',
+    gallery: [''],
+  },
+  {
+    id: '3',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '28.10.2024',
+    category: 'Технологии',
+    content: '',
+    title: 'ТГУ организовал конференцию по будущему цифрового образования',
+    gallery: [''],
+  },
+  {
+    id: '4',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '27.10.2024',
+    category: 'Наука',
+    content: '',
+    title: 'Исследования ТГУ: Новые горизонты в области ИИ',
+    gallery: [''],
+  },
+  {
+    id: '5',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '26.10.2024',
+    category: 'Культура',
+    content: '',
+    title: 'Культурные мероприятия в ТГУ: Программа на ноябрь',
+    gallery: [''],
+  },
+  {
+    id: '6',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '25.10.2024',
+    category: 'Образование',
+    content: '',
+    title: 'Внедрение новых методов обучения в ТГУ',
+    gallery: [''],
+  },
+  {
+    id: '7',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '24.10.2024',
+    category: 'Международное',
+    content: '',
+    title: 'Сотрудничество ТГУ с университетами Европы расширяется',
+    gallery: [''],
+  },
+  {
+    id: '8',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '23.10.2024',
+    category: 'Спорт',
+    content: '',
+    title: 'Спортивные достижения студентов ТГУ',
+    gallery: [''],
+  },
+  {
+    id: '9',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '22.10.2024',
+    category: 'Наука',
+    content: '',
+    title: 'ТГУ запускает новые исследовательские лаборатории',
+    gallery: [''],
+  },
+  {
+    id: '10',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '21.10.2024',
+    category: 'Технологии',
+    content: '',
+    title: 'Новые разработки студентов ТГУ в области робототехники',
+    gallery: [''],
+  },
+  {
+    id: '11',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '20.10.2024',
+    category: 'Культура',
+    content: '',
+    title: 'ТГУ организует международный фестиваль искусств',
+    gallery: [''],
+  },
+  {
+    id: '12',
+    image: 'https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg',
+    date: '19.10.2024',
+    category: 'Образование',
+    content: '',
+    title: 'ТГУ представил новый образовательный портал',
+    gallery: [''],
+  },
+];
+
 
 export const faculties: Faculty[] = [
   {

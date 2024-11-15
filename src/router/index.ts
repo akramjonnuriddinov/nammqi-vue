@@ -21,7 +21,7 @@ const routes: any = [
       {
         path: 'news',
         name: 'news-detail',
-        component: () => import('@/pages/NewsDetailView.vue'),
+        component: () => import('@/pages/NewsView.vue'),
       },
     ],
   },
