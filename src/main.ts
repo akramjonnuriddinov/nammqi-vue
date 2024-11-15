@@ -17,6 +17,7 @@ const app = createApp(App)
 const pinia = createPinia()
 import AOS from 'aos'
 import 'aos/dist/aos.css' // You can also use <link> for styles
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 app.use(pinia)
 app.use(router)
