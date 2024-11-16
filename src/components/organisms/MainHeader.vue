@@ -1,7 +1,7 @@
 <template>
   <header class="navbar z-[1000] relative">
     <div class="container relative flex items-center justify-between py-5">
-      <BaseLogo />
+      <BaseLogo class="mr-5" />
       <ul class="justify-end gap-10 capitalize nav__list">
         <NavLink
           v-for="(category, index) in navCategories"
