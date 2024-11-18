@@ -14,15 +14,15 @@
         </svg>
         <p class="mb-0">29.10.2024</p>
       </div>
-      <h2 class="mt-1 text-2xl font-bold">
+      <RouterLink to="news/news-detail" class="mt-1 text-2xl font-bold">
         Учёные открыли семейство бактерий, способных дышать кислородом под
         землей
-      </h2>
+      </RouterLink>
       <p class="mt-2 text-sm opacity-75">
         «Поймать» ранее неизвестные бактерии удалось с помощью
         метагеномного анализа.
       </p>
-      <a href="#" class="inline-block mt-4 font-semibold underline text-primary-gray"></a>
+      <a href="#" class="inline-block mt-4 font-semibold underline text-primary-gray">Подробнее</a>
     </div>
   </div>
 </template>
