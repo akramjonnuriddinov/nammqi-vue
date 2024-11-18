@@ -33,7 +33,7 @@
             </RouterLink>
             <RouterLink to="/" class="flex items-center border-b border-primary-blue/20 py-1 gap-5">
               <img class="w-10" src="../assets/images/office.png" alt="">
-              <div class="text-primary-blue">Fakultetlar</div>
+              <div class="text-primary-blue">Kafedralar</div>
             </RouterLink>
             <RouterLink to="/" class="flex items-center border-b border-primary-blue/20 py-1 gap-5">
               <img class="w-10" src="../assets/images/menu.png" alt="">

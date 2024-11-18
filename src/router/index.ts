@@ -20,9 +20,14 @@ const routes: any = [
       },
       {
         path: 'news',
-        name: 'news-detail',
+        name: 'news',
         component: () => import('@/pages/NewsView.vue'),
       },
+      {
+        path:'news/news-detail',
+        name:'news-detail',
+        component: () => import('@/pages/NewsDetailView.vue'),
+      }
     ],
   },
   {
