@@ -108,208 +108,35 @@
         <div class="order-2 w-full xl:w-2/3 lg:w-3/4 md:w-2/3 xl:order-1">
           <div class="bg-white rounded-lg shadow-md">
             <!-- Tab Section Start -->
-            <ul
-              class="flex p-3 border-b border-gray-300"
-              id="myTab"
-              role="tablist"
-            >
-              <li class="pr-3">
-                <a
-                  class="py-2 text-sm font-semibold text-gray-700 uppercase border-b-2 border-gray-700"
-                  id="home-tab"
-                  data-toggle="tab"
-                  href="#home"
-                  role="tab"
-                  aria-controls="home"
-                  aria-selected="true"
+            <ul class="flex border-b border-gray-300">
+              <li
+                v-for="tab in tabs"
+                :key="tab.name"
+                class="flex items-center gap-4 group"
+              >
+                <button
+                  class="relative px-4 py-5 text-gray-600 transition-colors duration-300 hover:text-primary-blue"
+                  @click="activeTab = tab.name"
+                  :class="{
+                    'text-primary-blue font-semibold': activeTab === tab.name,
+                  }"
                 >
-                  Overview
-                </a>
-              </li>
-              <li class="pr-3">
-                <a
-                  class="py-2 text-sm font-semibold text-gray-700 uppercase"
-                  id="profile-tab"
-                  data-toggle="tab"
-                  href="#profile"
-                  role="tab"
-                  aria-controls="profile"
-                  aria-selected="false"
-                >
-                  Contact
-                </a>
+                  {{ tab.label }}
+
+                  <!-- Active tab indicator -->
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-1 transition-opacity duration-300 rounded-t-lg bg-primary-blue"
+                    :class="
+                      activeTab === tab.name ? 'opacity-100' : 'opacity-0'
+                    "
+                  ></span>
+                </button>
               </li>
             </ul>
+
             <!-- Tab Content -->
             <div class="tab-content" id="myTabContent">
-              <div
-                class="tab-pane fade show active"
-                id="home"
-                role="tabpanel"
-                aria-labelledby="home-tab"
-              >
-                <!-- Excerpt Start -->
-                <div class="p-5 pt-7">
-                  <h4 class="mt-5 text-lg font-semibold text-black mb-7">
-                    About
-                  </h4>
-                  <p class="mb-8 text-sm text-gray-700">
-                    A talented professional with an academic background in IT
-                    and proven commercial development experience as C++
-                    developer since 1999. Has a sound knowledge of the software
-                    development life cycle. Was involved in more than 140
-                    software development outsourcing projects.
-                    <br />
-                    <br />
-                    Programming Languages: C/C++, .NET C++, Python, Bash, Shell,
-                    PERL, Regular expressions, Python, Active-script.
-                  </p>
-                </div>
-                <!-- Skills -->
-                <div class="p-5 border-t">
-                  <h4 class="mt-5 text-lg font-semibold text-black mb-7">
-                    Skills
-                  </h4>
-                  <ul class="flex flex-wrap">
-                    <li>
-                      <a
-                        class="px-3 py-1 mt-2 mb-2 mr-3 text-xs text-gray-700 bg-gray-100 rounded-md"
-                        href="#"
-                        >Agile</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="px-3 py-1 mt-2 mb-2 mr-3 text-xs text-gray-700 bg-gray-100 rounded-md"
-                        href="#"
-                        >Wireframing</a
-                      >
-                    </li>
-                    <!-- More skills here -->
-                  </ul>
-                </div>
-                <!-- Card Section Start -->
-                <div class="p-5 border-t">
-                  <h4 class="mt-5 text-lg font-semibold text-black mb-7">
-                    Work Experience
-                  </h4>
-                  <!-- Single Card -->
-                  <div class="flex items-center pr-11 mb-9">
-                    <div class="w-16 h-16 mr-8">
-                      <img
-                        src="https://finestwp.co/demos/html/jobcamp/image/l2/png/featured-job-logo-1.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="w-full">
-                      <h3 class="mb-0">
-                        <a class="text-lg font-semibold text-black" href="#"
-                          >Masters in Art Design</a
-                        >
-                      </h3>
-                      <a href="#" class="text-sm text-gray-500"
-                        >Harvard University</a
-                      >
-                      <div
-                        class="flex items-center justify-between text-sm text-gray-400"
-                      >
-                        <a href="#">Jun 2017 - Apr 2020 - 3 years</a>
-                        <a href="#">
-                          <img
-                            src="https://finestwp.co/demos/html/jobcamp/image/svg/icon-loaction-pin-black.svg"
-                            alt=""
-                            class="inline-block mr-1"
-                          />
-                          Brylin, USA
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Single Card End -->
-                  <!-- Additional Work Experience Cards -->
-                </div>
-                <!-- Education Section Start -->
-                <div class="p-5 border-t">
-                  <h4 class="mt-5 text-lg font-semibold text-black mb-7">
-                    Education
-                  </h4>
-                  <!-- Single Education Card -->
-                  <div class="flex items-center pr-11 mb-9">
-                    <div class="w-16 h-16 mr-8">
-                      <img
-                        src="https://finestwp.co/demos/html/jobcamp/image/svg/harvard.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="w-full">
-                      <h3 class="mb-0">
-                        <a class="text-lg font-semibold text-black" href="#"
-                          >Masters in Art Design</a
-                        >
-                      </h3>
-                      <a href="#" class="text-sm text-gray-500"
-                        >Harvard University</a
-                      >
-                      <div
-                        class="flex items-center justify-between text-sm text-gray-400"
-                      >
-                        <a href="#">Jun 2017 - Apr 2020 - 3 years</a>
-                        <a href="#">
-                          <img
-                            src="https://finestwp.co/demos/html/jobcamp/image/svg/icon-loaction-pin-black.svg"
-                            alt=""
-                            class="inline-block mr-1"
-                          />
-                          Brylin, USA
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Additional Education Cards -->
-                </div>
-                <!-- Card Section End -->
-              </div>
-              <div
-                class="tab-pane fade"
-                id="profile"
-                role="tabpanel"
-                aria-labelledby="profile-tab"
-              >
-                <!-- Excerpt Start -->
-                <div class="p-5">
-                  <form action="/">
-                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                      <div class="mb-5">
-                        <label
-                          for="name3"
-                          class="text-sm font-semibold text-black"
-                          >Your Name</label
-                        >
-                        <input
-                          id="name3"
-                          type="text"
-                          class="w-full p-2 border rounded-md"
-                          placeholder="John Doe"
-                        />
-                      </div>
-                      <div class="mb-5">
-                        <label
-                          for="email3"
-                          class="text-sm font-semibold text-black"
-                          >E-mail</label
-                        >
-                        <input
-                          id="email3"
-                          type="email"
-                          class="w-full p-2 border rounded-md"
-                          placeholder="example@gmail.com"
-                        />
-                      </div>
-                      <!-- Additional form fields here -->
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <component :is="activeTabComponent" />
             </div>
           </div>
         </div>
@@ -390,4 +217,29 @@
 <script setup lang="ts">
 import ProfileSidebar from '@/components/ProfileSidebar.vue'
 import MainHeader from '@/components/organisms/MainHeader.vue'
+import UpdateProfile from '@/components/UpdateProfile.vue'
+import ProfileInfo from '@/components/ProfileInfo.vue'
+import { computed, ref } from 'vue'
+import BaseButton from '@/components/atoms/BaseButton.vue'
+
+const tabs = [
+  {
+    name: 'ProfileInfo',
+    label: 'Men haqimda',
+    component: ProfileInfo,
+  },
+  {
+    name: 'UpdateProfile',
+    label: 'Tahrirlash',
+    component: UpdateProfile,
+  },
+]
+
+const activeTab = ref('ProfileInfo')
+
+const activeTabComponent = computed(() => {
+  return (
+    tabs.find((tab) => tab.name == activeTab.value)?.component || 'ProfileInfo'
+  )
+})
 </script>
