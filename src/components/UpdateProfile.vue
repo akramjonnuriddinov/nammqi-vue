@@ -77,6 +77,15 @@
     </div>
 
     <!-- Work Experience -->
+    <div class="flex items-center justify-between gap-2 font-bold">
+      <span class="block mb-2 text-base font-bold text-black">Ish joylari</span>
+      <button
+        class="flex items-center justify-center p-2 text-white transition-all duration-200 rounded-full bg-primary-blue hover:bg-primary-gray hover:text-primary-blue"
+        type="button"
+      >
+        <PlusIcon class="w-7" />
+      </button>
+    </div>
     <WorkExperience />
     <!-- Education -->
     <EducationField />
@@ -137,7 +146,7 @@
 </template>
 
 <script setup>
-import { XMarkIcon } from '@heroicons/vue/24/solid'
+import { PlusIcon, XMarkIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
 import WorkExperience from './WorkExperience.vue'
 import BaseButton from './atoms/BaseButton.vue'
