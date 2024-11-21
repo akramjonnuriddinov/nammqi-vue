@@ -3,9 +3,9 @@
   <div class="bg-[#f4f5f8] min-h-screen py-10">
     <div class="container">
       <div class="flex gap-4 -mx-4">
-        <ProfileLeftSidebar />
+        <ProfileLeftSidebar v-if="teacher" :teacher="teacher" />
         <div class="order-2 w-full xl:w-2/3 lg:w-3/4 md:w-2/3 xl:order-1">
-          <div class="bg-white rounded-lg shadow-md">
+          <div class="bg-white border rounded-lg">
             <ul class="flex border-b border-gray-300">
               <li
                 v-for="tab in tabs"
@@ -30,7 +30,7 @@
               </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-              <component :is="activeTabComponent" />
+              <component :is="activeTabComponent" :teacher="teacher" />
             </div>
           </div>
         </div>
@@ -41,13 +41,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import ProfileLeftSidebar from '@/components/ProfileLeftSidebar.vue'
 import MainHeader from '@/components/organisms/MainHeader.vue'
 import UpdateProfile from '@/components/UpdateProfile.vue'
 import ProfileInfo from '@/components/ProfileInfo.vue'
 import ProfileRightSidebar from '@/components/ProfileRightSidebar.vue'
+import { Teacher } from '@/types'
+import { getTeacher } from '@/composables/useNews'
 
+const teacher = ref<Teacher | null>(null)
 const tabs = [
   {
     name: 'ProfileInfo',
@@ -67,5 +70,14 @@ const activeTabComponent = computed(() => {
   return (
     tabs.find((tab) => tab.name == activeTab.value)?.component || 'ProfileInfo'
   )
+})
+
+onMounted(async () => {
+  try {
+    teacher.value = await getTeacher()
+    console.log('Teacher data loaded:', teacher.value)
+  } catch (err) {
+    console.error('Error: ', err)
+  }
 })
 </script>

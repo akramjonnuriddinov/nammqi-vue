@@ -45,14 +45,30 @@ export interface Faculty {
   departments: Department[]
 }
 
+export interface WorkExperience {
+  company: string
+  logo?: string
+  role: string
+  duration: string
+  description?: string
+}
+
+export interface TeacherEducation {
+  institution: string
+  logo?: string
+  degree: string
+  duration: string
+  description?: string
+}
+
 export interface Teacher {
   fullname: string
   position: string
   phone_number: string
   email: string
   linkedin: string
-  work_experience: string[]
-  education: string[]
+  work_experience: WorkExperience[]
+  education: TeacherEducation[]
   skills: string[]
   about: string
 }

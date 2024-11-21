@@ -3,7 +3,7 @@
   <div class="w-full xl:w-3/12 lg:w-4/12 md:w-5/12 mb-11 lg:mb-0">
     <div class="lg:pl-5">
       <!-- Top Start -->
-      <div class="bg-white rounded-lg shadow-md">
+      <div class="bg-white border rounded-lg">
         <div class="px-5 text-center border-b border-gray-200 py-11">
           <a class="mb-4" href="#">
             <img
@@ -13,38 +13,21 @@
             />
           </a>
           <h4 class="mb-0">
-            <a class="text-lg font-semibold text-gray-900" href="#"
-              >David Henricks</a
-            >
+            <a class="text-lg font-semibold text-gray-900" href="#">{{
+              teacher.fullname
+            }}</a>
           </h4>
           <p class="mb-8">
-            <a class="text-base text-gray-500" href="#">Product Designer</a>
+            <a class="text-base text-gray-500" href="#">{{
+              teacher.position
+            }}</a>
           </p>
           <div class="flex flex-wrap items-center justify-center space-x-3">
             <a
+              v-for="i in 4"
               class="flex items-center justify-center w-8 h-8 text-gray-400 bg-gray-100 rounded-full hover:bg-green-500 hover:text-white"
               href="#"
               ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              class="flex items-center justify-center w-8 h-8 text-gray-400 bg-gray-100 rounded-full hover:bg-green-500 hover:text-white"
-              href="#"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              class="flex items-center justify-center w-8 h-8 text-gray-400 bg-gray-100 rounded-full hover:bg-green-500 hover:text-white"
-              href="#"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              class="flex items-center justify-center w-8 h-8 text-gray-400 bg-gray-100 rounded-full hover:bg-green-500 hover:text-white"
-              href="#"
-              ><i class="fab fa-dribbble"></i
-            ></a>
-            <a
-              class="flex items-center justify-center w-8 h-8 text-gray-400 bg-gray-100 rounded-full hover:bg-green-500 hover:text-white"
-              href="#"
-              ><i class="fab fa-behance"></i
             ></a>
           </div>
         </div>
@@ -66,7 +49,7 @@
               <a
                 class="text-gray-900 break-words"
                 href="mailto:name_ac@gmail.com"
-                >name_ac@gmail.com</a
+                >{{ teacher.email }}</a
               >
             </h5>
           </div>
@@ -74,8 +57,10 @@
           <div class="mb-7">
             <p class="mb-0 text-base">Phone</p>
             <h5 class="mb-0 text-base font-semibold">
-              <a class="text-gray-900 break-words" href="tel:+999565562"
-                >+999 565 562</a
+              <a
+                class="text-gray-900 break-words"
+                :href="`tel:${teacher.phone_number}`"
+                >{{ teacher.phone_number }}</a
               >
             </h5>
           </div>
@@ -83,7 +68,7 @@
           <div class="mb-7">
             <p class="mb-0 text-base">Website Linked</p>
             <h5 class="mb-0 text-base font-semibold">
-              <a class="break-words" href="#">www.nameac.com</a>
+              <a class="break-words" href="#">{{ teacher.linkedin }}</a>
             </h5>
           </div>
           <!-- Single List -->
@@ -95,4 +80,10 @@
   <!-- Left Sidebar End -->
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Teacher } from '@/types'
+
+defineProps<{
+  teacher: Teacher
+}>()
+</script>

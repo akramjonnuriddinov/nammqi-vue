@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="p-5 mx-auto space-y-6 bg-white">
+  <form @submit.prevent="handleSubmit" class="p-5 mx-auto space-y-6">
     <!-- Full Name -->
     <div>
       <label for="fullname" class="block mb-2 text-base font-bold text-black"
@@ -151,6 +151,8 @@ import { ref } from 'vue'
 import WorkExperience from './WorkExperience.vue'
 import BaseButton from './atoms/BaseButton.vue'
 import EducationField from './EducationField.vue'
+import axios from 'axios'
+import { postTeacher } from '@/composables/useNews'
 
 const teacher = ref({
   fullname: '',
@@ -177,8 +179,9 @@ const removeSkill = (index) => {
   teacher.value.skills.splice(index, 1)
 }
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   console.log('Teacher Info:', teacher.value)
+  await postTeacher(teacher.value)
 }
 </script>
 

@@ -4,35 +4,19 @@
     <div class="px-5">
       <h4 class="mt-5 text-lg font-semibold text-black mb-7">About</h4>
       <p class="mb-8 text-sm text-gray-700">
-        A talented professional with an academic background in IT and proven
-        commercial development experience as C++ developer since 1999. Has a
-        sound knowledge of the software development life cycle. Was involved in
-        more than 140 software development outsourcing projects.
-        <br />
-        <br />
-        Programming Languages: C/C++, .NET C++, Python, Bash, Shell, PERL,
-        Regular expressions, Python, Active-script.
+        {{ teacher?.about }}
       </p>
     </div>
     <!-- Skills -->
     <div class="p-5 border-t">
       <h4 class="mt-5 text-lg font-semibold text-black mb-7">Skills</h4>
       <ul class="flex flex-wrap">
-        <li>
-          <a
+        <li v-for="skill in teacher?.skills">
+          <span
             class="px-3 py-1 mt-2 mb-2 mr-3 text-xs text-gray-700 bg-gray-100 rounded-md"
-            href="#"
-            >Agile</a
+            >{{ skill }}</span
           >
         </li>
-        <li>
-          <a
-            class="px-3 py-1 mt-2 mb-2 mr-3 text-xs text-gray-700 bg-gray-100 rounded-md"
-            href="#"
-            >Wireframing</a
-          >
-        </li>
-        <!-- More skills here -->
       </ul>
     </div>
     <!-- Card Section Start -->
@@ -41,29 +25,31 @@
         Work Experience
       </h4>
       <!-- Single Card -->
-      <div class="flex items-center pr-11 mb-9">
-        <div class="w-16 h-16 mr-8">
-          <img
-            src="https://finestwp.co/demos/html/jobcamp/image/l2/png/featured-job-logo-1.png"
-            alt=""
-          />
+      <div
+        v-for="experience in teacher?.work_experience"
+        class="flex items-center pr-11 mb-9"
+      >
+        <div class="flex w-16 h-16 mr-8">
+          <img :src="experience.logo" alt="" class="object-contain" />
         </div>
         <div class="w-full">
           <h3 class="mb-0">
-            <a class="text-lg font-semibold text-black" href="#"
-              >Masters in Art Design</a
-            >
+            <a class="text-lg font-semibold text-black" href="#">{{
+              experience.company
+            }}</a>
           </h3>
-          <a href="#" class="text-sm text-gray-500">Harvard University</a>
+          <a href="#" class="text-sm text-gray-500">{{
+            experience.description
+          }}</a>
           <div class="flex items-center justify-between text-sm text-gray-400">
-            <a href="#">Jun 2017 - Apr 2020 - 3 years</a>
+            <a href="#">{{ experience.duration }}</a>
             <a href="#">
               <img
                 src="https://finestwp.co/demos/html/jobcamp/image/svg/icon-loaction-pin-black.svg"
                 alt=""
                 class="inline-block mr-1"
               />
-              Brylin, USA
+              {{ experience.role }}
             </a>
           </div>
         </div>
@@ -75,29 +61,31 @@
     <div class="p-5 border-t">
       <h4 class="mt-5 text-lg font-semibold text-black mb-7">Education</h4>
       <!-- Single Education Card -->
-      <div class="flex items-center pr-11 mb-9">
-        <div class="w-16 h-16 mr-8">
-          <img
-            src="https://finestwp.co/demos/html/jobcamp/image/svg/harvard.svg"
-            alt=""
-          />
+      <div
+        v-for="education in teacher?.education"
+        class="flex items-center pr-11 mb-9"
+      >
+        <div class="flex w-16 h-16 mr-8">
+          <img :src="education.logo" alt="" class="object-contain" />
         </div>
         <div class="w-full">
           <h3 class="mb-0">
-            <a class="text-lg font-semibold text-black" href="#"
-              >Masters in Art Design</a
-            >
+            <a class="text-lg font-semibold text-black" href="#">{{
+              education.degree
+            }}</a>
           </h3>
-          <a href="#" class="text-sm text-gray-500">Harvard University</a>
+          <a href="#" class="text-sm text-gray-500">{{
+            education.institution
+          }}</a>
           <div class="flex items-center justify-between text-sm text-gray-400">
-            <a href="#">Jun 2017 - Apr 2020 - 3 years</a>
+            <a href="#">{{ education.duration }}</a>
             <a href="#">
               <img
                 src="https://finestwp.co/demos/html/jobcamp/image/svg/icon-loaction-pin-black.svg"
                 alt=""
                 class="inline-block mr-1"
               />
-              Brylin, USA
+              {{ education.description }}
             </a>
           </div>
         </div>
@@ -107,3 +95,11 @@
     <!-- Card Section End -->
   </div>
 </template>
+
+<script setup lang="ts">
+import { Teacher } from '@/types'
+
+defineProps<{
+  teacher: Teacher
+}>()
+</script>
