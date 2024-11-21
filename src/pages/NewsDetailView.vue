@@ -57,12 +57,16 @@
                     aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus
                 veniam. Voluptates, amet porro!
             </p>
+
+            <div>
+                <NewsDetailSlider/>
+            </div>
         </div>
     </div>
 </section></template>
 
 <script setup lang="ts">
-
+import NewsDetailSlider from "@/components/NewsDetailSlider.vue"
 </script>
 
 <style scoped></style>
