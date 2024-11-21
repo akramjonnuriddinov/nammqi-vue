@@ -1,10 +1,10 @@
 <template>
   <MainHero />
   <EventCarousel />
+  <AppNews />
   <DepartmentList />
   <InteractiveServices />
   <RectoratSection />
-  <AppNews />
   <PhotoGallery />
 </template>
 
