@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "teacher": 
+    {
+      "image": "https://lh3.googleusercontent.com/a/ACg8ocLB2rSq5S9ZP8jzgdADYoJaJYEnT0Kp6DymV7lF977E_A=s96-c",
+      "fullname": "Akramjon Nuriddinov",
+      "position": "Vue.js developer",
+      "phone_number": "+998900506166",
+      "email": "nn.akramjon@gmail.com",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "work_experience": [
+        {
+          "company": "Teamly",
+          "logo": "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png",
+          "role": "Software Engineer",
+          "duration": "Jan 2020 - Dec 2022",
+          "description": "Developed scalable web applications using Vue.js and Node.js."
+        }
+      ],
+      "education": [
+        {
+          "logo": "https://finestwp.co/demos/html/jobcamp/image/svg/harvard.svg",
+          "institution": "University of Example",
+          "degree": "B.Sc. in Computer Science",
+          "duration": "2015 - 2019",
+          "description": "Graduated with honors, focusing on software engineering."
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Vue.js",
+        "Node.js",
+        "TypeScript"
+      ],
+      "about": "A talented professional with an academic background in IT and proven commercial development experience as C++ developer since 1999. Has a sound knowledge of the software development life cycle. Was involved in more than 140 software development outsourcing projects. Programming Languages: C/C++, .NET C++, Python, Bash, Shell, PERL, Regular expressions, Python, Active-script."
+    }
+}
