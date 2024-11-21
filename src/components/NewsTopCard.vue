@@ -22,7 +22,7 @@
         «Поймать» ранее неизвестные бактерии удалось с помощью
         метагеномного анализа.
       </p>
-      <a href="#" class="inline-block mt-4 font-semibold underline text-primary-gray">Подробнее</a>
+      <RouterLink to="news/news-detail" class="inline-block mt-4 font-semibold underline text-primary-gray">Batafsil</RouterLink>
     </div>
   </div>
 </template>
