@@ -1,5 +1,5 @@
 <template>
-  <div
+  <RouterLink to="/news"
     class="overflow-hidden transform bg-white shadow-lg small-card h-[271px]"
     data-aos="fade-left"
   >
@@ -30,12 +30,12 @@
           {{ article.category }}
         </span>
       </div>
-      <RouterLink
-        to="/news"
+      <div
+        
         class="mb-1 text-lg font-bold leading-snug text-primary-blue line-clamp-2"
       >
         {{ article.title }}
-      </RouterLink>
+      </div>
       <p
         class="h-0 transition-all duration-500 opacity-0 text-neutral-gray small-card__text shrink-0 line-clamp-4"
       >
@@ -45,7 +45,7 @@
         бросил курсивных власти злых?
       </p>
     </div>
-  </div>
+  </RouterLink>
 </template>
 
 <script setup lang="ts">

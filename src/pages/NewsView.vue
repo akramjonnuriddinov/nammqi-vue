@@ -14,7 +14,9 @@
             <form class="flex flex-col gap-2">
               <h3 class="text-xl">Yangiliklarni izlash</h3>
               <div class="relative bg-red-500">
-                <input type="text" class="w-full border-primary-blue/30  ps-10 py-2  bg-white placeholder:text-primary-blue" placeholder="Izlash..." name="" id="">
+                <input type="text"
+                  class="w-full border-primary-blue/30  ps-10 py-2  bg-white placeholder:text-primary-blue"
+                  placeholder="Izlash..." name="" id="">
                 <div class="absolute fill-primary-blue top-[50%] left-3 -translate-y-1/2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                     <path
@@ -60,7 +62,7 @@
             <div class="p-4">
               <h3 class=" font-semibold">Rektorga murojat</h3>
               <BaseButton class="font-medium text-xs mt-3 px-1">
-                  <a  target="_blank" href="https://t.me/NamMQI_rectori">Murojat qilish</a>
+                <a target="_blank" href="https://t.me/NamMQI_rectori">Murojat qilish</a>
               </BaseButton>
             </div>
             <img class="aspect-[5/3] object-cover object-top" src="https://my.nammqi.uz/storage/news/sar.jpg" alt="">
@@ -84,7 +86,20 @@
 import NewsTopCardVue from '@/components/NewsTopCard.vue'
 import NewsCard from '@/components/NewsCard.vue'
 import BaseButton from '@/components/atoms/BaseButton.vue'
-import { news } from '@/constants'
+import { ref, onMounted } from 'vue'
+import { Article } from '@/types'
+import { getNews } from '@/composables/useNews'
+
+const news = ref<Article | null>(null);
+
+onMounted(async () => {
+  try {
+    news.value = await getNews()
+    console.log(news.value)
+  } catch (error) {
+
+  }
+})
 </script>
 
 <style>

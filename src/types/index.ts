@@ -25,7 +25,6 @@ export enum EThemes {
 export interface Article {
   id: string
   title: string
-  short_description: string
   description: string
   image: string
   date: string

@@ -20,4 +20,6 @@
 import ThreeDCard from '@/components/ThreeDCard.vue'
 </script>
 
-<style></style>
+<style>
+
+</style>
