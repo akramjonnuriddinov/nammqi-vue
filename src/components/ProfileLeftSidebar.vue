@@ -3,12 +3,12 @@
   <div class="w-full xl:w-3/12 lg:w-4/12 md:w-5/12 mb-11 lg:mb-0">
     <div class="lg:pl-5">
       <!-- Top Start -->
-      <div class="bg-white border rounded-lg">
+      <div v-if="teacher" class="bg-white border rounded-lg">
         <div class="px-5 text-center border-b border-gray-200 py-11">
           <a class="mb-4" href="#">
             <img
               class="mx-auto rounded-full w-14 h-14"
-              src="https://finestwp.co/demos/html/jobcamp/image/l3/png/pro-img.png"
+              :src="teacher.image"
               alt=""
             />
           </a>
@@ -84,6 +84,6 @@
 import { Teacher } from '@/types'
 
 defineProps<{
-  teacher: Teacher
+  teacher: Teacher | null
 }>()
 </script>

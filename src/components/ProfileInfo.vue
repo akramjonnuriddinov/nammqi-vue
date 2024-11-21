@@ -1,17 +1,17 @@
 <template>
-  <div>
+  <div v-if="teacher">
     <!-- Excerpt Start -->
     <div class="px-5">
       <h4 class="mt-5 text-lg font-semibold text-black mb-7">About</h4>
       <p class="mb-8 text-sm text-gray-700">
-        {{ teacher?.about }}
+        {{ teacher.about }}
       </p>
     </div>
     <!-- Skills -->
     <div class="p-5 border-t">
       <h4 class="mt-5 text-lg font-semibold text-black mb-7">Skills</h4>
       <ul class="flex flex-wrap">
-        <li v-for="skill in teacher?.skills">
+        <li v-for="skill in teacher.skills">
           <span
             class="px-3 py-1 mt-2 mb-2 mr-3 text-xs text-gray-700 bg-gray-100 rounded-md"
             >{{ skill }}</span
@@ -26,7 +26,7 @@
       </h4>
       <!-- Single Card -->
       <div
-        v-for="experience in teacher?.work_experience"
+        v-for="experience in teacher.work_experience"
         class="flex items-center pr-11 mb-9"
       >
         <div class="flex w-16 h-16 mr-8">
@@ -55,14 +55,13 @@
         </div>
       </div>
       <!-- Single Card End -->
-      <!-- Additional Work Experience Cards -->
     </div>
     <!-- Education Section Start -->
     <div class="p-5 border-t">
       <h4 class="mt-5 text-lg font-semibold text-black mb-7">Education</h4>
       <!-- Single Education Card -->
       <div
-        v-for="education in teacher?.education"
+        v-for="education in teacher.education"
         class="flex items-center pr-11 mb-9"
       >
         <div class="flex w-16 h-16 mr-8">
@@ -100,6 +99,6 @@
 import { Teacher } from '@/types'
 
 defineProps<{
-  teacher: Teacher
+  teacher: Teacher | null
 }>()
 </script>

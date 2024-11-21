@@ -62,6 +62,7 @@ export interface TeacherEducation {
 }
 
 export interface Teacher {
+  image?: string
   fullname: string
   position: string
   phone_number: string

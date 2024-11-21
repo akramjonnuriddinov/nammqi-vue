@@ -75,7 +75,6 @@ const activeTabComponent = computed(() => {
 onMounted(async () => {
   try {
     teacher.value = await getTeacher()
-    console.log('Teacher data loaded:', teacher.value)
   } catch (err) {
     console.error('Error: ', err)
   }
