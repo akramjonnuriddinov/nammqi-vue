@@ -31,7 +31,7 @@
 
         <!-- Small Articles -->
         <div class="flex flex-col gap-4 judstify-between">
-          <NewsCard v-for="article in articles" :key="article.id" :article="article" />
+          <NewsCard v-for="article in [news[0],news[1]]" :key="article.id" :article="article" />
         </div>
       </div>
 
@@ -72,12 +72,12 @@
 </template>
 
 <script setup lang="ts">
-import { articles } from '@/constants'
 import { getNews } from '@/composables/useNews'
 import { onMounted, ref } from 'vue'
 import NewsCard from './NewsCard.vue';
+import {Article} from '@/types';
 
-const news = ref<any>([])
+const news = ref<Article[] | null>(null)
 const loading = ref(true)
 const error = ref<string | null>(null)
 

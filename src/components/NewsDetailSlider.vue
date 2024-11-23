@@ -34,9 +34,23 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
 import { ref, onMounted, reactive } from 'vue'
-import { news } from '@/constants'
-import BaseButton from '@/components/atoms/BaseButton.vue'
-import { EThemes } from '@/types'
+
+import { getNews } from '@/composables/useNews'
+import {Article} from '@/types';
+
+const news = ref<Article[] | null>(null)
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+onMounted(async () => {
+  try {
+    news.value = await getNews()
+  } catch (err) {
+    error.value = 'Failed to load faculties'
+  } finally {
+    loading.value = false
+  }
+})
 
 const modules = [Navigation, Autoplay]
 
