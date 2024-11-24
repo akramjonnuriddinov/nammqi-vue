@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import ServiceCard from '@/components/ServiceCard.vue'
+import { cards } from '@/constants'
+</script>
+
 <template>
   <section>
     <div class="container py-10">
@@ -18,8 +23,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import ServiceCard from '@/components/ServiceCard.vue'
-import { cards } from '@/constants'
-</script>

@@ -1,3 +1,25 @@
+<script setup>
+import { ref } from 'vue'
+import BaseButton from './atoms/BaseButton.vue'
+
+const teacher = ref({
+  education: [],
+})
+
+const addEducation = () => {
+  teacher.value.education.push({
+    institution: '',
+    degree: '',
+    duration: '',
+    description: '',
+  })
+}
+
+const removeEducation = (index) => {
+  teacher.value.education.splice(index, 1)
+}
+</script>
+
 <template>
   <div>
     <label class="block mb-2 text-base font-bold text-black">Education</label>
@@ -81,28 +103,6 @@
     </BaseButton>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import BaseButton from './atoms/BaseButton.vue'
-
-const teacher = ref({
-  education: [],
-})
-
-const addEducation = () => {
-  teacher.value.education.push({
-    institution: '',
-    degree: '',
-    duration: '',
-    description: '',
-  })
-}
-
-const removeEducation = (index) => {
-  teacher.value.education.splice(index, 1)
-}
-</script>
 
 <style scoped>
 .form-control {

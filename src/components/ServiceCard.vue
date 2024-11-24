@@ -1,3 +1,13 @@
+<script setup lang="ts">
+defineProps<{
+  link: string
+  icon: string
+  hoverIcon: string
+  title: string
+  description: string
+}>()
+</script>
+
 <template>
   <div data-aos="zoom-in" class="interactive-card">
     <a :href="link" class="card-link" target="_blank">
@@ -13,16 +23,6 @@
     </a>
   </div>
 </template>
-
-<script setup lang="ts">
-defineProps<{
-  link: string
-  icon: string
-  hoverIcon: string
-  title: string
-  description: string
-}>()
-</script>
 
 <style scoped>
 .interactive-card {

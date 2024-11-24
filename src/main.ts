@@ -16,7 +16,7 @@ import 'quill/dist/quill.bubble.css'
 const app = createApp(App)
 const pinia = createPinia()
 import AOS from 'aos'
-import 'aos/dist/aos.css' // You can also use <link> for styles
+import 'aos/dist/aos.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
 app.use(pinia)

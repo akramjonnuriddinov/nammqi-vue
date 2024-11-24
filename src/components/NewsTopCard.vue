@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div
     data-aos="fade-right"
@@ -45,5 +47,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>

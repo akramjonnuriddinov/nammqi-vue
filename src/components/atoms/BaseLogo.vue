@@ -1,3 +1,12 @@
+<script setup lang="ts">
+defineProps({
+  classes: {
+    type: String,
+    default: 'text-gray-800',
+  },
+})
+</script>
+
 <template>
   <RouterLink
     to="/"
@@ -17,12 +26,3 @@
     >
   </RouterLink>
 </template>
-
-<script setup lang="ts">
-defineProps({
-  classes: {
-    type: String,
-    default: 'text-gray-800',
-  },
-})
-</script>

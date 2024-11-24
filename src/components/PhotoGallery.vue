@@ -1,3 +1,60 @@
+<script setup lang="ts">
+import { XMarkIcon } from '@heroicons/vue/24/solid'
+import { ref } from 'vue'
+
+interface Image {
+  src: string
+  alt: string
+}
+
+const images = ref<Image[]>([
+  {
+    src: 'https://my.nammqi.uz/storage/qabul-2024/image-2024-07-01-18-24-55.png',
+    alt: 'Event Highlights 1',
+  },
+  {
+    src: 'https://my.nammqi.uz/storage/elon-4.jpg',
+    alt: 'Community Gathering',
+  },
+  {
+    src: 'https://my.nammqi.uz/storage/infograph/banner.png',
+    alt: 'Innovative Projects',
+  },
+  {
+    src: 'https://my.nammqi.uz/storage/ijara-bulimi/2024-iil1-kengas2-masala-at-1x-1-1.jpg',
+    alt: 'Tech Conference',
+  },
+  {
+    src: 'https://my.nammqi.uz/themes/nammqi/images/institute.png',
+    alt: 'Art Exhibition',
+  },
+])
+
+const showModal = ref(false)
+const selectedImage = ref<Image | any>(null)
+
+const openModal = (image: Image) => {
+  selectedImage.value = image
+  showModal.value = true
+}
+
+const closeModal = () => {
+  showModal.value = false
+  selectedImage.value = null
+}
+
+const getFixedSize = (index: number) => {
+  const classes = [
+    'col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-3 row-span-2',
+    'col-span-2 sm:col-span-1 row-span-2',
+    'col-span-2 sm:col-span-1 row-span-2',
+    'col-span-2 row-span-2 sm:col-span-1 sm:row-span-1',
+    'col-span-2 row-span-2 sm:col-span-1 sm:row-span-1',
+  ]
+  return classes[index % classes.length]
+}
+</script>
+
 <template>
   <section class="py-10 bg-blue-50">
     <div class="container mx-auto px-4">
@@ -54,61 +111,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { XMarkIcon } from '@heroicons/vue/24/solid'
-import { ref } from 'vue'
-
-interface Image {
-  src: string
-  alt: string
-}
-
-const images = ref<Image[]>([
-  {
-    src: 'https://my.nammqi.uz/storage/qabul-2024/image-2024-07-01-18-24-55.png',
-    alt: 'Event Highlights 1',
-  },
-  {
-    src: 'https://my.nammqi.uz/storage/elon-4.jpg',
-    alt: 'Community Gathering',
-  },
-  {
-    src: 'https://my.nammqi.uz/storage/infograph/banner.png',
-    alt: 'Innovative Projects',
-  },
-  {
-    src: 'https://my.nammqi.uz/storage/ijara-bulimi/2024-iil1-kengas2-masala-at-1x-1-1.jpg',
-    alt: 'Tech Conference',
-  },
-  {
-    src: 'https://my.nammqi.uz/themes/nammqi/images/institute.png',
-    alt: 'Art Exhibition',
-  },
-])
-
-const showModal = ref(false)
-const selectedImage = ref<Image | any>(null)
-
-const openModal = (image: Image) => {
-  selectedImage.value = image
-  showModal.value = true
-}
-
-const closeModal = () => {
-  showModal.value = false
-  selectedImage.value = null
-}
-
-// Function to assign a specific CSS class to each card based on index
-const getFixedSize = (index: number) => {
-  const classes = [
-    'col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-3 row-span-2',
-    'col-span-2 sm:col-span-1 row-span-2',
-    'col-span-2 sm:col-span-1 row-span-2',
-    'col-span-2 row-span-2 sm:col-span-1 sm:row-span-1',
-    'col-span-2 row-span-2 sm:col-span-1 sm:row-span-1',
-  ]
-  return classes[index % classes.length]
-}
-</script>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import NewsDetailSlider from '@/components/NewsDetailSlider.vue'
+</script>
+
 <template>
   <section class="bg-primary-gray">
     <div class="container py-10 flex flex-col gap-14">
@@ -85,9 +89,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import NewsDetailSlider from '@/components/NewsDetailSlider.vue'
-</script>
-
-<style scoped></style>

@@ -1,3 +1,15 @@
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import { faculties } from '@/constants'
+
+const selectedFacultyIndex = ref(0)
+const selectedFaculty = computed(() => faculties[selectedFacultyIndex.value])
+
+function selectFaculty(index: any) {
+  selectedFacultyIndex.value = index
+}
+</script>
+
 <template>
   <section class="py-10 bg-blue-50">
     <div class="container flex flex-col md:flex-row">
@@ -56,18 +68,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { ref, computed } from 'vue'
-import { faculties } from '@/constants'
-
-const selectedFacultyIndex = ref(0)
-const selectedFaculty = computed(() => faculties[selectedFacultyIndex.value])
-
-function selectFaculty(index: any) {
-  selectedFacultyIndex.value = index
-}
-</script>
 
 <style scoped>
 .truncate-lines {

@@ -1,3 +1,51 @@
+<script setup lang="ts">
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Autoplay } from 'swiper/modules'
+import { ref, onMounted, reactive } from 'vue'
+
+import { getNews } from '@/composables/useNews'
+import { Article } from '@/types'
+
+const news = ref<Article[] | null>(null)
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+onMounted(async () => {
+  try {
+    news.value = await getNews()
+  } catch (err) {
+    error.value = 'Failed to load faculties'
+  } finally {
+    loading.value = false
+  }
+})
+
+const modules = [Navigation, Autoplay]
+
+const prevButton = ref<HTMLElement | null | any>(null)
+const nextButton = ref<HTMLElement | null>(null)
+
+const autoplayConfig: any = {
+  delay: 3000,
+  disableOnInteraction: false,
+}
+
+const navigation = reactive<any>({
+  prevEl: null as HTMLElement | null | any,
+  nextEl: null as HTMLElement | null | any,
+})
+
+onMounted(() => {
+  if (prevButton.value && nextButton.value) {
+    prevButton.value.classList.add('swiper-button-prev')
+    nextButton.value.classList.add('swiper-button-next')
+
+    navigation.prevEl = prevButton.value
+    navigation.nextEl = nextButton.value
+  }
+})
+</script>
+
 <template>
   <section>
     <div class="py-10">
@@ -55,54 +103,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Autoplay } from 'swiper/modules'
-import { ref, onMounted, reactive } from 'vue'
-
-import { getNews } from '@/composables/useNews'
-import { Article } from '@/types'
-
-const news = ref<Article[] | null>(null)
-const loading = ref(true)
-const error = ref<string | null>(null)
-
-onMounted(async () => {
-  try {
-    news.value = await getNews()
-  } catch (err) {
-    error.value = 'Failed to load faculties'
-  } finally {
-    loading.value = false
-  }
-})
-
-const modules = [Navigation, Autoplay]
-
-const prevButton = ref<HTMLElement | null | any>(null)
-const nextButton = ref<HTMLElement | null>(null)
-
-const autoplayConfig: any = {
-  delay: 3000,
-  disableOnInteraction: false,
-}
-
-const navigation = reactive<any>({
-  prevEl: null as HTMLElement | null | any,
-  nextEl: null as HTMLElement | null | any,
-})
-
-onMounted(() => {
-  if (prevButton.value && nextButton.value) {
-    prevButton.value.classList.add('swiper-button-prev')
-    nextButton.value.classList.add('swiper-button-next')
-
-    navigation.prevEl = prevButton.value
-    navigation.nextEl = nextButton.value
-  }
-})
-</script>
 
 <style scoped>
 .swiper-button-prev,

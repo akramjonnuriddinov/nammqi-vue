@@ -1,3 +1,37 @@
+<script setup lang="ts">
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Autoplay } from 'swiper/modules'
+import { ref, onMounted, reactive } from 'vue'
+import { events } from '@/constants'
+import BaseButton from '@/components/atoms/BaseButton.vue'
+import { EThemes } from '@/types'
+
+const modules = [Navigation, Autoplay]
+
+const prevButton = ref<HTMLElement | null | any>(null)
+const nextButton = ref<HTMLElement | null>(null)
+
+const autoplayConfig: any = {
+  delay: 3500,
+  disableOnInteraction: false,
+}
+
+const navigation = reactive<any>({
+  prevEl: null as HTMLElement | null | any,
+  nextEl: null as HTMLElement | null | any,
+})
+
+onMounted(() => {
+  if (prevButton.value && nextButton.value) {
+    prevButton.value.classList.add('swiper-button-prev')
+    nextButton.value.classList.add('swiper-button-next')
+
+    navigation.prevEl = prevButton.value
+    navigation.nextEl = nextButton.value
+  }
+})
+</script>
+
 <template>
   <section>
     <div class="container py-10">
@@ -42,40 +76,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Autoplay } from 'swiper/modules'
-import { ref, onMounted, reactive } from 'vue'
-import { events } from '@/constants'
-import BaseButton from '@/components/atoms/BaseButton.vue'
-import { EThemes } from '@/types'
-
-const modules = [Navigation, Autoplay]
-
-const prevButton = ref<HTMLElement | null | any>(null)
-const nextButton = ref<HTMLElement | null>(null)
-
-const autoplayConfig: any = {
-  delay: 3500,
-  disableOnInteraction: false,
-}
-
-const navigation = reactive<any>({
-  prevEl: null as HTMLElement | null | any,
-  nextEl: null as HTMLElement | null | any,
-})
-
-onMounted(() => {
-  if (prevButton.value && nextButton.value) {
-    prevButton.value.classList.add('swiper-button-prev')
-    nextButton.value.classList.add('swiper-button-next')
-
-    navigation.prevEl = prevButton.value
-    navigation.nextEl = nextButton.value
-  }
-})
-</script>
 
 <style scoped>
 .swiper-button-prev,

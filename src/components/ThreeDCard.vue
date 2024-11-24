@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/solid'
+import BaseButton from '@/components/atoms/BaseButton.vue'
+</script>
+
 <template>
   <div class="flip-card w-full h-[450px]">
     <div class="flip-card-inner relative w-full h-full text-center">
@@ -57,11 +62,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/solid'
-import BaseButton from '@/components/atoms/BaseButton.vue'
-</script>
 
 <style scoped>
 .flip-card {

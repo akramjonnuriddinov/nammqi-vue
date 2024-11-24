@@ -1,3 +1,37 @@
+<script setup>
+import { ref } from 'vue'
+import BaseButton from './atoms/BaseButton.vue'
+
+const teacher = ref({
+  work_experience: [],
+})
+
+const addExperience = () => {
+  teacher.value.work_experience.push({
+    company: '',
+    logo: null,
+    role: '',
+    duration: '',
+    description: '',
+  })
+}
+
+const removeExperience = (index) => {
+  teacher.value.work_experience.splice(index, 1)
+}
+
+const uploadLogo = (event, index) => {
+  const file = event.target.files[0]
+  if (file) {
+    const reader = new FileReader()
+    reader.onload = (e) => {
+      teacher.value.work_experience[index].logo = e.target.result
+    }
+    reader.readAsDataURL(file)
+  }
+}
+</script>
+
 <template>
   <div>
     <label class="block mb-2 text-base font-bold text-black"
@@ -115,40 +149,6 @@
     </BaseButton>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import BaseButton from './atoms/BaseButton.vue'
-
-const teacher = ref({
-  work_experience: [],
-})
-
-const addExperience = () => {
-  teacher.value.work_experience.push({
-    company: '',
-    logo: null,
-    role: '',
-    duration: '',
-    description: '',
-  })
-}
-
-const removeExperience = (index) => {
-  teacher.value.work_experience.splice(index, 1)
-}
-
-const uploadLogo = (event, index) => {
-  const file = event.target.files[0]
-  if (file) {
-    const reader = new FileReader()
-    reader.onload = (e) => {
-      teacher.value.work_experience[index].logo = e.target.result
-    }
-    reader.readAsDataURL(file)
-  }
-}
-</script>
 
 <style scoped>
 .form-control {

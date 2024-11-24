@@ -1,23 +1,3 @@
-<template>
-  <Swiper :loop="true" class="h-[460px] relative">
-    <SwiperSlide v-for="(slide, index) in slides" :key="index">
-      <div
-        class="hero-slide"
-        :style="{ backgroundImage: `url(${slide.image})` }"
-      >
-        <div class="container py-16 text-white">
-          <div class="max-w-[600px] w-full">
-            <h2 class="text-[55px] font-extrabold mb-3 leading-[55px]">
-              {{ slide.title }}
-            </h2>
-            <p class="text-2xl">{{ slide.description }}</p>
-          </div>
-        </div>
-      </div>
-    </SwiperSlide>
-  </Swiper>
-</template>
-
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
@@ -42,6 +22,26 @@ const slides = [
   },
 ]
 </script>
+
+<template>
+  <Swiper :loop="true" class="h-[460px] relative">
+    <SwiperSlide v-for="(slide, index) in slides" :key="index">
+      <div
+        class="hero-slide"
+        :style="{ backgroundImage: `url(${slide.image})` }"
+      >
+        <div class="container py-16 text-white">
+          <div class="max-w-[600px] w-full">
+            <h2 class="text-[55px] font-extrabold mb-3 leading-[55px]">
+              {{ slide.title }}
+            </h2>
+            <p class="text-2xl">{{ slide.description }}</p>
+          </div>
+        </div>
+      </div>
+    </SwiperSlide>
+  </Swiper>
+</template>
 
 <style scoped>
 .hero-slide {

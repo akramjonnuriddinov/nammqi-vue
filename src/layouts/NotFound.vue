@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import BaseButton from '@/components/atoms/BaseButton.vue'
+import { EThemes } from '@/types'
+</script>
+
 <template>
   <section class="bg-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -25,8 +30,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import BaseButton from '@/components/atoms/BaseButton.vue'
-import { EThemes } from '@/types'
-</script>

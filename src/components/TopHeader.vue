@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import {
+  Squares2X2Icon,
+  MagnifyingGlassIcon,
+  LanguageIcon,
+} from '@heroicons/vue/24/outline'
+import { EyeSlashIcon } from '@heroicons/vue/20/solid'
+</script>
+
 <template>
   <div class="py-4 text-white bg-primary-blue">
     <div class="container flex items-center justify-between">
@@ -20,12 +29,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import {
-  Squares2X2Icon,
-  MagnifyingGlassIcon,
-  LanguageIcon,
-} from '@heroicons/vue/24/outline'
-import { EyeSlashIcon } from '@heroicons/vue/20/solid'
-</script>

@@ -2,12 +2,11 @@
 import AppEditor from '@/components/AppEditor.vue'
 import { CloudArrowUpIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
-import { Article } from '@/types'
 import { v4 as uuidv4 } from 'uuid'
 import { postNews } from '@/composables/useNews'
 
 const content = ref()
-const news = ref<Article>({
+const news = ref<any>({
   id: uuidv4(),
   image: '',
   date: '',

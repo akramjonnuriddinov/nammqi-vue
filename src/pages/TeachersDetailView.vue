@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="flex gap-10 container pb-8">
     <div class="h-screen min-w-[400px] flex flex-col px-8">
@@ -113,7 +115,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>

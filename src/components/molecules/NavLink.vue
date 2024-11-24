@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { NavCategory } from '@/types'
+import NavDropdown from '@/components/organisms/NavDropdown.vue'
+
+defineProps<{ category: NavCategory }>()
+</script>
+
 <template>
   <li class="nav__item">
     <router-link :to="category.path" class="nav__item-link whitespace-nowrap">
@@ -7,13 +14,6 @@
     <NavDropdown v-if="category.isInnerLinks" :category="category" />
   </li>
 </template>
-
-<script setup lang="ts">
-import { NavCategory } from '@/types'
-import NavDropdown from '@/components/organisms/NavDropdown.vue'
-
-defineProps<{ category: NavCategory }>()
-</script>
 
 <style scoped>
 .nav__item {

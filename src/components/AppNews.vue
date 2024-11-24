@@ -1,3 +1,24 @@
+<script setup lang="ts">
+import { getNews } from '@/composables/useNews'
+import { onMounted, ref } from 'vue'
+import NewsCard from './NewsCard.vue'
+import { Article } from '@/types'
+
+const news = ref<Article[] | null>(null)
+const loading = ref(true)
+const error = ref<string | null>(null)
+
+onMounted(async () => {
+  try {
+    news.value = await getNews()
+  } catch (err) {
+    error.value = 'Failed to load faculties'
+  } finally {
+    loading.value = false
+  }
+})
+</script>
+
 <template>
   <section class="py-10">
     <div class="container">
@@ -107,24 +128,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { getNews } from '@/composables/useNews'
-import { onMounted, ref } from 'vue'
-import NewsCard from './NewsCard.vue'
-import { Article } from '@/types'
-
-const news = ref<Article[] | null>(null)
-const loading = ref(true)
-const error = ref<string | null>(null)
-
-onMounted(async () => {
-  try {
-    news.value = await getNews()
-  } catch (err) {
-    error.value = 'Failed to load faculties'
-  } finally {
-    loading.value = false
-  }
-})
-</script>

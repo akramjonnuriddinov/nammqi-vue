@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { NavCategory } from '@/types'
+
+defineProps<{ category: NavCategory }>()
+</script>
+
 <template>
   <div class="nav__inner-list">
     <div class="nav__inner-left">
@@ -18,12 +24,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { NavCategory } from '@/types'
-
-defineProps<{ category: NavCategory }>()
-</script>
 
 <style scoped>
 .nav__inner-list {

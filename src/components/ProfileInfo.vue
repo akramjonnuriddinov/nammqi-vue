@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { Teacher } from '@/types'
+
+defineProps<{
+  teacher: Teacher | null
+}>()
+</script>
+
 <template>
   <div v-if="teacher">
     <!-- Excerpt Start -->
@@ -94,11 +102,3 @@
     <!-- Card Section End -->
   </div>
 </template>
-
-<script setup lang="ts">
-import { Teacher } from '@/types'
-
-defineProps<{
-  teacher: Teacher | null
-}>()
-</script>

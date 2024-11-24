@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <!-- Right Sidebar Start -->
   <div

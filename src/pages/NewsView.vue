@@ -1,3 +1,21 @@
+<script setup lang="ts">
+import NewsTopCardVue from '@/components/NewsTopCard.vue'
+import NewsCard from '@/components/NewsCard.vue'
+import BaseButton from '@/components/atoms/BaseButton.vue'
+import { ref, onMounted } from 'vue'
+import { Article } from '@/types'
+import { getNews } from '@/composables/useNews'
+
+const news = ref<Article[] | null>(null)
+
+onMounted(async () => {
+  try {
+    news.value = await getNews()
+    console.log(news.value)
+  } catch (error) {}
+})
+</script>
+
 <template>
   <section>
     <div class="container mt-10">
@@ -124,24 +142,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import NewsTopCardVue from '@/components/NewsTopCard.vue'
-import NewsCard from '@/components/NewsCard.vue'
-import BaseButton from '@/components/atoms/BaseButton.vue'
-import { ref, onMounted } from 'vue'
-import { Article } from '@/types'
-import { getNews } from '@/composables/useNews'
-
-const news = ref<Article[] | null>(null)
-
-onMounted(async () => {
-  try {
-    news.value = await getNews()
-    console.log(news.value)
-  } catch (error) {}
-})
-</script>
 
 <style>
 .telegramBg {

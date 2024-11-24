@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import ThreeDCard from '@/components/ThreeDCard.vue'
+</script>
+
 <template>
   <section class="py-10 bg-blue-50">
     <div class="container">
@@ -15,9 +19,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import ThreeDCard from '@/components/ThreeDCard.vue'
-</script>
-
-<style></style>

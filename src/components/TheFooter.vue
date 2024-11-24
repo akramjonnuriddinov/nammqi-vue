@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <footer
     class="py-10 text-white bg-center bg-cover"
@@ -81,11 +83,3 @@
     </div>
   </footer>
 </template>
-
-<script setup>
-// Import any necessary icons (you might use FontAwesome or any other icon set)
-</script>
-
-<style scoped>
-/* Optional: Add any additional styles if needed */
-</style>

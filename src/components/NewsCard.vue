@@ -1,3 +1,17 @@
+<script setup lang="ts">
+defineProps(['article'])
+const getCategoryColor = (category: any) => {
+  switch (category) {
+    case 'Международное':
+      return 'bg-primary-blue'
+    case 'Образование':
+      return 'bg-green-600'
+    default:
+      return 'bg-gray-600'
+  }
+}
+</script>
+
 <template>
   <RouterLink
     to="/news"
@@ -47,20 +61,6 @@
     </div>
   </RouterLink>
 </template>
-
-<script setup lang="ts">
-const props = defineProps(['article'])
-const getCategoryColor = (category: any) => {
-  switch (category) {
-    case 'Международное':
-      return 'bg-primary-blue'
-    case 'Образование':
-      return 'bg-green-600'
-    default:
-      return 'bg-gray-600'
-  }
-}
-</script>
 
 <style scoped>
 .small-card__img {

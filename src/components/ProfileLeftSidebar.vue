@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { Teacher } from '@/types'
+
+defineProps<{
+  teacher: Teacher | null
+}>()
+</script>
+
 <template>
   <!-- Left Sidebar Start -->
   <div class="w-full xl:w-3/12 lg:w-4/12 md:w-5/12 mb-11 lg:mb-0">
@@ -79,11 +87,3 @@
   </div>
   <!-- Left Sidebar End -->
 </template>
-
-<script setup lang="ts">
-import { Teacher } from '@/types'
-
-defineProps<{
-  teacher: Teacher | null
-}>()
-</script>

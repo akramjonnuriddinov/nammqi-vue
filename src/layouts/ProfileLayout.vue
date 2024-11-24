@@ -1,3 +1,44 @@
+<script setup lang="ts">
+import { computed, onMounted, ref } from 'vue'
+import ProfileLeftSidebar from '@/components/ProfileLeftSidebar.vue'
+import MainHeader from '@/components/organisms/MainHeader.vue'
+import UpdateProfile from '@/components/UpdateProfile.vue'
+import ProfileInfo from '@/components/ProfileInfo.vue'
+import ProfileRightSidebar from '@/components/ProfileRightSidebar.vue'
+import { Teacher } from '@/types'
+import { getTeacher } from '@/composables/useNews'
+
+const teacher = ref<Teacher | null>(null)
+const tabs = [
+  {
+    name: 'ProfileInfo',
+    label: 'Men haqimda',
+    component: ProfileInfo,
+  },
+  {
+    name: 'UpdateProfile',
+    label: 'Tahrirlash',
+    component: UpdateProfile,
+  },
+]
+
+const activeTab = ref('ProfileInfo')
+
+const activeTabComponent = computed(() => {
+  return (
+    tabs.find((tab) => tab.name == activeTab.value)?.component || 'ProfileInfo'
+  )
+})
+
+onMounted(async () => {
+  try {
+    teacher.value = await getTeacher()
+  } catch (err) {
+    console.error('Error: ', err)
+  }
+})
+</script>
+
 <template>
   <MainHeader />
   <div class="bg-[#f4f5f8] min-h-screen py-10">
@@ -39,44 +80,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
-import ProfileLeftSidebar from '@/components/ProfileLeftSidebar.vue'
-import MainHeader from '@/components/organisms/MainHeader.vue'
-import UpdateProfile from '@/components/UpdateProfile.vue'
-import ProfileInfo from '@/components/ProfileInfo.vue'
-import ProfileRightSidebar from '@/components/ProfileRightSidebar.vue'
-import { Teacher } from '@/types'
-import { getTeacher } from '@/composables/useNews'
-
-const teacher = ref<Teacher | null>(null)
-const tabs = [
-  {
-    name: 'ProfileInfo',
-    label: 'Men haqimda',
-    component: ProfileInfo,
-  },
-  {
-    name: 'UpdateProfile',
-    label: 'Tahrirlash',
-    component: UpdateProfile,
-  },
-]
-
-const activeTab = ref('ProfileInfo')
-
-const activeTabComponent = computed(() => {
-  return (
-    tabs.find((tab) => tab.name == activeTab.value)?.component || 'ProfileInfo'
-  )
-})
-
-onMounted(async () => {
-  try {
-    teacher.value = await getTeacher()
-  } catch (err) {
-    console.error('Error: ', err)
-  }
-})
-</script>

@@ -1,3 +1,43 @@
+<script setup>
+import { PlusIcon, XMarkIcon } from '@heroicons/vue/24/solid'
+import { ref } from 'vue'
+import WorkExperience from './WorkExperience.vue'
+import BaseButton from './atoms/BaseButton.vue'
+import EducationField from './EducationField.vue'
+import axios from 'axios'
+import { postTeacher } from '@/composables/useNews'
+
+const teacher = ref({
+  fullname: '',
+  position: '',
+  phone_number: '',
+  email: '',
+  linkedin: '',
+  work_experience: '',
+  education: '',
+  skills: [],
+  about: '',
+})
+
+const newSkill = ref('')
+
+const addSkill = () => {
+  if (newSkill.value.trim() !== '') {
+    teacher.value.skills.push(newSkill.value.trim())
+    newSkill.value = ''
+  }
+}
+
+const removeSkill = (index) => {
+  teacher.value.skills.splice(index, 1)
+}
+
+const handleSubmit = async () => {
+  console.log('Teacher Info:', teacher.value)
+  await postTeacher(teacher.value)
+}
+</script>
+
 <template>
   <form @submit.prevent="handleSubmit" class="p-5 mx-auto space-y-6">
     <!-- Full Name -->
@@ -144,46 +184,6 @@
     </div>
   </form>
 </template>
-
-<script setup>
-import { PlusIcon, XMarkIcon } from '@heroicons/vue/24/solid'
-import { ref } from 'vue'
-import WorkExperience from './WorkExperience.vue'
-import BaseButton from './atoms/BaseButton.vue'
-import EducationField from './EducationField.vue'
-import axios from 'axios'
-import { postTeacher } from '@/composables/useNews'
-
-const teacher = ref({
-  fullname: '',
-  position: '',
-  phone_number: '',
-  email: '',
-  linkedin: '',
-  work_experience: '',
-  education: '',
-  skills: [],
-  about: '',
-})
-
-const newSkill = ref('')
-
-const addSkill = () => {
-  if (newSkill.value.trim() !== '') {
-    teacher.value.skills.push(newSkill.value.trim())
-    newSkill.value = ''
-  }
-}
-
-const removeSkill = (index) => {
-  teacher.value.skills.splice(index, 1)
-}
-
-const handleSubmit = async () => {
-  console.log('Teacher Info:', teacher.value)
-  await postTeacher(teacher.value)
-}
-</script>
 
 <style scoped>
 .form-control {

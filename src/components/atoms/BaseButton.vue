@@ -1,15 +1,3 @@
-<template>
-  <button
-    :disabled="props.disabled || props.isLoading"
-    :class="[
-      'px-4 py-1 font-semibold transition-opacity duration-300 border whitespace-nowrap hover:opacity-80',
-      themeClass,
-    ]"
-  >
-    <slot></slot>
-  </button>
-</template>
-
 <script setup lang="ts">
 import { computed } from 'vue'
 import { EThemes } from '@/types'
@@ -35,3 +23,15 @@ const theme = {
 }
 const themeClass = computed(() => theme[props.theme || EThemes.DEFAULT])
 </script>
+
+<template>
+  <button
+    :disabled="props.disabled || props.isLoading"
+    :class="[
+      'px-4 py-1 font-semibold transition-opacity duration-300 border whitespace-nowrap hover:opacity-80',
+      themeClass,
+    ]"
+  >
+    <slot></slot>
+  </button>
+</template>

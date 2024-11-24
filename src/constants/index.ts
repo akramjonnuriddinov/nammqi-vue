@@ -1,4 +1,4 @@
-import { NavCategory, Article, Faculty } from '@/types'
+import { NavCategory, Faculty } from '@/types'
 
 export const navCategories: NavCategory[] = [
   {
