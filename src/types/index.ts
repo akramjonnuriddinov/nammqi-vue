@@ -23,16 +23,16 @@ export enum EThemes {
 }
 
 export interface Article {
-  id: string;
-  title: string;
-  description: string;
-  image?: string;
-  date: string;
-  category: Category;
-  content: string;
+  id: string
+  title: string
+  description: string
+  image?: string
+  date: string
+  category: Category
+  content: string
   gallery?: GalleryItem[]
-  tags?: string[];
-  author?: string;
+  tags?: string[]
+  author?: string
 }
 
 enum Category {
@@ -43,12 +43,9 @@ enum Category {
 }
 
 type GalleryItem = {
-  image: string;
-  caption?: string;
-};
-
-
-
+  image: string
+  caption?: string
+}
 
 export interface Department {
   name: string

@@ -2,9 +2,9 @@
   <section class="py-10 bg-blue-50">
     <div class="container">
       <h2 class="mb-4 text-4xl font-semibold text-gray-800">Rektorat</h2>
-      <div class="flex justify-center  gap-[30px] mb-[30px]">
+      <div class="flex justify-center gap-[30px] mb-[30px]">
         <div class="md:max-w-[400px] max-w-full w-full">
-          <ThreeDCard ></ThreeDCard>
+          <ThreeDCard></ThreeDCard>
         </div>
       </div>
       <div
@@ -20,6 +20,4 @@
 import ThreeDCard from '@/components/ThreeDCard.vue'
 </script>
 
-<style>
-
-</style>
+<style></style>

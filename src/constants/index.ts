@@ -315,8 +315,6 @@ export const cards = [
   },
 ]
 
-
-
 export const faculties: Faculty[] = [
   {
     name: 'Iqtisodiyot va Boshqaruv fakulteti',

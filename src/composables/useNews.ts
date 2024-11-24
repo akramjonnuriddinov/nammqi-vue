@@ -4,7 +4,6 @@ import httpClient from './useApi'
 export const getNews = async (): Promise<Article[]> => {
   const response = await httpClient.get('/news')
   return response.data
-
 }
 
 export const postNews = async (news: Article) => {

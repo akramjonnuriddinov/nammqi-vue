@@ -24,10 +24,10 @@ const routes: any = [
         component: () => import('@/pages/NewsView.vue'),
       },
       {
-        path:'news/news-detail',
-        name:'news-detail',
+        path: 'news/news-detail',
+        name: 'news-detail',
         component: () => import('@/pages/NewsDetailView.vue'),
-      }
+      },
     ],
   },
   {
@@ -53,9 +53,9 @@ const routes: any = [
       {
         path: '',
         name: 'profile-info',
-        component: () => import('@/pages/ProfileInfoView.vue')
-      }
-    ]
+        component: () => import('@/pages/ProfileInfoView.vue'),
+      },
+    ],
   },
   {
     path: '/:pathMatch(.*)*',

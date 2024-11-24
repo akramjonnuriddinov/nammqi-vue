@@ -1,5 +1,6 @@
 <template>
-  <RouterLink to="/news"
+  <RouterLink
+    to="/news"
     class="overflow-hidden transform bg-white shadow-lg small-card h-[271px]"
     data-aos="fade-left"
   >
@@ -12,17 +13,17 @@
       <div class="flex items-center justify-between mb-2">
         <div class="text-xs text-gray-500 fill-gray-500 flex items-start gap-1">
           <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="15"
-          height="15"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"
-          ></path>
-        </svg>
-          <p> {{ article.date }}</p>
-          </div>
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"
+            ></path>
+          </svg>
+          <p>{{ article.date }}</p>
+        </div>
         <span
           class="px-2 py-1 text-xs font-semibold text-white"
           :class="getCategoryColor(article.category)"
@@ -31,7 +32,6 @@
         </span>
       </div>
       <div
-        
         class="mb-1 text-lg font-bold leading-snug text-primary-blue line-clamp-2"
       >
         {{ article.title }}
