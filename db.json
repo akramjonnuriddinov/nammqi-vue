@@ -51,7 +51,12 @@
         "description": "Graduated with honors, focusing on software engineering."
       }
     ],
-    "skills": ["JavaScript", "Vue.js", "Node.js", "TypeScript"],
+    "skills": [
+      "JavaScript",
+      "Vue.js",
+      "Node.js",
+      "TypeScript"
+    ],
     "about": "A talented professional with an academic background in IT and proven commercial development experience as C++ developer since 1999. Has a sound knowledge of the software development life cycle. Was involved in more than 140 software development outsourcing projects. Programming Languages: C/C++, .NET C++, Python, Bash, Shell, PERL, Regular expressions, Python, Active-script."
   },
   "news": [
@@ -171,6 +176,71 @@
         "https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg",
         "https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg"
       ]
+    },
+    {
+      "id": "273508c5-62f1-42d4-bcdb-ec2659b8b34c",
+      "image": "blob:http://192.168.13.166:5173/ff5fd21f-aacb-417e-a97f-ac5ff0055bc0",
+      "date": "2024-11-25T04:17:38.959Z",
+      "title": "A",
+      "content": "",
+      "description": "B",
+      "category": "Tech",
+      "gallery": [
+        {
+          "caption": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "11567e2d-fabf-4542-9a49-f18255f993ef",
+      "title": "Akramjon",
+      "description": "Hey, It's me",
+      "image": "blob:http://192.168.13.166:5173/a3a235b5-d18e-4532-8934-1112b189d80f",
+      "date": "2024-11-25T04:28:29.477Z",
+      "category": "Tech",
+      "content": "<h2><strong style=\"color: rgb(0, 0, 0);\">В ноябре в ТГУ пройдет студенческий фестиваль «Первый творческий»</strong></h2><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\"><img src=\"https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><br></p>",
+      "gallery": [
+        {
+          "image": "blob:http://192.168.13.166:5173/ebbe02d6-f1c8-42a3-a2aa-846b0b85483b",
+          "caption": "It's Logo"
+        },
+        {
+          "image": "blob:http://192.168.13.166:5173/523a8104-6a3e-4eb3-898c-0500541b6bae",
+          "caption": "it's first code"
+        },
+        {
+          "image": "blob:http://192.168.13.166:5173/e47a5095-dc7d-40ec-84f5-4e788df1f61c",
+          "caption": "it's second code"
+        }
+      ],
+      "tags": "news, tech, nammqi, code",
+      "author": "Admin"
+    },
+    {
+      "id": "2f863385-aebd-49a3-8489-ffed09534a14",
+      "title": "AAAA",
+      "description": "BBBBBB",
+      "image": "blob:http://192.168.13.166:5173/3cde0072-242e-49d8-9916-d46aa1e900cc",
+      "date": "2024-11-25T04:49:35.727Z",
+      "category": "Tech",
+      "content": "<h4><strong style=\"color: rgb(0, 0, 0);\">В ноябре в ТГУ пройдет студенческий фестиваль «Первый творческий»</strong></h4><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\"><img src=\"https://tsue.uz/media/news/photo_2024-10-24_19-11-34.jpg\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga quod a, cumque error recusandae aliquid facilis perspiciatis veniam ducimus. Voluptatum accusantium expedita repudiandae, ducimus minus veniam. Voluptates, amet porro!</span></p><p><br></p><p><br></p>",
+      "gallery": [
+        {
+          "image": "blob:http://192.168.13.166:5173/a64b5828-c44a-4bab-a309-b9f525f770da",
+          "caption": "dsadas"
+        },
+        {
+          "image": "blob:http://192.168.13.166:5173/407ebbd8-ed58-4360-b3d2-d9d00628a10b",
+          "caption": "dasda"
+        },
+        {
+          "image": "blob:http://192.168.13.166:5173/bd2a9384-a7d2-4345-9a7a-d350bdf6b23c",
+          "caption": "ewqeqeq"
+        }
+      ],
+      "tags": "Admin, Akramjon",
+      "author": "Admin"
     }
   ]
 }
