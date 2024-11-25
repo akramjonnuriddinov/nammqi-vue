@@ -56,6 +56,31 @@ const handleGalleryImageUpload = (event: Event) => {
   }
 }
 
+// Handle Drag-and-Drop for Gallery Images
+const handleDragOver = (event: DragEvent) => {
+  event.preventDefault() // Prevent the default action to allow dropping
+}
+
+const handleDrop = (event: DragEvent) => {
+  event.preventDefault()
+  const files = event.dataTransfer?.files
+  if (files) {
+    for (const file of Array.from(files)) {
+      const imageUrl = URL.createObjectURL(file) // Replace with your actual upload logic
+      gallery.value.push({ image: imageUrl, caption: '' })
+    }
+    news.value.gallery = gallery.value
+    console.log('Gallery updated with drag-and-drop:', gallery.value)
+  }
+}
+
+// Remove Image from Gallery
+const removeImage = (index: number) => {
+  gallery.value.splice(index, 1)
+  news.value.gallery = gallery.value
+  console.log('Image removed:', index)
+}
+
 // Validate Form
 const validateForm = () => {
   const { title, description, content, image } = news.value
@@ -143,6 +168,7 @@ const submitNews = async () => {
       />
     </div>
 
+    <!-- Main Image Upload -->
     <div class="mb-6">
       <label class="block mb-2 text-sm font-bold text-primary-black"
         >Main Image</label
@@ -155,17 +181,25 @@ const submitNews = async () => {
       />
     </div>
 
+    <!-- Gallery Images with Drag-and-Drop -->
     <div class="mb-6">
       <label class="block mb-2 text-sm font-bold text-primary-black"
         >Gallery Images</label
       >
-      <input
-        type="file"
-        multiple
-        accept="image/*"
-        @change="handleGalleryImageUpload"
-        class="block w-full text-sm text-gray-500"
-      />
+      <div
+        class="p-4 border-2 border-gray-400 border-dashed rounded-md"
+        @dragover="handleDragOver"
+        @drop="handleDrop"
+      >
+        <p class="text-center text-gray-500">Drag & Drop your images here</p>
+        <input
+          type="file"
+          multiple
+          accept="image/*"
+          @change="handleGalleryImageUpload"
+          class="block w-full mt-4 text-sm text-gray-500"
+        />
+      </div>
       <div class="flex flex-wrap gap-4 mt-4">
         <div v-for="(item, index) in gallery" :key="index" class="relative">
           <img
@@ -173,6 +207,13 @@ const submitNews = async () => {
             alt="Gallery"
             class="object-cover w-24 h-24 rounded-md"
           />
+          <button
+            @click="removeImage(index)"
+            type="button"
+            class="absolute top-0 right-0 flex items-center justify-center w-6 h-6 p-1 text-xs text-white bg-red-500 rounded-full"
+          >
+            X
+          </button>
           <input
             v-model="item.caption"
             placeholder="Caption"
