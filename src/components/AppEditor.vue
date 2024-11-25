@@ -135,7 +135,7 @@ watch(
 </script>
 
 <template>
-  <div class="w-full px-3">
+  <div class="w-full">
     <div class="relative rounded-md quill-editor">
       <slot class="rounded-md" name="toolbar"></slot>
       <div
