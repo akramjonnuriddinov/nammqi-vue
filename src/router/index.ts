@@ -31,6 +31,17 @@ const routes: any = [
     ],
   },
   {
+    path: '/teachers',
+    component: () => import('@/layouts/TeachersLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'teachers',
+        component: () => import('@/pages/TeachersList.vue')
+      }
+    ]
+  },
+  {
     path: '/admin',
     component: () => import('@/layouts/AdminLayout.vue'),
     children: [
