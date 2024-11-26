@@ -3,7 +3,7 @@ import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
-  <div class="container bg-primary-gray py-10">
+  <div class="container  py-10">
     <h1 class="text-4xl font-semibold mb-10">Rektorat</h1>
     <div class="flex gap-10 pb-8">
       <div class="max-w-[470px]  flex flex-col                        ">

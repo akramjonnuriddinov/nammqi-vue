@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import HomeView from '@/pages/HomeView.vue'
+import HomeView from '@/pages/home/HomeView.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
 const routes: any = [
@@ -16,17 +16,17 @@ const routes: any = [
       {
         path: 'teachers-detail',
         name: 'teachers-detail',
-        component: () => import('@/pages/TeachersDetailView.vue'),
+        component: () => import('@/pages/home/TeachersDetailView.vue'),
       },
       {
         path: 'news',
         name: 'news',
-        component: () => import('@/pages/NewsView.vue'),
+        component: () => import('@/pages/home/NewsView.vue'),
       },
       {
         path: 'news/:id',
         name: 'news-detail',
-        component: () => import('@/pages/NewsDetailView.vue'),
+        component: () => import('@/pages/home/NewsDetailView.vue'),
       },
     ],
   },
@@ -37,12 +37,12 @@ const routes: any = [
       {
         path: '',
         name: 'teachers',
-        component: () => import('@/pages/TeachersList.vue')
+        component: () => import('@/pages/home/TeachersList.vue')
       },
       {
         path: '/:id',
         name: 'teacher-detail2',
-        component: () => import('@/pages/TeacherDetail2.vue')
+        component: () => import('@/pages/home/TeacherDetail2.vue')
       }
     ]
   },
@@ -53,12 +53,12 @@ const routes: any = [
       {
         path: 'dashboard',
         name: 'dashboard',
-        component: () => import('@/pages/AdminDashboard.vue'),
+        component: () => import('@/pages/admin/AdminDashboard.vue'),
       },
       {
         path: 'news',
         name: 'admin-news',
-        component: () => import('@/pages/AdminNews.vue'),
+        component: () => import('@/pages/admin/AdminNews.vue'),
       },
     ],
   },
@@ -69,7 +69,7 @@ const routes: any = [
       {
         path: '',
         name: 'profile-info',
-        component: () => import('@/pages/ProfileInfoView.vue'),
+        component: () => import('@/pages/home/ProfileInfoView.vue'),
       },
     ],
   },
