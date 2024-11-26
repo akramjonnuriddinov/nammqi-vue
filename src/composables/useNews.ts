@@ -1,5 +1,5 @@
 import { Article, Teacher } from '@/types'
-import httpClient from './useApi'
+import httpClient from '@/composables/useApi'
 
 export const getNews = async (): Promise<Article[]> => {
   const response = await httpClient.get('/news')

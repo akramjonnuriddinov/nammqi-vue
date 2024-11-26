@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getNews } from '@/composables/useNews'
 import { onMounted, ref } from 'vue'
-import NewsCard from './NewsCard.vue'
+import NewsCard from '@/components/news/NewsCard.vue'
 import { Article } from '@/types'
 
 const news = ref<Article[] | null>(null)

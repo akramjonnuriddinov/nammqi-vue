@@ -20,21 +20,21 @@ onMounted(async () => {
   <section>
     <div class="container mt-10">
       <h1 class="text-4xl font-semibold">Barcha yangiliklar</h1>
-      <div class="grid grid-cols-4 py-10 gap-6 bg-white">
-        <div class="col-span-3 flex flex-col gap-6">
+      <div class="grid grid-cols-4 gap-6 py-10 bg-white">
+        <div class="flex flex-col col-span-3 gap-6">
           <NewsTopCardVue />
           <div class="grid grid-cols-3 gap-6">
             <NewsCard v-for="article in news" :article="article" />
           </div>
         </div>
-        <div class="col-span-1 flex flex-col gap-6">
+        <div class="flex flex-col col-span-1 gap-6">
           <div>
             <form class="flex flex-col gap-2">
               <h3 class="text-xl">Yangiliklarni izlash</h3>
               <div class="relative bg-red-500">
                 <input
                   type="text"
-                  class="w-full border-primary-blue/30 ps-10 py-2 bg-white placeholder:text-primary-blue"
+                  class="w-full py-2 bg-white border-primary-blue/30 ps-10 placeholder:text-primary-blue"
                   placeholder="Izlash..."
                   name=""
                   id=""
@@ -54,7 +54,7 @@ onMounted(async () => {
                   </svg>
                 </div>
               </div>
-              <BaseButton class="w-max ms-auto uppercase text-sm"
+              <BaseButton class="text-sm uppercase w-max ms-auto"
                 >Izlash</BaseButton
               >
             </form>
@@ -62,58 +62,58 @@ onMounted(async () => {
           <div class="flex flex-col gap-2">
             <RouterLink
               to="/"
-              class="flex items-center border-b border-primary-blue/20 py-1 gap-5"
+              class="flex items-center gap-5 py-1 border-b border-primary-blue/20"
             >
-              <img class="w-10" src="../assets/images/education.png" alt="" />
+              <img class="w-10" src="@/assets/images/education.png" alt="" />
               <div class="text-primary-blue">Fakultetlar</div>
             </RouterLink>
             <RouterLink
               to="/"
-              class="flex items-center border-b border-primary-blue/20 py-1 gap-5"
+              class="flex items-center gap-5 py-1 border-b border-primary-blue/20"
             >
-              <img class="w-10" src="../assets/images/office.png" alt="" />
+              <img class="w-10" src="@/assets/images/office.png" alt="" />
               <div class="text-primary-blue">Kafedralar</div>
             </RouterLink>
             <RouterLink
               to="/"
-              class="flex items-center border-b border-primary-blue/20 py-1 gap-5"
+              class="flex items-center gap-5 py-1 border-b border-primary-blue/20"
             >
-              <img class="w-10" src="../assets/images/menu.png" alt="" />
+              <img class="w-10" src="@/assets/images/menu.png" alt="" />
               <div class="text-primary-blue">Bo'limlar</div>
             </RouterLink>
             <RouterLink
               to="/"
-              class="flex items-center border-b border-primary-blue/20 py-1 gap-5"
+              class="flex items-center gap-5 py-1 border-b border-primary-blue/20"
             >
-              <img class="w-10" src="../assets/images/calendar.png" alt="" />
+              <img class="w-10" src="@/assets/images/calendar.png" alt="" />
               <div class="text-primary-blue">Dars jadvali</div>
             </RouterLink>
             <RouterLink
               to="/"
-              class="flex items-center border-b border-primary-blue/20 py-1 gap-5"
+              class="flex items-center gap-5 py-1 border-b border-primary-blue/20"
             >
-              <img class="w-10" src="../assets/images/book.png" alt="" />
+              <img class="w-10" src="@/assets/images/book.png" alt="" />
               <div class="text-primary-blue">Elektron kutubxona</div>
             </RouterLink>
             <RouterLink
               to="/"
-              class="flex items-center border-b border-primary-blue/20 py-1 gap-5"
+              class="flex items-center gap-5 py-1 border-b border-primary-blue/20"
             >
-              <img class="w-10" src="../assets/images/guru.png" alt="" />
+              <img class="w-10" src="@/assets/images/guru.png" alt="" />
               <div class="text-primary-blue">Iqtidorli talabalar</div>
             </RouterLink>
             <RouterLink
               to="/"
-              class="flex items-center border-b border-primary-blue/20 py-1 gap-5"
+              class="flex items-center gap-5 py-1 border-b border-primary-blue/20"
             >
-              <img class="w-10" src="../assets/images/webinar.png" alt="" />
+              <img class="w-10" src="@/assets/images/webinar.png" alt="" />
               <div class="text-primary-blue">Video darslar</div>
             </RouterLink>
           </div>
           <div class="bg-[#f0f0f5]">
             <div class="p-4">
               <h3 class="font-semibold">Rektorga murojat</h3>
-              <BaseButton class="font-medium text-xs mt-3 px-1">
+              <BaseButton class="px-1 mt-3 text-xs font-medium">
                 <a target="_blank" href="https://t.me/NamMQI_rectori"
                   >Murojat qilish</a
                 >
@@ -126,8 +126,8 @@ onMounted(async () => {
             />
             <!--  -->
           </div>
-          <div class="telegramBg text-sm p-3">
-            <h3 class="font-semibold text-white mb-3">
+          <div class="p-3 text-sm telegramBg">
+            <h3 class="mb-3 font-semibold text-white">
               Universitetning Telegram dagi rasmiy kanalini kuzatib boring
             </h3>
             <a
@@ -145,7 +145,7 @@ onMounted(async () => {
 
 <style>
 .telegramBg {
-  background: url('../assets/images/telegramBg.svg');
+  background: url('@/assets/images/telegramBg.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

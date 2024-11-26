@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import BaseButton from '../shared/BaseButton.vue'
+import BaseButton from '@/components/shared/BaseButton.vue'
 
 const teacher = ref({
   work_experience: [],

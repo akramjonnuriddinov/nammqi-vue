@@ -1,10 +1,9 @@
 <script setup>
 import { PlusIcon, XMarkIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
-import WorkExperience from './WorkExperience.vue'
-import BaseButton from '../shared/BaseButton.vue'
-import EducationField from './EducationField.vue'
-import axios from 'axios'
+import WorkExperience from '@/components/profile/WorkExperience.vue'
+import BaseButton from '@/components/shared/BaseButton.vue'
+import EducationField from '@/components/profile/EducationField.vue'
 import { postTeacher } from '@/composables/useNews'
 
 const teacher = ref({
