@@ -58,10 +58,7 @@ const getCategoryColor = (category: any) => {
       <p
         class="h-0 transition-all duration-500 opacity-0 text-neutral-gray small-card__text shrink-0 line-clamp-4"
       >
-        Далеко-далеко за словесными горами в стране гласных и согласных живут
-        рыбные тексты. То своих однажды путь семантика залетают власти жизни
-        буквенных. Буквенных эта пустился обеспечивает использовало наш речью,
-        бросил курсивных власти злых?
+        {{ article.description }}
       </p>
     </div>
   </RouterLink>

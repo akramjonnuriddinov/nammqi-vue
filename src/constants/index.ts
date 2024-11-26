@@ -21,6 +21,7 @@ export const navCategories: NavCategory[] = [
           { title: 'Fakultetlar', href: '#' },
           { title: 'Kafedralar', href: '#' },
           { title: "Bo'limlar", href: '#' },
+          { title: "O'qituvchilar", href: '/teachers' },
         ],
       },
     ],

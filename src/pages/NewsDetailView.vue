@@ -112,7 +112,7 @@ onMounted(async () => {
 
 <style>
 .editor img {
-  @apply w-full max-h-[90vh] object-cover object-center;
+  @apply w-full max-h-[60vh] object-cover object-center;
 }
 
 .editor li {
@@ -126,8 +126,8 @@ onMounted(async () => {
 }
 
 .editor li::before {
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
   position: absolute;
   top: 0.7rem;
   left: 0;
