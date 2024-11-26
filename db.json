@@ -51,12 +51,7 @@
         "description": "Graduated with honors, focusing on software engineering."
       }
     ],
-    "skills": [
-      "JavaScript",
-      "Vue.js",
-      "Node.js",
-      "TypeScript"
-    ],
+    "skills": ["JavaScript", "Vue.js", "Node.js", "TypeScript"],
     "about": "A talented professional with an academic background in IT and proven commercial development experience as C++ developer since 1999. Has a sound knowledge of the software development life cycle. Was involved in more than 140 software development outsourcing projects. Programming Languages: C/C++, .NET C++, Python, Bash, Shell, PERL, Regular expressions, Python, Active-script."
   },
   "news": [

@@ -37,14 +37,14 @@ const routes: any = [
       {
         path: '',
         name: 'teachers',
-        component: () => import('@/pages/default/TeachersList.vue')
+        component: () => import('@/pages/default/TeachersList.vue'),
       },
       {
         path: '/:id',
         name: 'teacher-detail2',
-        component: () => import('@/pages/default/TeacherDetail2.vue')
-      }
-    ]
+        component: () => import('@/pages/default/TeacherDetail2.vue'),
+      },
+    ],
   },
   {
     path: '/admin',
