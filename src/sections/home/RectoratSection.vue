@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ThreeDCard from '@/components/ThreeDCard.vue'
+import ThreeDCard from '@/components/shared/ThreeDCard.vue'
 </script>
 
 <template>

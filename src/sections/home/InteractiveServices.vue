@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ServiceCard from '@/components/ServiceCard.vue'
+import ServiceCard from '@/components/shared/ServiceCard.vue'
 import { cards } from '@/constants'
 </script>
 

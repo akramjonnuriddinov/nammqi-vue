@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppEditor from '@/components/AppEditor.vue'
+import AppEditor from '@/components/shared/AppEditor.vue'
 import { ref } from 'vue'
 import { v4 as uuidv4 } from 'uuid'
 import { postNews } from '@/composables/useNews'

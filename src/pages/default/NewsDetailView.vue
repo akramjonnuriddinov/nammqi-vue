@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NewsDetailSlider from '@/components/NewsDetailSlider.vue'
+import NewsDetailSlider from '@/components/news/NewsDetailSlider.vue'
 import { getNewsById } from '@/composables/useNews'
 import { ref, onMounted } from 'vue'
 import { Article } from '@/types'

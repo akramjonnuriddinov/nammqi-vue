@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
 import { ref, onMounted, reactive } from 'vue'
 import { events } from '@/constants'
-import BaseButton from '@/components/atoms/BaseButton.vue'
+import BaseButton from '@/components/shared/BaseButton.vue'
 import { EThemes } from '@/types'
 
 const modules = [Navigation, Autoplay]
