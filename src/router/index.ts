@@ -38,6 +38,11 @@ const routes: any = [
         path: '',
         name: 'teachers',
         component: () => import('@/pages/TeachersList.vue')
+      },
+      {
+        path: '/:id',
+        name: 'teacher-detail2',
+        component: () => import('@/pages/TeacherDetail2.vue')
       }
     ]
   },
