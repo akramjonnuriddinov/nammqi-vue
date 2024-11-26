@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import NewsTopCardVue from '@/components/NewsTopCard.vue'
-import NewsCard from '@/components/NewsCard.vue'
-import BaseButton from '@/components/atoms/BaseButton.vue'
+import NewsTopCardVue from '@/components/news/NewsTopCard.vue'
+import NewsCard from '@/components/news/NewsCard.vue'
+import BaseButton from '@/components/shared/BaseButton.vue'
 import { ref, onMounted } from 'vue'
 import { Article } from '@/types'
 import { getNews } from '@/composables/useNews'

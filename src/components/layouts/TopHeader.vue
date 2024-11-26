@@ -6,7 +6,7 @@ import {
   LanguageIcon,
 } from '@heroicons/vue/24/outline'
 import { EyeSlashIcon } from '@heroicons/vue/20/solid'
-import AppAccessibility from '@/components/AppAccessibility.vue'
+import AppAccessibility from '@/components/navbar/AppAccessibility.vue'
 
 const accessibility = ref(false)
 </script>

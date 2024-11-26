@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getTeachers } from '@/composables/useTeachers'
 import { ref, computed, onMounted } from 'vue'
-import TeachersSidebar from '@/components/TeachersSidebar.vue'
+import TeachersSidebar from '@/components/layouts/TeachersSidebar.vue'
 
 // Teacher interface
 interface Teacher {

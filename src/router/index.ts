@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import HomeView from '@/pages/home/HomeView.vue'
+import HomeView from '@/pages/default/HomeView.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
 const routes: any = [
@@ -16,17 +16,17 @@ const routes: any = [
       {
         path: 'teachers-detail',
         name: 'teachers-detail',
-        component: () => import('@/pages/home/TeachersDetailView.vue'),
+        component: () => import('@/pages/default/TeachersDetailView.vue'),
       },
       {
         path: 'news',
         name: 'news',
-        component: () => import('@/pages/home/NewsView.vue'),
+        component: () => import('@/pages/default/NewsView.vue'),
       },
       {
         path: 'news/:id',
         name: 'news-detail',
-        component: () => import('@/pages/home/NewsDetailView.vue'),
+        component: () => import('@/pages/default/NewsDetailView.vue'),
       },
     ],
   },
@@ -37,12 +37,12 @@ const routes: any = [
       {
         path: '',
         name: 'teachers',
-        component: () => import('@/pages/home/TeachersList.vue')
+        component: () => import('@/pages/default/TeachersList.vue')
       },
       {
         path: '/:id',
         name: 'teacher-detail2',
-        component: () => import('@/pages/home/TeacherDetail2.vue')
+        component: () => import('@/pages/default/TeacherDetail2.vue')
       }
     ]
   },
@@ -69,7 +69,7 @@ const routes: any = [
       {
         path: '',
         name: 'profile-info',
-        component: () => import('@/pages/home/ProfileInfoView.vue'),
+        component: () => import('@/pages/default/ProfileInfoView.vue'),
       },
     ],
   },

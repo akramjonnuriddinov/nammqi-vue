@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NavCategory } from '@/types'
-import NavDropdown from '@/components/organisms/NavDropdown.vue'
+import NavDropdown from '@/components/navbar/NavDropdown.vue'
 
 defineProps<{ category: NavCategory }>()
 </script>

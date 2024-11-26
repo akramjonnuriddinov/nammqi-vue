@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import ProfileLeftSidebar from '@/components/ProfileLeftSidebar.vue'
-import MainHeader from '@/components/organisms/MainHeader.vue'
-import UpdateProfile from '@/components/UpdateProfile.vue'
-import ProfileInfo from '@/components/ProfileInfo.vue'
-import ProfileRightSidebar from '@/components/ProfileRightSidebar.vue'
+import ProfileLeftSidebar from '@/components/layouts/ProfileLeftSidebar.vue'
+import MainHeader from '@/components/layouts/MainHeader.vue'
+import UpdateProfile from '@/components/profile/UpdateProfile.vue'
+import ProfileInfo from '@/components/profile/ProfileInfo.vue'
+import ProfileRightSidebar from '@/components/layouts/ProfileRightSidebar.vue'
 import { Teacher } from '@/types'
 import { getTeacher } from '@/composables/useNews'
 

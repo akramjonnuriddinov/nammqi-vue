@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BaseLogo from '@/components/atoms/BaseLogo.vue'
-import NavLink from '@/components/molecules/NavLink.vue'
+import BaseLogo from '@/components/shared/BaseLogo.vue'
+import NavLink from '@/components/navbar/NavLink.vue'
 import { navCategories } from '@/constants'
 </script>
 
