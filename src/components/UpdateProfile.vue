@@ -2,7 +2,7 @@
 import { PlusIcon, XMarkIcon } from '@heroicons/vue/24/solid'
 import { ref } from 'vue'
 import WorkExperience from './WorkExperience.vue'
-import BaseButton from './atoms/BaseButton.vue'
+import BaseButton from './BaseButton.vue'
 import EducationField from './EducationField.vue'
 import axios from 'axios'
 import { postTeacher } from '@/composables/useNews'
