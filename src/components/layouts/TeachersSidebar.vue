@@ -18,22 +18,24 @@ const searchQuery = ref('')
 </script>
 
 <template>
-  <aside class="w-64 h-screen p-4 bg-gray-100 border-r border-primary-gray">
+  <aside
+    class="h-screen p-6 border-r border-gray-200 shadow-md w-80 bg-gray-50"
+  >
     <!-- Search -->
-    <div class="mb-6">
-      <h2 class="mb-2 text-lg font-bold">Search</h2>
+    <div class="mb-8">
+      <h2 class="mb-3 text-xl font-semibold text-gray-800">Search</h2>
       <input
         v-model="searchQuery"
         type="text"
         placeholder="Search by name"
-        class="w-full px-4 py-2 border border-primary-gray focus:outline-none focus:ring-2 focus:ring-primary-blue"
+        class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary-blue"
       />
     </div>
 
     <!-- Filters -->
-    <div class="mb-6">
+    <div class="mb-8">
       <h2
-        class="flex items-center justify-between mb-2 text-lg font-bold cursor-pointer"
+        class="flex items-center justify-between mb-3 text-xl font-semibold text-gray-800 cursor-pointer"
         @click="showFilters = !showFilters"
       >
         Filters
@@ -41,14 +43,12 @@ const searchQuery = ref('')
           {{ showFilters ? 'Hide' : 'Show' }}
         </span>
       </h2>
-      <div v-if="showFilters" class="space-y-4">
+      <div v-if="showFilters" class="space-y-5">
         <div>
-          <label class="block mb-1 text-sm font-medium text-gray-700"
-            >Faculty</label
-          >
+          <label class="block text-sm font-medium text-gray-700">Faculty</label>
           <select
             v-model="selectedFaculty"
-            class="w-full px-4 py-2 border border-primary-gray focus:outline-none focus:ring-2 focus:ring-primary-blue"
+            class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary-blue"
           >
             <option value="" disabled selected>-- Select Faculty --</option>
             <option
@@ -64,24 +64,30 @@ const searchQuery = ref('')
     </div>
 
     <!-- Quick Links -->
-    <div class="mb-6">
-      <h2 class="mb-2 text-lg font-bold">Quick Links</h2>
-      <ul class="space-y-2">
+    <div class="mb-8">
+      <h2 class="mb-3 text-xl font-semibold text-gray-800">Quick Links</h2>
+      <ul class="space-y-4">
         <li>
           <a
             href="#"
-            class="block px-4 py-2 text-center text-white transition bg-primary-blue hover:bg-blue-600"
+            class="block px-4 py-3 text-center text-white transition-colors duration-200 rounded bg-primary-blue hover:bg-blue-600"
           >
             Add New Teacher
           </a>
         </li>
         <li>
-          <a href="#" class="block text-primary-blue hover:underline">
+          <a
+            href="#"
+            class="block text-lg font-medium transition-all duration-150 text-primary-blue hover:underline"
+          >
             Top-Rated Teachers
           </a>
         </li>
         <li>
-          <a href="#" class="block text-primary-blue hover:underline">
+          <a
+            href="#"
+            class="block text-lg font-medium transition-all duration-150 text-primary-blue hover:underline"
+          >
             Recently Updated Profiles
           </a>
         </li>
@@ -90,8 +96,8 @@ const searchQuery = ref('')
 
     <!-- Statistics -->
     <div>
-      <h2 class="mb-2 text-lg font-bold">Statistics</h2>
-      <ul class="space-y-2">
+      <h2 class="mb-3 text-xl font-semibold text-gray-800">Statistics</h2>
+      <ul class="space-y-4 text-lg font-medium">
         <li>
           Total Teachers:
           <span class="font-semibold">{{
@@ -105,7 +111,3 @@ const searchQuery = ref('')
     </div>
   </aside>
 </template>
-
-<style scoped>
-/* Add any custom styles here if needed */
-</style>

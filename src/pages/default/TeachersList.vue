@@ -72,14 +72,14 @@ onMounted(fetchTeachers)
 </script>
 
 <template>
-  <div class="flex bg-gray-50">
+  <div class="flex min-h-screen bg-gray-50">
     <!-- Sidebar -->
     <TeachersSidebar
-      class="fixed top-0 left-0 h-full w-[260px] bg-white shadow-lg border-r border-gray-200"
+      class="fixed top-0 left-0 h-full bg-white border-r border-gray-200 shadow-lg"
     />
 
     <!-- Main Content -->
-    <div class="ml-[260px] flex-1">
+    <div class="flex-1 ml-80">
       <!-- Header -->
       <header
         class="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-white border-b shadow-sm"
