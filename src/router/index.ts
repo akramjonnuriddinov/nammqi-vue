@@ -24,7 +24,7 @@ const routes: any = [
         component: () => import('@/pages/NewsView.vue'),
       },
       {
-        path: 'news/news-detail',
+        path: 'news/:id',
         name: 'news-detail',
         component: () => import('@/pages/NewsDetailView.vue'),
       },

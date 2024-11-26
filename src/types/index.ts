@@ -35,14 +35,14 @@ export interface Article {
   author?: string
 }
 
-enum Category {
+export enum Category {
   Tech = 'Tech',
   Health = 'Health',
   Lifestyle = 'Lifestyle',
   Sports = 'Sports',
 }
 
-type GalleryItem = {
+export type GalleryItem = {
   image: string
   caption?: string
 }

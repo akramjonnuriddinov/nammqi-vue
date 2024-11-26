@@ -2,10 +2,13 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
 import { ref, onMounted, reactive } from 'vue'
-
 import { getNews } from '@/composables/useNews'
 import { Article } from '@/types'
+import { GalleryItem } from '@/types'
 
+defineProps<{
+  gallery: GalleryItem[]
+}>()
 const news = ref<Article[] | null>(null)
 const loading = ref(true)
 const error = ref<string | null>(null)
@@ -74,7 +77,7 @@ onMounted(() => {
         :navigation="navigation"
         class="mySwiper"
       >
-        <SwiperSlide v-for="(event, index) in news" :key="index">
+        <SwiperSlide v-for="(event, index) in gallery" :key="index">
           <div
             class="h-[250px] max-[500px]:h-[200px] max-[400px]:h-[150px] sm:h-[300px] lg:h-[500px] xls:h-[700px] flex flex-col"
           >
@@ -84,7 +87,7 @@ onMounted(() => {
               alt=""
             />
             <div
-              class="absolute text-xs sm:text-base flex items-center fill-white gap-1 px-4 py-2 mb-3 font-bold top-10 left-0 bg-primary-blue text-white"
+              class="absolute left-0 flex items-center gap-1 px-4 py-2 mb-3 text-xs font-bold text-white sm:text-base fill-white top-10 bg-primary-blue"
             >
               <svg
                 class="w-3 h-3 sm:w-[18px] sm:h-[18px]"
@@ -95,7 +98,7 @@ onMounted(() => {
                   d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"
                 ></path>
               </svg>
-              <p class="mb-0">{{ event.date }}</p>
+              <p class="mb-0">{{ event.caption }}</p>
             </div>
           </div>
         </SwiperSlide>

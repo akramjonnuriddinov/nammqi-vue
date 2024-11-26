@@ -14,7 +14,12 @@ const getCategoryColor = (category: any) => {
 
 <template>
   <RouterLink
-    to="/news"
+    :to="{
+      name: 'news-detail',
+      params: {
+        id: article.id,
+      },
+    }"
     class="overflow-hidden transform bg-white shadow-lg small-card h-[271px]"
     data-aos="fade-left"
   >
@@ -25,7 +30,7 @@ const getCategoryColor = (category: any) => {
     />
     <div class="block p-4 small-card__content">
       <div class="flex items-center justify-between mb-2">
-        <div class="text-xs text-gray-500 fill-gray-500 flex items-start gap-1">
+        <div class="flex items-start gap-1 text-xs text-gray-500 fill-gray-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
