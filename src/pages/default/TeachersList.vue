@@ -2,15 +2,10 @@
 import { getTeachers } from '@/composables/useTeachers'
 import { ref, computed, onMounted } from 'vue'
 import TeachersSidebar from '@/components/layouts/TeachersSidebar.vue'
-
-// Teacher interface
-interface Teacher {
-  id: number
-  name: string
-}
+import { ITeacher } from '@/types'
 
 // State
-const teachers = ref<Teacher[]>([])
+const teachers = ref<ITeacher[]>([])
 const total = ref(0) // Total number of teachers
 const currentPage = ref(1) // Current page number
 const limit = 20 // Teachers per page
@@ -36,7 +31,7 @@ const filteredTeachers = computed(() => {
     return teachers.value // Return all teachers if there's no search query
   }
   return teachers.value.filter((teacher) =>
-    teacher.name.toLowerCase().includes(search.value.toLowerCase())
+    teacher.fullname.toLowerCase().includes(search.value.toLowerCase())
   )
 })
 
@@ -111,7 +106,7 @@ onMounted(fetchTeachers)
               :to="{ name: 'teacher-detail2', params: { id: teacher.id } }"
               class="block text-lg font-medium text-primary-black hover:opacity-80"
             >
-              {{ teacher.name }}
+              {{ teacher.fullname }}
             </RouterLink>
           </div>
         </div>

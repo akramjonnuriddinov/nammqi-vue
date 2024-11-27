@@ -23,7 +23,7 @@ const handleUpload = (newImageUrl: string) => {
   teacher.value.image = newImageUrl
 }
 
-const handleRemove = (file: File) => {
+const handleRemove = () => {
   uploadedImage.value = null
 }
 
