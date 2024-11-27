@@ -86,3 +86,10 @@ export interface Teacher {
   skills: string[]
   about: string
 }
+
+export interface ITeacher {
+  id: number
+  fullname: string
+  content: string
+  image: File | null | string
+}
