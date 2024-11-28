@@ -25,7 +25,7 @@ onMounted(async () => {
     <div class="flex gap-10 pb-8">
       <div class="max-w-[470px] flex flex-col">
         <img
-          class="sticky object-cover object-top top-10"
+          class="sticky object-cover object-top mb-4 top-10 w-100 img-fluid"
           :src="teacher?.image"
           alt=""
         />
