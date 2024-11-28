@@ -1,204 +1,311 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ChevronRightIcon } from '@heroicons/vue/24/outline'
+import { getTeacherById } from '@/composables/useTeachers'
+import { onMounted, ref } from 'vue'
+import { ITeacher } from '@/types'
+import { useRoute } from 'vue-router'
 
-// Teacher interface
-interface Teacher {
-  id: number
-  name: string
-  email?: string
-  phoneNumber?: string
-  department?: string
-  designation?: string
-  photoUrl?: string
-  subjects?: string[]
-  bio?: string
-  experienceYears?: number
-  qualifications?: string[]
-  isActive?: boolean
-  officeHours?: string
-  courses?: {
-    id: number
-    name: string
-    studentsCount: number
-  }[]
-  socialLinks?: {
-    linkedin?: string
-    twitter?: string
-    personalWebsite?: string
+const route = useRoute()
+
+const teacher = ref<ITeacher | null>(null)
+
+onMounted(async () => {
+  try {
+    teacher.value = await getTeacherById(route.params.id as any)
+    console.log(teacher.value)
+  } catch (err) {
+    console.log(err)
   }
-  hireDate?: string
-}
-
-// Mock teacher data
-const teacher = ref<Teacher>({
-  id: 1,
-  name: 'Dr. Sarah Johnson',
-  email: 'sarah.johnson@university.edu',
-  phoneNumber: '+123 456 7890',
-  department: 'Computer Science',
-  designation: 'Professor',
-  photoUrl: 'https://via.placeholder.com/150',
-  bio: 'Passionate about teaching and research in computer science. Focused on AI and algorithms.',
-  experienceYears: 10,
-  qualifications: ['PhD in Computer Science', 'MSc in Computer Science'],
-  isActive: true,
-  officeHours: 'Mon, Wed, Fri: 2:00 PM - 4:00 PM',
-  courses: [
-    { id: 101, name: 'Introduction to Algorithms', studentsCount: 120 },
-    { id: 102, name: 'Machine Learning Basics', studentsCount: 80 },
-  ],
-  socialLinks: {
-    linkedin: 'https://linkedin.com/in/sarahjohnson',
-    twitter: 'https://twitter.com/sarahjohnson',
-    personalWebsite: 'https://sarahjohnson.com',
-  },
-  hireDate: '2015-08-01',
 })
 </script>
 
 <template>
-  <div v-if="teacher.socialLinks" class="container px-4 py-10 mx-auto lg:px-8">
-    <!-- Header Section -->
-    <div class="flex items-center mb-10">
-      <img
-        :src="teacher.photoUrl"
-        alt="Teacher Profile Picture"
-        class="object-cover w-32 h-32 mr-6 rounded-full shadow-lg"
-      />
-      <div>
-        <h1 class="text-3xl font-bold">{{ teacher.name }}</h1>
-        <p class="text-lg text-gray-600">
-          {{ teacher.designation }} - {{ teacher.department }}
-        </p>
-        <p class="mt-2 text-gray-800">{{ teacher.bio }}</p>
+  {{ teacher }}
+  <div v-if="teacher" class="container py-10">
+    <h1 class="text-4xl font-semibold mb-10">Rektorat</h1>
+    <div class="flex gap-10 pb-8">
+      <div class="max-w-[470px] flex flex-col">
+        <img
+          class="aspect-[5/3] object-cover sticky top-10 object-top"
+          :src="teacher?.image"
+          alt=""
+        />
+      </div>
+      <div class="flex flex-col gap-10">
+        <div class="bg-white border p-16 px-12">
+          <h1 class="text-4xl font-bold text-gray-800">
+            {{ teacher?.fullname }}
+          </h1>
+          <p class="text-primary-blue mt-6">Rektor</p>
+        </div>
+        <div>
+          <div class="bg-white border p-16 flex flex-col gap-6">
+            <h3
+              class="text-xl m-auto font-bold border-b-2 border-primary-blue pb-1 w-max"
+            >
+              Biografiya
+            </h3>
+            <p class="indent-5">
+              1968-yilda tug'ilgan, Yoshlar masalalari va ma'naviy-ma'rifiy
+              ishlar bo'yicha birinchi prorektor, Professor, texnika fanlari
+              doktori.
+            </p>
+            <ul
+              class="list-[square] flex flex-col gap-5 ps-5 marker:text-primary-blue indent-3"
+            >
+              <li>
+                Toshkent to'qimachilik va yengil sanoat instituti Namangan
+                filiali assistenti 1985-1989 yy. - Toshkent to'qimachilik va
+                yengil sanoat instituti paxtani dastlabki ishlash kafedrasi
+                aspiranti (1982-1985 yy.)
+              </li>
+              <li>
+                Namangan muhandislik-iqtisodiyot instituti to'qimachilik
+                mashinalari kafedrasi katta o'qituvchisi, dekan muovini, dotsent
+                (1989-1994 yy.)
+              </li>
+              <li>
+                Namangan muhandislik-iqtisodiyot instituti ma'naviy-ma'rifiy
+                ishlari bo'yicha birinchi prorektori (1994-1997 yy.)
+              </li>
+              <li>
+                Pop tumani hokimligining ijtimoiy masalalari bo'yicha o'rinbosar
+                (1997-1998 yy.)
+              </li>
+              <li>
+                Namangan viloyati o'rta maxsus kasb-hunar ta'limi boshqarmasi
+                boshlig'i (1998-2000 yy.)
+              </li>
+              <li>
+                O'rta maxsus kasb-hunar ta'limi rivojlantirish instituti dekani
+                (2000-2001 yy.)
+              </li>
+              <li>
+                O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik
+                Respublika tashxis markazi direktorining birinchi o'rinbosari
+                (2001-2004 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Halq ta'limi vazirligi kadrlar va
+                pedagog xodimlar malkasini oshirish boshqarmasi boshlig'i
+                o'rinbosari (2004-2005 yy.)
+              </li>
+              <li>
+                O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik
+                Respublika tashxis markazi direktori (2005-2008 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim
+                maktablarida o'quv-tarbiya jarayonini rivojlantirish va tashkil
+                etish bosh boshqarmasi boshlig'i (2008-2009 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Halq ta'limi vazirligi huzuridagi
+                multmedia umumta'lim dasturlarini rivojlantirish markazi
+                direktori (2009-2015 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim
+                maktablarida o'quv-tarbiya jarayonini rivojlantirish bosh
+                boshqarmasi boshlig'i (2015-2016 yy.)
+              </li>
+              <li>
+                O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik
+                Respublika tashxis markazi direktori (2016-2017 yy.)
+              </li>
+              <li>
+                O'rta maxsus kasb-hunar ta'limi muassasalarini axborot-metodik
+                ta'minlash xizmati boshlig'i (2017-2018 yy.)
+              </li>
+              <li>
+                Kasb-hunar ta'limi tizimini innovatsion rivojlantirish, pedagog
+                kadrlarning malakasini oshirish va ularni qayta tayyorlash
+                instituti direktorining kasb-hunar ta'limini innovatsion
+                rivojlantirish bo'yicha o'rinbosari (2018-2019 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Oliy va o'rta maxsus ta'lim vazirligi
+                kasb-hunar ta'limini o'quv -metodik muvofiqlashtirish bosh
+                boshqarmasi boshlig'i (2019-2020 yy.)
+              </li>
+              <li>
+                Namangan muhandislik-qurilish instituti rektori (2020 y. - h.v.)
+              </li>
+            </ul>
+            <div class="grid grid-cols-2 mt-5 justify-between">
+              <div class="text-xl">
+                <span class="text-primary-blue">F.I.O:</span>
+                <span class="ms-2">Ergashev Sharibboy To'lanovich</span>
+              </div>
+              <div class="text-xl">
+                <span class="text-primary-blue">Darajasi:</span>
+                <span class="ms-2"
+                  >Yoshlar masalalari va ma'naviy-ma'rifiy ishlar bo'yicha
+                  birinchi prorektor, Professor, texnika fanlari doktori</span
+                >
+              </div>
+              <div class="text-xl">
+                <span class="text-primary-blue">Telefon:</span>
+                <span class="ms-2">(69)234-15-23</span>
+              </div>
+              <div class="text-xl">
+                <span class="text-primary-blue">Email:</span>
+                <span class="ms-2">nammqi_info@edu.uz</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-primary-blue flex justify-between p-6 border-x border-b group hover:bg-white transition-all duration-300 hover:text-black text-white"
+          >
+            <h1 class="font-semibold">Rektorga murojat</h1>
+            <ChevronRightIcon
+              class="w-5 group-hover:translate-x-3 transition-transform duration-300"
+            ></ChevronRightIcon>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Personal Information Table -->
-    <section class="mb-10">
-      <h2 class="mb-4 text-2xl font-semibold">Personal Information</h2>
-      <table
-        class="w-full bg-white border border-collapse border-gray-300 rounded-lg shadow-md"
-      >
-        <tbody>
-          <tr class="border-b border-gray-300">
-            <th class="px-4 py-2 text-left bg-gray-100">Email</th>
-            <td class="px-4 py-2">{{ teacher.email }}</td>
-          </tr>
-          <tr class="border-b border-gray-300">
-            <th class="px-4 py-2 text-left bg-gray-100">Phone</th>
-            <td class="px-4 py-2">{{ teacher.phoneNumber }}</td>
-          </tr>
-          <tr class="border-b border-gray-300">
-            <th class="px-4 py-2 text-left bg-gray-100">Office Hours</th>
-            <td class="px-4 py-2">{{ teacher.officeHours }}</td>
-          </tr>
-          <tr class="border-b border-gray-300">
-            <th class="px-4 py-2 text-left bg-gray-100">Experience</th>
-            <td class="px-4 py-2">{{ teacher.experienceYears }} years</td>
-          </tr>
-          <tr>
-            <th class="px-4 py-2 text-left bg-gray-100">Hire Date</th>
-            <td class="px-4 py-2">{{ teacher.hireDate }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Qualifications Table -->
-    <section class="mb-10">
-      <h2 class="mb-4 text-2xl font-semibold">Qualifications</h2>
-      <table
-        class="w-full bg-white border border-collapse border-gray-300 rounded-lg shadow-md"
-      >
-        <tbody>
-          <tr
-            v-for="(qualification, index) in teacher.qualifications"
-            :key="index"
-            class="border-b border-gray-300"
+    <div class="flex gap-10 pb-8">
+      <div class="max-w-[470px] flex flex-col">
+        <img
+          class="aspect-[5/3] object-cover sticky top-10 object-top"
+          src="https://my.nammqi.uz/storage/news/sar.jpg"
+          alt=""
+        />
+      </div>
+      <div class="flex flex-col gap-10">
+        <div class="bg-white border p-16 px-12">
+          <h1 class="text-4xl font-bold text-gray-800">
+            Ergashev Sharibboy To'lanovich
+          </h1>
+          <p class="text-primary-blue mt-6">Rektor</p>
+        </div>
+        <div>
+          <div class="bg-white border p-16 flex flex-col gap-6">
+            <h3
+              class="text-xl m-auto font-bold border-b-2 border-primary-blue pb-1 w-max"
+            >
+              Biografiya
+            </h3>
+            <p class="indent-5">
+              1968-yilda tug'ilgan, Yoshlar masalalari va ma'naviy-ma'rifiy
+              ishlar bo'yicha birinchi prorektor, Professor, texnika fanlari
+              doktori.
+            </p>
+            <ul
+              class="list-[square] flex flex-col gap-5 ps-5 marker:text-primary-blue indent-3"
+            >
+              <li>
+                Toshkent to'qimachilik va yengil sanoat instituti Namangan
+                filiali assistenti 1985-1989 yy. - Toshkent to'qimachilik va
+                yengil sanoat instituti paxtani dastlabki ishlash kafedrasi
+                aspiranti (1982-1985 yy.)
+              </li>
+              <li>
+                Namangan muhandislik-iqtisodiyot instituti to'qimachilik
+                mashinalari kafedrasi katta o'qituvchisi, dekan muovini, dotsent
+                (1989-1994 yy.)
+              </li>
+              <li>
+                Namangan muhandislik-iqtisodiyot instituti ma'naviy-ma'rifiy
+                ishlari bo'yicha birinchi prorektori (1994-1997 yy.)
+              </li>
+              <li>
+                Pop tumani hokimligining ijtimoiy masalalari bo'yicha o'rinbosar
+                (1997-1998 yy.)
+              </li>
+              <li>
+                Namangan viloyati o'rta maxsus kasb-hunar ta'limi boshqarmasi
+                boshlig'i (1998-2000 yy.)
+              </li>
+              <li>
+                O'rta maxsus kasb-hunar ta'limi rivojlantirish instituti dekani
+                (2000-2001 yy.)
+              </li>
+              <li>
+                O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik
+                Respublika tashxis markazi direktorining birinchi o'rinbosari
+                (2001-2004 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Halq ta'limi vazirligi kadrlar va
+                pedagog xodimlar malkasini oshirish boshqarmasi boshlig'i
+                o'rinbosari (2004-2005 yy.)
+              </li>
+              <li>
+                O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik
+                Respublika tashxis markazi direktori (2005-2008 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim
+                maktablarida o'quv-tarbiya jarayonini rivojlantirish va tashkil
+                etish bosh boshqarmasi boshlig'i (2008-2009 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Halq ta'limi vazirligi huzuridagi
+                multmedia umumta'lim dasturlarini rivojlantirish markazi
+                direktori (2009-2015 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim
+                maktablarida o'quv-tarbiya jarayonini rivojlantirish bosh
+                boshqarmasi boshlig'i (2015-2016 yy.)
+              </li>
+              <li>
+                O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik
+                Respublika tashxis markazi direktori (2016-2017 yy.)
+              </li>
+              <li>
+                O'rta maxsus kasb-hunar ta'limi muassasalarini axborot-metodik
+                ta'minlash xizmati boshlig'i (2017-2018 yy.)
+              </li>
+              <li>
+                Kasb-hunar ta'limi tizimini innovatsion rivojlantirish, pedagog
+                kadrlarning malakasini oshirish va ularni qayta tayyorlash
+                instituti direktorining kasb-hunar ta'limini innovatsion
+                rivojlantirish bo'yicha o'rinbosari (2018-2019 yy.)
+              </li>
+              <li>
+                O'zbekiston Respublikasi Oliy va o'rta maxsus ta'lim vazirligi
+                kasb-hunar ta'limini o'quv -metodik muvofiqlashtirish bosh
+                boshqarmasi boshlig'i (2019-2020 yy.)
+              </li>
+              <li>
+                Namangan muhandislik-qurilish instituti rektori (2020 y. - h.v.)
+              </li>
+            </ul>
+            <div class="grid grid-cols-2 mt-5 justify-between">
+              <div class="text-xl">
+                <span class="text-primary-blue">F.I.O:</span>
+                <span class="ms-2">Ergashev Sharibboy To'lanovich</span>
+              </div>
+              <div class="text-xl">
+                <span class="text-primary-blue">Darajasi:</span>
+                <span class="ms-2"
+                  >Yoshlar masalalari va ma'naviy-ma'rifiy ishlar bo'yicha
+                  birinchi prorektor, Professor, texnika fanlari doktori</span
+                >
+              </div>
+              <div class="text-xl">
+                <span class="text-primary-blue">Telefon:</span>
+                <span class="ms-2">(69)234-15-23</span>
+              </div>
+              <div class="text-xl">
+                <span class="text-primary-blue">Email:</span>
+                <span class="ms-2">nammqi_info@edu.uz</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-primary-blue flex justify-between p-6 border-x border-b group hover:bg-white transition-all duration-300 hover:text-black text-white"
           >
-            <td class="px-4 py-2">{{ qualification }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Courses Table -->
-    <section class="mb-10">
-      <h2 class="mb-4 text-2xl font-semibold">Courses</h2>
-      <table
-        class="w-full bg-white border border-collapse border-gray-300 rounded-lg shadow-md"
-      >
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="px-4 py-2 text-left">Course Name</th>
-            <th class="px-4 py-2 text-right">Students Enrolled</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            v-for="course in teacher.courses"
-            :key="course.id"
-            class="border-b border-gray-300"
-          >
-            <td class="px-4 py-2">{{ course.name }}</td>
-            <td class="px-4 py-2 text-right">{{ course.studentsCount }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Social Links Table -->
-    <section>
-      <h2 class="mb-4 text-2xl font-semibold">Social Links</h2>
-      <table
-        class="w-full bg-white border border-collapse border-gray-300 rounded-lg shadow-md"
-      >
-        <tbody>
-          <tr
-            v-if="teacher.socialLinks.linkedin"
-            class="border-b border-gray-300"
-          >
-            <th class="px-4 py-2 text-left bg-gray-100">LinkedIn</th>
-            <td class="px-4 py-2">
-              <a
-                :href="teacher.socialLinks.linkedin"
-                target="_blank"
-                class="text-blue-600 hover:underline"
-              >
-                View Profile
-              </a>
-            </td>
-          </tr>
-          <tr
-            v-if="teacher.socialLinks.twitter"
-            class="border-b border-gray-300"
-          >
-            <th class="px-4 py-2 text-left bg-gray-100">Twitter</th>
-            <td class="px-4 py-2">
-              <a
-                :href="teacher.socialLinks.twitter"
-                target="_blank"
-                class="text-blue-400 hover:underline"
-              >
-                View Profile
-              </a>
-            </td>
-          </tr>
-          <tr v-if="teacher.socialLinks.personalWebsite">
-            <th class="px-4 py-2 text-left bg-gray-100">Personal Website</th>
-            <td class="px-4 py-2">
-              <a
-                :href="teacher.socialLinks.personalWebsite"
-                target="_blank"
-                class="text-blue-800 hover:underline"
-              >
-                Visit Website
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+            <h1 class="font-semibold">Rektorga murojat</h1>
+            <ChevronRightIcon
+              class="w-5 group-hover:translate-x-3 transition-transform duration-300"
+            ></ChevronRightIcon>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>

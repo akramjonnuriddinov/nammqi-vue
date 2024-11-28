@@ -24,3 +24,8 @@ export const postTeacher = async (teacher: ITeacher): Promise<any> => {
   const response = await httpClient.post('/teachers', teacher)
   return response.data
 }
+
+export const getTeacherById = async (id: number): Promise<ITeacher> => {
+  const response = await httpClient.get(`/teachers/${id}`)
+  return response.data
+}
