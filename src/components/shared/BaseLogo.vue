@@ -20,7 +20,7 @@ defineProps({
       height="60"
       alt="Logo"
     />
-    <span class="whitespace-nowrap"
+    <span class="text-xl font-bold whitespace-nowrap"
       >Namangan Muhandislik <br />
       Qurilish Instituti</span
     >

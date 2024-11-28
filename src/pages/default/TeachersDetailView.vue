@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ChevronRightIcon } from "@heroicons/vue/24/outline";
+import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 
 const rectorData = {
   name: "Ergashev Sharibboy To'lanovich",
-  position: "Rektor",
+  position: 'Rektor',
   biography:
     "1968-yilda tug'ilgan, Yoshlar masalalari va ma'naviy-ma'rifiy ishlar bo'yicha birinchi prorektor, Professor, texnika fanlari doktori.",
   roles: [
@@ -15,13 +15,13 @@ const rectorData = {
     "Namangan viloyati o'rta maxsus kasb-hunar ta'limi boshqarmasi boshlig'i (1998-2000 yy.)",
     "O'rta maxsus kasb-hunar ta'limi rivojlantirish instituti dekani (2000-2001 yy.)",
     "O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktorining birinchi o'rinbosari (2001-2004 yy.)",
-    "Namangan muhandislik-qurilish instituti rektori (2020 y. - h.v.)",
+    'Namangan muhandislik-qurilish instituti rektori (2020 y. - h.v.)',
   ],
   contact: {
-    phone: "(69)234-15-23",
-    email: "nammqi_info@edu.uz",
+    phone: '(69)234-15-23',
+    email: 'nammqi_info@edu.uz',
   },
-};
+}
 </script>
 
 <template>
@@ -40,7 +40,9 @@ const rectorData = {
       <div class="flex flex-col gap-10">
         <!-- Name and Position -->
         <div class="bg-white border p-16 px-12">
-          <h1 class="text-4xl font-bold text-gray-800">{{ rectorData.name }}</h1>
+          <h1 class="text-4xl font-bold text-gray-800">
+            {{ rectorData.name }}
+          </h1>
           <p class="text-primary-blue mt-6">{{ rectorData.position }}</p>
         </div>
         <!-- Biography -->
