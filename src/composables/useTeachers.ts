@@ -1,4 +1,5 @@
 import httpClient from '@/composables/useApi'
+import { ITeacher } from '@/types'
 
 export const getTeachers = async (
   page: number,
@@ -17,4 +18,14 @@ export const getTeachers = async (
     console.error('Failed to fetch teachers:', error)
     throw error
   }
+}
+
+export const postTeacher = async (teacher: ITeacher): Promise<any> => {
+  const response = await httpClient.post('/teachers', teacher)
+  return response.data
+}
+
+export const getTeacherById = async (id: number): Promise<ITeacher> => {
+  const response = await httpClient.get(`/teachers/${id}`)
+  return response.data
 }

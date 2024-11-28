@@ -86,3 +86,14 @@ export interface Teacher {
   skills: string[]
   about: string
 }
+
+export interface ITeacher {
+  id: string
+  fullname: string
+  content: string
+  image: string | undefined
+  position: string
+  phone_number: string
+  academic_title: string
+  email: string
+}

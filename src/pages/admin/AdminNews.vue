@@ -6,7 +6,7 @@ import { postNews } from '@/composables/useNews'
 import { Article, Category, GalleryItem } from '@/types'
 
 const news = ref<Article>({
-  id: uuidv4(),
+  id: '',
   title: '',
   description: '',
   image: '',
@@ -19,36 +19,32 @@ const news = ref<Article>({
 })
 
 const content = ref<string>('') // Editor content
-const gallery = ref<GalleryItem[]>([]) // Image gallery
+const gallery = ref<GalleryItem[]>([])
 
-// Define available categories
 const categories = ref<Category[]>([
   Category.Tech,
   Category.Sports,
   Category.Health,
 ])
 
-// Handle Editor Content
 const updateContent = (htmlContent: string) => {
   news.value.content = htmlContent
 }
 
-// Handle Image Upload for Main Image
 const handleMainImageUpload = (event: Event) => {
   const file = (event.target as HTMLInputElement).files?.[0]
   if (file) {
-    const imageUrl = URL.createObjectURL(file) // Replace with your actual upload logic
+    const imageUrl = URL.createObjectURL(file)
     news.value.image = imageUrl
     console.log('Main image uploaded:', imageUrl)
   }
 }
 
-// Handle Gallery Image Upload
 const handleGalleryImageUpload = (event: Event) => {
   const files = (event.target as HTMLInputElement).files
   if (files) {
     for (const file of Array.from(files)) {
-      const imageUrl = URL.createObjectURL(file) // Replace with your actual upload logic
+      const imageUrl = URL.createObjectURL(file)
       gallery.value.push({ image: imageUrl, caption: '' })
     }
     news.value.gallery = gallery.value
@@ -56,9 +52,8 @@ const handleGalleryImageUpload = (event: Event) => {
   }
 }
 
-// Handle Drag-and-Drop for Gallery Images
 const handleDragOver = (event: DragEvent) => {
-  event.preventDefault() // Prevent the default action to allow dropping
+  event.preventDefault()
 }
 
 const handleDrop = (event: DragEvent) => {
@@ -74,14 +69,12 @@ const handleDrop = (event: DragEvent) => {
   }
 }
 
-// Remove Image from Gallery
 const removeImage = (index: number) => {
   gallery.value.splice(index, 1)
   news.value.gallery = gallery.value
   console.log('Image removed:', index)
 }
 
-// Validate Form
 const validateForm = () => {
   const { title, description, content, image } = news.value
   if (!title || !description || !content || !image) {
@@ -91,15 +84,14 @@ const validateForm = () => {
   return true
 }
 
-// Submit News
 const submitNews = async () => {
   if (!validateForm()) return
 
-  // Set the current date if not already set
   news.value.date = new Date().toISOString()
 
   try {
     console.log('Submitting news:', news.value)
+    news.value.id = uuidv4()
     await postNews(news.value)
     alert('News submitted successfully!')
   } catch (error) {

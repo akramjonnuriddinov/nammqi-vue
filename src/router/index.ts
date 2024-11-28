@@ -60,6 +60,11 @@ const routes: any = [
         name: 'admin-news',
         component: () => import('@/pages/admin/AdminNews.vue'),
       },
+      {
+        path: 'teachers',
+        name: 'admin-teachers',
+        component: () => import('@/pages/admin/AdminTeachers.vue'),
+      },
     ],
   },
   {

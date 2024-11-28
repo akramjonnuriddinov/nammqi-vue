@@ -17,11 +17,11 @@ export const getNewsById = async (id: string): Promise<Article> => {
 }
 
 export const postTeacher = async (teacher: any) => {
-  const response = await httpClient.post('/teacher', teacher)
+  const response = await httpClient.post('/teachers', teacher)
   return response
 }
 
 export const getTeacher = async (): Promise<Teacher> => {
-  const response = await httpClient.get('/teacher')
+  const response = await httpClient.get('/teachers')
   return response.data
 }

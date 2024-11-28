@@ -51,7 +51,12 @@
         "description": "Graduated with honors, focusing on software engineering."
       }
     ],
-    "skills": ["JavaScript", "Vue.js", "Node.js", "TypeScript"],
+    "skills": [
+      "JavaScript",
+      "Vue.js",
+      "Node.js",
+      "TypeScript"
+    ],
     "about": "A talented professional with an academic background in IT and proven commercial development experience as C++ developer since 1999. Has a sound knowledge of the software development life cycle. Was involved in more than 140 software development outsourcing projects. Programming Languages: C/C++, .NET C++, Python, Bash, Shell, PERL, Regular expressions, Python, Active-script."
   },
   "news": [
@@ -207,164 +212,44 @@
   ],
   "teachers": [
     {
-      "id": 0,
-      "name": "Зеар Аунг"
+      "id": "733ed19f-4972-4a8e-a2a2-423783aa2099",
+      "fullname": "Nuriddinov Akramjon",
+      "content": "<p>\t<span style=\"color: rgb(0, 0, 0);\">1968-yilda tug'ilgan, Yoshlar masalalari va ma'naviy-ma'rifiy ishlar bo'yicha birinchi prorektor, Professor, texnika fanlari doktori.</span></p><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>\t<span style=\"color: rgb(0, 0, 0);\">Toshkent to'qimachilik va yengil sanoat instituti Namangan filiali assistenti 1985-1989 yy. - Toshkent to'qimachilik va yengil sanoat instituti paxtani dastlabki ishlash kafedrasi aspiranti (1982-1985 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-iqtisodiyot instituti to'qimachilik mashinalari kafedrasi katta o'qituvchisi, dekan muovini, dotsent (1989-1994 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-iqtisodiyot instituti ma'naviy-ma'rifiy ishlari bo'yicha birinchi prorektori (1994-1997 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Pop tumani hokimligining ijtimoiy masalalari bo'yicha o'rinbosar (1997-1998 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan viloyati o'rta maxsus kasb-hunar ta'limi boshqarmasi boshlig'i (1998-2000 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'rta maxsus kasb-hunar ta'limi rivojlantirish instituti dekani (2000-2001 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktorining birinchi o'rinbosari (2001-2004 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi kadrlar va pedagog xodimlar malkasini oshirish boshqarmasi boshlig'i o'rinbosari (2004-2005 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktori (2005-2008 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim maktablarida o'quv-tarbiya jarayonini rivojlantirish va tashkil etish bosh boshqarmasi boshlig'i (2008-2009 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi huzuridagi multmedia umumta'lim dasturlarini rivojlantirish markazi direktori (2009-2015 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim maktablarida o'quv-tarbiya jarayonini rivojlantirish bosh boshqarmasi boshlig'i (2015-2016 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktori (2016-2017 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'rta maxsus kasb-hunar ta'limi muassasalarini axborot-metodik ta'minlash xizmati boshlig'i (2017-2018 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Kasb-hunar ta'limi tizimini innovatsion rivojlantirish, pedagog kadrlarning malakasini oshirish va ularni qayta tayyorlash instituti direktorining kasb-hunar ta'limini innovatsion rivojlantirish bo'yicha o'rinbosari (2018-2019 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Oliy va o'rta maxsus ta'lim vazirligi kasb-hunar ta'limini o'quv -metodik muvofiqlashtirish bosh boshqarmasi boshlig'i (2019-2020 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-qurilish instituti rektori (2020 y. - h.v.)</span></li></ol><p><br></p>",
+      "image": "blob:http://localhost:5173/845768ca-ced4-48cd-9abf-eb446b902267",
+      "position": "Tarmoq adminstratori",
+      "phone_number": "+998900506166",
+      "academic_title": "Yo'q",
+      "email": "nn.akramjon@gmail.com"
     },
     {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
+      "id": "d6d2b541-796c-466b-b115-eb72a7fcb263",
+      "fullname": "Avazbekov Asadbek",
+      "content": "<p>\t<span style=\"color: rgb(0, 0, 0);\">1968-yilda tug'ilgan, Yoshlar masalalari va ma'naviy-ma'rifiy ishlar bo'yicha birinchi prorektor, Professor, texnika fanlari doktori.</span></p><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>\t<span style=\"color: rgb(0, 0, 0);\">Toshkent to'qimachilik va yengil sanoat instituti Namangan filiali assistenti 1985-1989 yy. - Toshkent to'qimachilik va yengil sanoat instituti paxtani dastlabki ishlash kafedrasi aspiranti (1982-1985 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-iqtisodiyot instituti to'qimachilik mashinalari kafedrasi katta o'qituvchisi, dekan muovini, dotsent (1989-1994 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-iqtisodiyot instituti ma'naviy-ma'rifiy ishlari bo'yicha birinchi prorektori (1994-1997 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Pop tumani hokimligining ijtimoiy masalalari bo'yicha o'rinbosar (1997-1998 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan viloyati o'rta maxsus kasb-hunar ta'limi boshqarmasi boshlig'i (1998-2000 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'rta maxsus kasb-hunar ta'limi rivojlantirish instituti dekani (2000-2001 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktorining birinchi o'rinbosari (2001-2004 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi kadrlar va pedagog xodimlar malkasini oshirish boshqarmasi boshlig'i o'rinbosari (2004-2005 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktori (2005-2008 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim maktablarida o'quv-tarbiya jarayonini rivojlantirish va tashkil etish bosh boshqarmasi boshlig'i (2008-2009 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi huzuridagi multmedia umumta'lim dasturlarini rivojlantirish markazi direktori (2009-2015 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim maktablarida o'quv-tarbiya jarayonini rivojlantirish bosh boshqarmasi boshlig'i (2015-2016 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktori (2016-2017 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'rta maxsus kasb-hunar ta'limi muassasalarini axborot-metodik ta'minlash xizmati boshlig'i (2017-2018 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Kasb-hunar ta'limi tizimini innovatsion rivojlantirish, pedagog kadrlarning malakasini oshirish va ularni qayta tayyorlash instituti direktorining kasb-hunar ta'limini innovatsion rivojlantirish bo'yicha o'rinbosari (2018-2019 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Oliy va o'rta maxsus ta'lim vazirligi kasb-hunar ta'limini o'quv -metodik muvofiqlashtirish bosh boshqarmasi boshlig'i (2019-2020 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-qurilish instituti rektori (2020 y. - h.v.)</span></li></ol><p><br></p>",
+      "image": "blob:http://localhost:5173/e4e3af3a-8f4d-461d-8c3f-5ea0ee0cf43a",
+      "position": "Tarmoq adminstratori",
+      "phone_number": "+998909999999",
+      "academic_title": "Yo'q",
+      "email": "nn.asadbek@gmail.com"
     },
     {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
+      "id": "1878d41f-efba-4d17-9ce4-dc6af0148b0f",
+      "fullname": "Axrorbek",
+      "content": "<p>\t<span style=\"color: rgb(0, 0, 0);\">1968-yilda tug'ilgan, Yoshlar masalalari va ma'naviy-ma'rifiy ishlar bo'yicha birinchi prorektor, Professor, texnika fanlari doktori.</span></p><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>\t<span style=\"color: rgb(0, 0, 0);\">Toshkent to'qimachilik va yengil sanoat instituti Namangan filiali assistenti 1985-1989 yy. - Toshkent to'qimachilik va yengil sanoat instituti paxtani dastlabki ishlash kafedrasi aspiranti (1982-1985 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-iqtisodiyot instituti to'qimachilik mashinalari kafedrasi katta o'qituvchisi, dekan muovini, dotsent (1989-1994 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-iqtisodiyot instituti ma'naviy-ma'rifiy ishlari bo'yicha birinchi prorektori (1994-1997 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Pop tumani hokimligining ijtimoiy masalalari bo'yicha o'rinbosar (1997-1998 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan viloyati o'rta maxsus kasb-hunar ta'limi boshqarmasi boshlig'i (1998-2000 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'rta maxsus kasb-hunar ta'limi rivojlantirish instituti dekani (2000-2001 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktorining birinchi o'rinbosari (2001-2004 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi kadrlar va pedagog xodimlar malkasini oshirish boshqarmasi boshlig'i o'rinbosari (2004-2005 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktori (2005-2008 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim maktablarida o'quv-tarbiya jarayonini rivojlantirish va tashkil etish bosh boshqarmasi boshlig'i (2008-2009 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi huzuridagi multmedia umumta'lim dasturlarini rivojlantirish markazi direktori (2009-2015 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim maktablarida o'quv-tarbiya jarayonini rivojlantirish bosh boshqarmasi boshlig'i (2015-2016 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktori (2016-2017 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'rta maxsus kasb-hunar ta'limi muassasalarini axborot-metodik ta'minlash xizmati boshlig'i (2017-2018 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Kasb-hunar ta'limi tizimini innovatsion rivojlantirish, pedagog kadrlarning malakasini oshirish va ularni qayta tayyorlash instituti direktorining kasb-hunar ta'limini innovatsion rivojlantirish bo'yicha o'rinbosari (2018-2019 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Oliy va o'rta maxsus ta'lim vazirligi kasb-hunar ta'limini o'quv -metodik muvofiqlashtirish bosh boshqarmasi boshlig'i (2019-2020 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-qurilish instituti rektori (2020 y. - h.v.)</span></li></ol><p><br></p>",
+      "image": "blob:http://localhost:5173/e3e44a01-0478-4ff6-a38a-3a50252bf182",
+      "position": "Tarmoq adminstratori",
+      "phone_number": "+998907891234",
+      "academic_title": "Yo'q",
+      "email": "nn.axorbek@gmail.com"
     },
     {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич"
-    },
-    {
-      "id": 0,
-      "name": "Зеар Аунг"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Виктория Александровна"
-    },
-    {
-      "id": 0,
-      "name": "Абакумова Наталия Николаевна"
-    },
-    {
-      "id": 0,
-      "name": "Абашин Сергей Николаевич2"
+      "id": "66cb97a5-4ce5-4ed4-8b60-e5e314ff7122",
+      "fullname": "Ismoil",
+      "content": "<p>\t<span style=\"color: rgb(0, 0, 0);\">1968-yilda tug'ilgan, Yoshlar masalalari va ma'naviy-ma'rifiy ishlar bo'yicha birinchi prorektor, Professor, texnika fanlari doktori.</span></p><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>\t<span style=\"color: rgb(0, 0, 0);\">Toshkent to'qimachilik va yengil sanoat instituti Namangan filiali assistenti 1985-1989 yy. - Toshkent to'qimachilik va yengil sanoat instituti paxtani dastlabki ishlash kafedrasi aspiranti (1982-1985 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-iqtisodiyot instituti to'qimachilik mashinalari kafedrasi katta o'qituvchisi, dekan muovini, dotsent (1989-1994 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-iqtisodiyot instituti ma'naviy-ma'rifiy ishlari bo'yicha birinchi prorektori (1994-1997 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Pop tumani hokimligining ijtimoiy masalalari bo'yicha o'rinbosar (1997-1998 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan viloyati o'rta maxsus kasb-hunar ta'limi boshqarmasi boshlig'i (1998-2000 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'rta maxsus kasb-hunar ta'limi rivojlantirish instituti dekani (2000-2001 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktorining birinchi o'rinbosari (2001-2004 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi kadrlar va pedagog xodimlar malkasini oshirish boshqarmasi boshlig'i o'rinbosari (2004-2005 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktori (2005-2008 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim maktablarida o'quv-tarbiya jarayonini rivojlantirish va tashkil etish bosh boshqarmasi boshlig'i (2008-2009 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi huzuridagi multmedia umumta'lim dasturlarini rivojlantirish markazi direktori (2009-2015 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Halq ta'limi vazirligi umumta'lim maktablarida o'quv-tarbiya jarayonini rivojlantirish bosh boshqarmasi boshlig'i (2015-2016 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'quvchilarni kasb-hunarga yo'naltirish va psixologik-pedagogik Respublika tashxis markazi direktori (2016-2017 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'rta maxsus kasb-hunar ta'limi muassasalarini axborot-metodik ta'minlash xizmati boshlig'i (2017-2018 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Kasb-hunar ta'limi tizimini innovatsion rivojlantirish, pedagog kadrlarning malakasini oshirish va ularni qayta tayyorlash instituti direktorining kasb-hunar ta'limini innovatsion rivojlantirish bo'yicha o'rinbosari (2018-2019 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">O'zbekiston Respublikasi Oliy va o'rta maxsus ta'lim vazirligi kasb-hunar ta'limini o'quv -metodik muvofiqlashtirish bosh boshqarmasi boshlig'i (2019-2020 yy.)</span></li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"color: rgb(0, 0, 0);\">Namangan muhandislik-qurilish instituti rektori (2020 y. - h.v.)</span></li></ol><p><br></p>",
+      "image": "blob:http://localhost:5173/e43bafc2-4bef-44fa-9566-c44d6cd58ea2",
+      "position": "Tarmoq adminstratori",
+      "phone_number": "+9989012345",
+      "academic_title": "Yo'q",
+      "email": "nn.axorbek@gmail.com"
     }
   ]
 }
