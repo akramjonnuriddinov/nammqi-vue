@@ -4,14 +4,19 @@ import AppEditor from '@/components/shared/AppEditor.vue'
 import ImageUpload from '@/components/shared/ImageUpload.vue'
 import { ITeacher } from '@/types'
 import { postTeacher } from '@/composables/useNews'
+import { v4 as uuidv4 } from 'uuid'
 
-const editorContent = ref<string>('<p>Initial value</p>')
+const editorContent = ref<string>('')
 const uploadedImage = ref<File | null>(null)
 const teacher = ref<ITeacher>({
-  id: 0,
+  id: '',
   fullname: '',
   content: '',
-  image: null,
+  image: '',
+  position: '',
+  phone_number: '',
+  academic_title: '',
+  email: '',
 })
 
 const handleInput = (content: string) => {
@@ -29,8 +34,8 @@ const handleRemove = () => {
 
 const postData = async () => {
   try {
+    teacher.value.id = uuidv4()
     console.log('TEACHER: ', teacher.value)
-    teacher.value.id++
     await postTeacher(teacher.value)
   } catch (err) {
     console.log(err)
@@ -50,6 +55,54 @@ const postData = async () => {
         class="block w-full px-3 py-2 border-2 rounded-md"
         type="text"
         placeholder="Ism-familiya"
+        required
+      />
+    </div>
+    <div class="mb-6">
+      <label class="block mb-2 text-sm font-bold text-primary-black"
+        >Telefon raqami</label
+      >
+      <input
+        v-model="teacher.phone_number"
+        class="block w-full px-3 py-2 border-2 rounded-md"
+        type="text"
+        placeholder="Telefon raqami"
+        required
+      />
+    </div>
+    <div class="mb-6">
+      <label class="block mb-2 text-sm font-bold text-primary-black"
+        >Email</label
+      >
+      <input
+        v-model="teacher.email"
+        class="block w-full px-3 py-2 border-2 rounded-md"
+        type="text"
+        placeholder="Email"
+        required
+      />
+    </div>
+    <div class="mb-6">
+      <label class="block mb-2 text-sm font-bold text-primary-black"
+        >Lavozimi</label
+      >
+      <input
+        v-model="teacher.position"
+        class="block w-full px-3 py-2 border-2 rounded-md"
+        type="text"
+        placeholder="Lavozimi"
+        required
+      />
+    </div>
+    <div class="mb-6">
+      <label class="block mb-2 text-sm font-bold text-primary-black"
+        >Ilmiy darajasi</label
+      >
+      <input
+        v-model="teacher.academic_title"
+        class="block w-full px-3 py-2 border-2 rounded-md"
+        type="text"
+        placeholder="Ilmiy darajasi"
         required
       />
     </div>

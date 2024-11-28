@@ -88,8 +88,12 @@ export interface Teacher {
 }
 
 export interface ITeacher {
-  id: number
+  id: string
   fullname: string
   content: string
-  image: File | null | string
+  image: string | undefined
+  position: string
+  phone_number: string
+  academic_title: string
+  email: string
 }
