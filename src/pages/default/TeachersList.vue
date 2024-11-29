@@ -3,7 +3,8 @@ import { getTeachers } from '@/composables/useTeachers'
 import { ref, computed, onMounted } from 'vue'
 import TeachersSidebar from '@/components/layouts/TeachersSidebar.vue'
 import { ITeacher } from '@/types'
-
+import MainHeader from '@/components/layouts/MainHeader.vue'
+import ThreeDCard from '@/components/shared/ThreeDCard.vue'
 // State
 const teachers = ref<ITeacher[]>([])
 const total = ref(0) // Total number of teachers
@@ -67,71 +68,17 @@ onMounted(fetchTeachers)
 </script>
 
 <template>
-  <div class="flex min-h-screen bg-gray-50">
-    <!-- Sidebar -->
-    <TeachersSidebar
-      class="fixed top-0 left-0 h-full bg-white border-r border-gray-200 shadow-lg"
-    />
-
-    <!-- Main Content -->
-    <div class="flex-1 ml-80">
-      <!-- Header -->
-      <header
-        class="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-white border-b shadow-sm"
+  <MainHeader />
+  <section class="py-[100px]">
+    <div class="container px-5 mx-auto">
+      <h1 class="text-[52px] leading-[64px] mb-16 font-semibold">
+        Bizning ustozlar bilan tanishing
+      </h1>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-[30px]"
       >
-        <h1 class="text-2xl font-semibold text-gray-800">Teachers</h1>
-        <input
-          v-model="search"
-          type="text"
-          placeholder="Search for a teacher..."
-          class="px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-primary-blue"
-          @input="onSearch"
-        />
-      </header>
-
-      <!-- Teachers List -->
-      <main class="px-6 py-8">
-        <div class="mb-6 text-lg font-semibold text-gray-600">
-          Total Teachers: {{ total }}
-        </div>
-
-        <!-- Teacher Cards -->
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div
-            v-for="teacher in filteredTeachers"
-            :key="teacher.id"
-            class="p-4 bg-white border rounded hover:shadow-sm"
-          >
-            <RouterLink
-              :to="{ name: 'teacher-detail2', params: { id: teacher.id } }"
-              class="block text-lg font-medium text-primary-black hover:opacity-80"
-            >
-              {{ teacher.fullname }}
-            </RouterLink>
-          </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="flex items-center justify-between mt-8">
-          <button
-            class="px-4 py-2 text-sm font-medium text-white bg-primary-blue hover:bg-blue-600 disabled:opacity-50"
-            :disabled="currentPage === 1"
-            @click="prevPage"
-          >
-            Previous
-          </button>
-          <span class="text-sm font-medium text-gray-600">
-            Page {{ currentPage }} of {{ totalPages }}
-          </span>
-          <button
-            class="px-4 py-2 text-sm font-medium text-white bg-primary-blue hover:bg-blue-600 disabled:opacity-50"
-            :disabled="currentPage === totalPages"
-            @click="nextPage"
-          >
-            Next
-          </button>
-        </div>
-      </main>
+        <ThreeDCard v-for="i in 12" :key="i"></ThreeDCard>
+      </div>
     </div>
-  </div>
+  </section>
 </template>

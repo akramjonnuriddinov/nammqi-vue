@@ -6,7 +6,7 @@ import BaseButton from '@/components/shared/BaseButton.vue'
 <template>
   <div class="flip-card w-full h-[450px]">
     <div class="relative w-full h-full text-center flip-card-inner">
-      <div class="flex flex-col bg-white flip-card-front">
+      <div class="flex flex-col bg-white rounded flip-card-front">
         <div class="overflow-hidden">
           <img
             class="object-cover object-top w-full h-full"
@@ -21,7 +21,7 @@ import BaseButton from '@/components/shared/BaseButton.vue'
         </div>
       </div>
       <div
-        class="flex flex-col p-5 bg-transparent border flip-card-back border-primary-blue"
+        class="flex flex-col p-5 bg-transparent border rounded flip-card-back bg-primary-gray border-neutral-200"
       >
         <div class="w-32 h-32 m-auto">
           <img
@@ -54,8 +54,11 @@ import BaseButton from '@/components/shared/BaseButton.vue'
               <p>sharibboy@gmail.com</p>
             </div>
           </div>
-          <RouterLink class="mt-auto w-max" to="/teachers-detail">
-            <BaseButton>Batafsil</BaseButton>
+          <RouterLink
+            class="mt-auto font-semibold w-max text-primary-blue"
+            to="/teachers-detail"
+          >
+            Batafsil
           </RouterLink>
         </div>
       </div>
