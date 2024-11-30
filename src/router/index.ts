@@ -28,6 +28,11 @@ const routes: any = [
         name: 'news-detail',
         component: () => import('@/pages/default/NewsDetailView.vue'),
       },
+      {
+        path: '/contact',
+        name: 'contact',
+        component: () => import('@/pages/default/ContactView.vue')
+      }
     ],
   },
   {
@@ -40,7 +45,7 @@ const routes: any = [
         component: () => import('@/pages/default/TeachersList.vue'),
       },
       {
-        path: '/:id',
+        path: ':id',
         name: 'teacher-detail2',
         component: () => import('@/pages/default/TeacherDetail2.vue'),
       },

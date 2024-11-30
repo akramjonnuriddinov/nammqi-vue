@@ -73,7 +73,8 @@
     font-display: swap;
   }
 
-  input {
+  input,
+  textarea {
     @apply border focus:border-primary-blue outline-none py-1 px-2;
   }
 
