@@ -26,30 +26,30 @@ const rectorData = {
 
 <template>
   <div class="container py-10">
-    <h1 class="text-4xl font-semibold mb-10">Rektorat</h1>
-    <div class="flex gap-10 pb-8">
+    <h1 class="mb-10 text-4xl font-semibold">Rektorat</h1>
+    <div v-for="i in 5" class="flex gap-10 pb-8">
       <!-- Image Section -->
       <div class="max-w-[470px] flex flex-col">
         <img
           class="aspect-[5/3] object-cover sticky top-10 object-top"
-          src="https://my.nammqi.uz/storage/news/sar.jpg"
+          src="https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM="
           alt=""
         />
       </div>
       <!-- Information Section -->
       <div class="flex flex-col gap-10">
         <!-- Name and Position -->
-        <div class="bg-white border p-16 px-12">
+        <div class="p-16 px-12 bg-white border">
           <h1 class="text-4xl font-bold text-gray-800">
             {{ rectorData.name }}
           </h1>
-          <p class="text-primary-blue mt-6">{{ rectorData.position }}</p>
+          <p class="mt-6 text-primary-blue">{{ rectorData.position }}</p>
         </div>
         <!-- Biography -->
         <div>
-          <div class="bg-white border p-16 flex flex-col gap-6">
+          <div class="flex flex-col gap-6 p-16 bg-white border">
             <h3
-              class="text-xl m-auto font-bold border-b-2 border-primary-blue pb-1 w-max"
+              class="pb-1 m-auto text-xl font-bold border-b-2 border-primary-blue w-max"
             >
               Biografiya
             </h3>
@@ -63,7 +63,7 @@ const rectorData = {
               </li>
             </ul>
             <!-- Contact Info -->
-            <div class="grid grid-cols-2 mt-5 justify-between">
+            <div class="grid justify-between grid-cols-2 mt-5">
               <div class="text-xl">
                 <span class="text-primary-blue">F.I.O:</span>
                 <span class="ms-2">{{ rectorData.name }}</span>
@@ -87,11 +87,11 @@ const rectorData = {
           </div>
           <!-- Button Section -->
           <div
-            class="bg-primary-blue flex justify-between p-6 border-x border-b group hover:bg-white transition-all duration-300 hover:text-black text-white"
+            class="flex justify-between p-6 text-white transition-all duration-300 border-b bg-primary-blue border-x group hover:bg-white hover:text-black"
           >
             <h1 class="font-semibold">Rektorga murojat</h1>
             <ChevronRightIcon
-              class="w-5 group-hover:translate-x-3 transition-transform duration-300"
+              class="w-5 transition-transform duration-300 group-hover:translate-x-3"
             />
           </div>
         </div>

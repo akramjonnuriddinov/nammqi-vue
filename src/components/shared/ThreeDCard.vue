@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/solid'
-import BaseButton from '@/components/shared/BaseButton.vue'
 </script>
 
 <template>
   <div class="flip-card w-full h-[450px]">
     <div class="relative w-full h-full text-center flip-card-inner">
-      <div class="flex flex-col bg-white rounded flip-card-front">
+      <div
+        class="flex flex-col bg-white border rounded border-neutral-200 flip-card-front"
+      >
         <div class="overflow-hidden">
           <img
             class="object-cover object-top w-full h-full"
-            src="https://my.nammqi.uz/storage/news/rektor.jpg"
+            src="https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM="
           />
         </div>
         <div class="p-4">
@@ -23,10 +24,10 @@ import BaseButton from '@/components/shared/BaseButton.vue'
       <div
         class="flex flex-col p-5 bg-transparent border rounded flip-card-back bg-primary-gray border-neutral-200"
       >
-        <div class="w-32 h-32 m-auto">
+        <div class="w-32 h-32 m-auto rouded-full">
           <img
-            class="object-cover w-full h-full rounded-full"
-            src="https://my.nammqi.uz/storage/news/rektor.jpg"
+            class="object-cover w-32 h-32 rounded-full"
+            src="https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM="
           />
         </div>
         <div class="flex flex-col items-center h-full">

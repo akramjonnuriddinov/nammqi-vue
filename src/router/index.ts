@@ -32,6 +32,11 @@ const routes: any = [
         path: '/contact',
         name: 'contact',
         component: () => import('@/pages/default/ContactView.vue')
+      },
+      {
+        path: '/faculties',
+        name: 'faculties',
+        component: () => import('@/pages/default/FacultiesView.vue')
       }
     ],
   },

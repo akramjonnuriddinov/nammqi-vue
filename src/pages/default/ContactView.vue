@@ -11,7 +11,7 @@
       <div class="flex flex-wrap gap-4">
         <a
           href="tel:+998692341430"
-          class="w-[280px] flex rounded-[50px] p-[8px_32px_8px_8px] items-center gap-[16px] label-md bg-gray-100 animate__fadeInUp animate__animated animate__animated--end"
+          class="w-[280px] flex p-[8px_32px_8px_8px] items-center gap-[16px] label-md bg-gray-100 animate__fadeInUp animate__animated animate__animated--end"
           data-aos="animate__fadeInUp"
         >
           <img
@@ -19,7 +19,7 @@
             width="56"
             height="56"
             alt=""
-            class="size-[56px] rounded-[50%] bg-white ls-is-cached lazyloaded"
+            class="size-[56px] bg-white"
             src="https://smultron.software/content/uploads/2024/02/jakub-kozak-1-56x56.png"
             style="
               --smush-placeholder-width: 56px;
@@ -31,17 +31,17 @@
               width="56"
               height="56"
               alt=""
-              class="size-[56px] rounded-[50%] bg-white"
+              class="size-[56px] bg-white"
           /></noscript>
           <span>+998 (69) 234-14-30</span>
         </a>
         <a
           href="mailto:nammqi_info@edu.uz"
-          class="w-[280px] bg-gray-100 flex rounded-[50px] p-[8px_32px_8px_8px] items-center gap-[16px] label-md animate__fadeInUp animate__animated animate__animated--end"
+          class="w-[280px] bg-gray-100 flex p-[8px_32px_8px_8px] items-center gap-[16px] label-md animate__fadeInUp animate__animated animate__animated--end"
           data-aos="animate__fadeInUp"
           data-aos-delay="100"
         >
-          <span class="overflow-hidden bg-white rounded-full">
+          <span class="overflow-hidden bg-white">
             <svg
               width="56"
               height="56"
