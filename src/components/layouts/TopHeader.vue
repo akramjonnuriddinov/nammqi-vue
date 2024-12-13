@@ -20,7 +20,7 @@ const accessibility = ref(false)
         <span>NamMQI linklar</span>
       </button>
       <div class="flex items-center">
-        <RouterLink class="mr-6" to="/admin">Admin</RouterLink>
+        <RouterLink class="mr-6" :to="{ name: 'login' }">Admin</RouterLink>
         <button @click="accessibility = true">
           <EyeSlashIcon class="w-6 mr-6" />
         </button>

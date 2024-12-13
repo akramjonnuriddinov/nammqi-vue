@@ -1,0 +1,16 @@
+export const PERMISSIONS = {
+  CREATE_ADMIN: 'create_admin',
+  VIEW_USER: 'view_user',
+  CREATE_TEACHER: 'create_teacher',
+  UPDATE_TEACHER: 'update_teacher',
+  DELETE_TEACHER: 'delete_teacher',
+  VIEW_TEACHER: 'view_teacher',
+  CREATE_NEWS: 'create_news',
+  UPDATE_NEWS: 'update_news',
+  DELETE_NEWS: 'delete_news',
+  VIEW_NEWS: 'view_news',
+  CREATE_RECTORAT: 'create_rectorat',
+  UPDATE_RECTORAT: 'update_rectorat',
+  DELETE_RECTORAT: 'delete_rectorat',
+  VIEW_RECTORAT: 'view_rectorat',
+}
