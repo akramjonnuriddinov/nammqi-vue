@@ -3,7 +3,7 @@
 <template>
   <section>
     <div
-      class="container px-5 mx-auto pt-[60px] py-[30px] desktop:pt-[120px] pb-[30px] desktop:pb-[60px]"
+      class="container px-5 mx-auto flex flex-col items-center1 pt-[60px] py-[30px] desktop:pt-[120px] pb-[30px] desktop:pb-[60px]"
     >
       <h1 class="text-[52px] leading-[64px] font-semibold mb-[60px]">
         Biz bilan bog'laning
@@ -91,7 +91,7 @@
             >
               Qandaydir savolingiz bormi?
             </h2>
-            <p class="text-etGray font-light text-[16px] mb-[38px]">
+            <p class="text-neutral-gray font-light text-[16px] mb-[38px]">
               Har qanday qiziqtirgan savolingiz bo'lsa so'rang! Albatta javob
               beramiz!
             </p>
