@@ -86,7 +86,10 @@ const filteredFaculties = computed(() => {
 <template>
   <section class="min-h-screen py-10 bg-[#f6f6f6]">
     <div class="container p-6 mx-auto">
-      <h1 class="mb-6 text-3xl font-bold">Fakultetlar</h1>
+      <span class="flex w-full mb-2 text-sm text-primary-blue"
+        >Namangan Muhandislik Qurilish Instituti</span
+      >
+      <h1 class="mb-6 text-4xl font-bold">Fakultetlar</h1>
       <div class="relative mb-6">
         <input
           v-model="searchQuery"

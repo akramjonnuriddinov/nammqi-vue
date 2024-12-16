@@ -78,8 +78,10 @@
         </a>
       </div>
     </div>
-    <div class="container mx-auto px-5 py-[120px] xl:py-[80px] md:py-[60px]">
-      <div class="px-[12px] xl:max-w-full">
+    <div
+      class="container mx-auto px-5 py-[120px] xl:py-[80px] md:py-[60px] flex"
+    >
+      <div class="px-[12px] w-full max-w-[600px] xl:max-w-full">
         <div
           class="flex grid-cols-2 md:grid-cols-1 gap-[60px] xl:gap-[40px] items-center"
         >
@@ -157,6 +159,116 @@
           <div></div>
         </div>
       </div>
+      <div
+        class="address flex w-full items-center justify-center max-[990px]:h-[600px] max-sm:h-[350px]"
+      >
+        <div
+          class="address__inner relative z-30 flex w-full max-w-[304px] flex-col items-center rounded-2xl bg-white p-10 text-xl"
+        >
+          <p class="my-4 text-center text-gray-500">
+            Temiryo'lchilar ko'chasi 1-uy,
+            <span class="font-bold">Namangan Viloyati</span>
+          </p>
+          <a
+            class="font-medium text-primary-blue"
+            href="https://maps.app.goo.gl/uTbQ3MW8CSdPWGBFA"
+            target="_blank"
+            >Google orqali topish</a
+          >
+          <div class="dot"></div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.sent-mail path {
+  stroke-width: 10 !important;
+}
+
+.address {
+  background-image: url('https://teamly.netlify.app/assets/contact-1-bg-94e14802.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.address__inner::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #ffffff;
+  z-index: 20;
+}
+
+.dot {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 15px));
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #1e85ff;
+  cursor: pointer;
+}
+
+.dot::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background: #1e85ff;
+  border-radius: 50%;
+  -webkit-animation: wave 2s linear infinite;
+  animation: wave 2s linear infinite;
+}
+
+.dot::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background: #1e85ff;
+  border-radius: 50%;
+  -webkit-animation: wave 2s linear infinite;
+  animation: wave 2s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+  }
+  50% {
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+  }
+}
+</style>
