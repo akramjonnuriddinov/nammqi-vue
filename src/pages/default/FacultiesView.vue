@@ -89,7 +89,7 @@ const filteredFaculties = computed(() => {
       <span class="flex w-full mb-2 text-sm text-primary-blue"
         >Namangan Muhandislik Qurilish Instituti</span
       >
-      <h1 class="mb-6 text-4xl font-bold">Fakultetlar</h1>
+      <h2 class="mb-6 text-4xl font-bold">Fakultetlar</h2>
       <div class="relative mb-6">
         <input
           v-model="searchQuery"
