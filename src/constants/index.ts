@@ -11,7 +11,7 @@ export const navCategories: NavCategory[] = [
       {
         links: [
           { title: 'Institut Ustavi', href: '/institute-charter' },
-          { title: 'Institut haqida', href: '/institute' },
+          { title: 'Institut haqida', href: '/about-institute' },
           { title: 'Rahbariyat', href: '/rectorat' },
           { title: 'Rekvizitlar', href: '/props' },
         ],

@@ -19,6 +19,11 @@ const routes: any = [
         component: () => import('@/pages/default/TeachersDetailView.vue'),
       },
       {
+        path: 'teachers',
+        name: 'teachers',
+        component: () => import('@/pages/default/TeachersList.vue'),
+      },
+      {
         path: 'news',
         name: 'news',
         component: () => import('@/pages/default/NewsView.vue'),
@@ -52,23 +57,12 @@ const routes: any = [
         path: '/institute-charter',
         name: 'institute-charter',
         component: () => import('@/pages/default/InstituteCharter.vue')
+      },
+      {
+        path: '/about-institute',
+        name: 'about-institute',
+        component: () => import('@/pages/default/AboutInstituteView.vue')
       }
-    ],
-  },
-  {
-    path: '/teachers',
-    component: () => import('@/layouts/TeachersLayout.vue'),
-    children: [
-      {
-        path: '',
-        name: 'teachers',
-        component: () => import('@/pages/default/TeachersList.vue'),
-      },
-      {
-        path: ':id',
-        name: 'teacher-detail2',
-        component: () => import('@/pages/default/TeacherDetail2.vue'),
-      },
     ],
   },
   {

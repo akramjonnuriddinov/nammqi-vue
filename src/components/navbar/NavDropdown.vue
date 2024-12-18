@@ -7,7 +7,7 @@ defineProps<{ category: NavCategory }>()
 <template>
   <div class="nav__inner-list">
     <div class="nav__inner-left">
-      <img src="https://tsue.uz/_nuxt/img/university.c6bede9.svg" alt="" />
+      <img src="../../assets/images/university.svg" alt="" />
       <h2>{{ category.title }}</h2>
       <p>{{ category.description }}</p>
     </div>

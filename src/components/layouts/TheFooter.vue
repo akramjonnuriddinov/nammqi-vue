@@ -3,7 +3,7 @@
 <template>
   <footer
     class="py-10 text-white bg-center bg-cover"
-    style="background-image: url('https://tstu.uz/assets/mobilBg-B-mnYgqw.png')"
+    style="background-image: url(src/assets/images/footer-bg.png)"
   >
     <div class="container grid grid-cols-1 gap-8 mx-auto lg:grid-cols-3">
       <!-- Left Section: University Info -->
