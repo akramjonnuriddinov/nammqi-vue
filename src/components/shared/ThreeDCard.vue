@@ -1,28 +1,53 @@
 <script setup lang="ts">
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/vue/24/solid'
+
+defineProps({
+  name: {
+    type: String,
+    default: "Ergashev Shariboy To'lanovich",
+  },
+  title: {
+    type: String,
+    default: 'Rektor',
+  },
+  phone: {
+    type: String,
+    default: '+998 99 477 65 18',
+  },
+  email: {
+    type: String,
+    default: 'sharibboy@gmail.com',
+  },
+  image: {
+    type: String,
+    default:
+      'https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM=',
+  },
+})
 </script>
 
 <template>
   <div class="flip-card w-full h-[450px]">
     <div class="relative w-full h-full text-center flip-card-inner">
+      <!-- Front Side -->
       <div
-        class="flex flex-col bg-white border rounded border-neutral-200 flip-card-front"
+        class="flex flex-col bg-white border flip-card-front border-neutral-200"
       >
-        <div class="overflow-hidden">
+        <div class="overflow-hidden h-2/3">
           <img
+            :src="image"
+            alt="Profile photo"
             class="object-cover object-top w-full h-full"
-            src="https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM="
           />
         </div>
-        <div class="p-4">
-          <h3 class="text-xl font-bold text-gray-800">
-            Ergashev Shariboy To'lanovich
-          </h3>
-          <p class="text-primary-blue">Rektor</p>
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">{{ name }}</h3>
+          <p class="text-sm text-primary-blue">{{ title }}</p>
         </div>
       </div>
+      <!-- Back Side -->
       <div
-        class="flex flex-col p-5 bg-transparent border rounded flip-card-back bg-primary-gray border-neutral-200"
+        class="flex flex-col p-5 bg-transparent border flip-card-back bg-primary-gray border-neutral-200"
       >
         <div class="w-32 h-32 m-auto rouded-full">
           <img

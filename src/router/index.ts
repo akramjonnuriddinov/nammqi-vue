@@ -42,6 +42,11 @@ const routes: any = [
         path: '/announcements',
         name: 'announcements',
         component: () => import('@/pages/default/AnnouncementsView.vue')
+      },
+      {
+        path: '/rectorat',
+        name: 'rectorat',
+        component: () => import('@/pages/default/RectoratView.vue')
       }
     ],
   },

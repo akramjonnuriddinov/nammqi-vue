@@ -3,7 +3,7 @@ import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 
 const rectorData = {
   name: "Ergashev Sharibboy To'lanovich",
-  position: 'Assissent',
+  position: 'Rektor',
   biography:
     "1968-yilda tug'ilgan, Yoshlar masalalari va ma'naviy-ma'rifiy ishlar bo'yicha birinchi prorektor, Professor, texnika fanlari doktori.",
   roles: [
@@ -26,14 +26,14 @@ const rectorData = {
 
 <template>
   <div class="container py-10">
-    <h1 class="mb-10 text-4xl font-semibold">O'qituvchi ma'lumotlari</h1>
-    <div class="flex gap-10 pb-8">
+    <h1 class="mb-10 text-4xl font-semibold">Rektorat</h1>
+    <div v-for="i in 5" class="flex gap-10 pb-8">
       <!-- Image Section -->
       <div class="max-w-[470px] flex flex-col">
         <img
           class="aspect-[5/3] object-cover sticky top-10 object-top"
           src="https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM="
-          alt="teacher"
+          alt=""
         />
       </div>
       <!-- Information Section -->
@@ -86,15 +86,14 @@ const rectorData = {
             </div>
           </div>
           <!-- Button Section -->
-          <a
-            href="#"
+          <div
             class="flex justify-between p-6 text-white transition-all duration-300 border-b bg-primary-blue border-x group hover:bg-white hover:text-black"
           >
-            <span class="font-semibold">Rektorga murojat</span>
+            <h1 class="font-semibold">Rektorga murojat</h1>
             <ChevronRightIcon
               class="w-5 transition-transform duration-300 group-hover:translate-x-3"
             />
-          </a>
+          </div>
         </div>
       </div>
     </div>
