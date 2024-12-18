@@ -10,8 +10,8 @@ export const navCategories: NavCategory[] = [
     columns: [
       {
         links: [
-          { title: 'Institut Ustavi', href: '/intitute-charter' },
-          { title: 'Institut haqida', href: '/intitute' },
+          { title: 'Institut Ustavi', href: '/institute-charter' },
+          { title: 'Institut haqida', href: '/institute' },
           { title: 'Rahbariyat', href: '/rectorat' },
           { title: 'Rekvizitlar', href: '/props' },
         ],

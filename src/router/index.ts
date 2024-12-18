@@ -47,6 +47,11 @@ const routes: any = [
         path: '/rectorat',
         name: 'rectorat',
         component: () => import('@/pages/default/RectoratView.vue')
+      },
+      {
+        path: '/institute-charter',
+        name: 'institute-charter',
+        component: () => import('@/pages/default/InstituteCharter.vue')
       }
     ],
   },
