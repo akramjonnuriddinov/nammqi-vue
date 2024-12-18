@@ -62,6 +62,11 @@ const routes: any = [
         path: '/about-institute',
         name: 'about-institute',
         component: () => import('@/pages/default/AboutInstituteView.vue')
+      },
+      {
+        path: '/video-gallery',
+        name: 'video-gallery',
+        component: () => import('@/pages/default/VideoGallery.vue')
       }
     ],
   },
