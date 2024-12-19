@@ -44,6 +44,11 @@ const routes: any = [
         component: () => import('@/pages/default/FacultiesView.vue')
       },
       {
+        path: '/faculties/:id',
+        name: 'faculty',
+        component: () => import('@/pages/default/FacultiesInnerView.vue')
+      },
+      {
         path: '/announcements',
         name: 'announcements',
         component: () => import('@/pages/default/AnnouncementsView.vue')

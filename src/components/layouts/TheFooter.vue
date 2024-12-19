@@ -1,10 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer
-    class="py-10 text-white bg-left-top bg-cover"
-    style="background-image: url(src/assets/images/footer-bg.webp)"
-  >
+  <footer class="py-10 text-white bg-left-top bg-cover">
     <div class="container grid grid-cols-1 gap-8 mx-auto lg:grid-cols-3">
       <!-- Left Section: University Info -->
       <div>
@@ -83,3 +80,9 @@
     </div>
   </footer>
 </template>
+
+<style scoped>
+footer {
+  background-image: url(@/assets/images/footer-bg.webp);
+}
+</style>

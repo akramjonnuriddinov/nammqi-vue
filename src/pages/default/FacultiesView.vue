@@ -111,7 +111,12 @@ const filteredFaculties = computed(() => {
             <img :src="faculty.image" alt="" class="w-[70px]" />
           </div>
           <RouterLink
-            to="/"
+            :to="{
+              name: 'faculty',
+              params: {
+                id: faculty.name,
+              },
+            }"
             class="w-full text-xl font-semibold text-black max-w-80"
             >{{ faculty.name }}</RouterLink
           >
