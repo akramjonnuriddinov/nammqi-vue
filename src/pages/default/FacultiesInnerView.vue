@@ -21,19 +21,19 @@
           </p>
           <ul class="space-y-2">
             <li class="flex items-center space-x-2">
-              <span class="text-red-600">&#9679;</span>
+              <span class="text-primary-blue">&#9679;</span>
               <span>Programming</span>
             </li>
             <li class="flex items-center space-x-2">
-              <span class="text-red-600">&#9679;</span>
+              <span class="text-primary-blue">&#9679;</span>
               <span>Big Data and Data Science</span>
             </li>
             <li class="flex items-center space-x-2">
-              <span class="text-red-600">&#9679;</span>
+              <span class="text-primary-blue">&#9679;</span>
               <span>Artificial Intelligence</span>
             </li>
             <li class="flex items-center space-x-2">
-              <span class="text-red-600">&#9679;</span>
+              <span class="text-primary-blue">&#9679;</span>
               <span>Software Development</span>
             </li>
           </ul>
