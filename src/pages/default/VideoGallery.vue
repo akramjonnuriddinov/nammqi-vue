@@ -15,6 +15,7 @@ const categories = [
 
 const videos = ref([
   {
+    title: 'Video Created by Vidio',
     link: 'https://www.youtube.com/AnVO_pFyz7o',
     date: 'Dekabr 19, 2024',
     owner: 'Akramjon Nuriddinov',
@@ -23,38 +24,16 @@ const videos = ref([
       'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-17.jpg',
   },
   {
+    title: '30 yoshda afsuslanmaslik uchun nima qilish kerak?',
     link: 'https://youtu.be/Ytu7-4HQGwk',
     date: 'Dekabr 19, 2024',
-    owner: 'Akramjon Nuriddinov',
+    owner: 'Asadbek Avazbekov',
     views: '9.267K',
     image:
       'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-1.jpg',
   },
   {
-    link: 'https://youtu.be/Ytu7-4HQGwk',
-    date: 'Dekabr 19, 2024',
-    owner: 'Akramjon Nuriddinov',
-    views: '12.267K',
-    image:
-      'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-8.jpg',
-  },
-  {
-    link: 'https://www.youtube.com/AnVO_pFyz7o',
-    date: 'Dekabr 19, 2024',
-    owner: 'Akramjon Nuriddinov',
-    views: '6.267K',
-    image:
-      'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-17.jpg',
-  },
-  {
-    link: 'https://www.youtube.com/AnVO_pFyz7o',
-    date: 'Dekabr 19, 2024',
-    owner: 'Akramjon Nuriddinov',
-    views: '9.267K',
-    image:
-      'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-1.jpg',
-  },
-  {
+    title: 'Video Created by Vidio',
     link: 'https://youtu.be/Ytu7-4HQGwk',
     date: 'Dekabr 19, 2024',
     owner: 'Akramjon Nuriddinov',
@@ -63,6 +42,7 @@ const videos = ref([
       'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-8.jpg',
   },
   {
+    title: 'Video Created by Vidio',
     link: 'https://www.youtube.com/AnVO_pFyz7o',
     date: 'Dekabr 19, 2024',
     owner: 'Akramjon Nuriddinov',
@@ -71,6 +51,7 @@ const videos = ref([
       'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-17.jpg',
   },
   {
+    title: 'Video Created by Vidio',
     link: 'https://www.youtube.com/AnVO_pFyz7o',
     date: 'Dekabr 19, 2024',
     owner: 'Akramjon Nuriddinov',
@@ -79,6 +60,34 @@ const videos = ref([
       'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-1.jpg',
   },
   {
+    title: 'Video Created by Vidio',
+    link: 'https://youtu.be/Ytu7-4HQGwk',
+    date: 'Dekabr 19, 2024',
+    owner: 'Akramjon Nuriddinov',
+    views: '12.267K',
+    image:
+      'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-8.jpg',
+  },
+  {
+    title: 'Video Created by Vidio',
+    link: 'https://www.youtube.com/AnVO_pFyz7o',
+    date: 'Dekabr 19, 2024',
+    owner: 'Akramjon Nuriddinov',
+    views: '6.267K',
+    image:
+      'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-17.jpg',
+  },
+  {
+    title: 'Video Created by Vidio',
+    link: 'https://www.youtube.com/AnVO_pFyz7o',
+    date: 'Dekabr 19, 2024',
+    owner: 'Akramjon Nuriddinov',
+    views: '9.267K',
+    image:
+      'https://demo.harutheme.com/vidio/wp-content/uploads/2020/01/technology-1.jpg',
+  },
+  {
+    title: 'Video Created by Vidio',
     link: 'https://youtu.be/Ytu7-4HQGwk',
     date: 'Dekabr 19, 2024',
     owner: 'Akramjon Nuriddinov',
@@ -154,7 +163,7 @@ const loadMore = () => {
             ></div>
           </div>
           <div class="flex flex-col">
-            <h3 class="my-2">Video Created by Vidio</h3>
+            <h3 class="my-2">{{ video.title }}</h3>
             <div class="flex items-center gap-2 text-xs text-gray-500">
               <span class="text-sm">{{ video.owner }}</span>
               <span class="text-sm">{{ video.date }}</span>
