@@ -181,7 +181,7 @@ const loadMore = () => {
         </button>
       </div>
     </div>
-    <!-- Video Modal -->
+
     <VideoModal v-if="isModalOpen" :link="selectedVideo" @close="closeModal" />
   </section>
 </template>

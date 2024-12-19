@@ -2,8 +2,8 @@
 
 <template>
   <footer
-    class="py-10 text-white bg-center bg-cover"
-    style="background-image: url(src/assets/images/footer-bg.png)"
+    class="py-10 text-white bg-left-top bg-cover"
+    style="background-image: url(src/assets/images/footer-bg.webp)"
   >
     <div class="container grid grid-cols-1 gap-8 mx-auto lg:grid-cols-3">
       <!-- Left Section: University Info -->
